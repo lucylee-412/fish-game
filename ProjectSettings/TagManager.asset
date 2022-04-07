@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fishing Pole
   - Cast Net
+  - Ground
   layers:
   - Default
   - TransparentFX
