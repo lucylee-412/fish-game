@@ -1,0 +1,34 @@
+fishPoleDesc = "A long, elastic rod used by fishermen to catch fish by manipulating a line ending in a hook.\n" +
+"At its simplest form, a fishing rod is a straight stick or pole with a line attached to one end.\n" +
+"Modern rods, however, generally have the line stored on a reel mounted at the rod handle which controls the line retrieval, " +
+"as well as line-guiding swivels that reduce tangling.\n"
+To better entice fish, bait or lures are dressed on one or more hooks attached to the line and a bite indicator is used, " +
+"some of which might be incorporated as part of the rod itself."
+
+shovelDesc = "This fishing method, developed long ago by the indigenous people of Arctic Alaska, the Iñupiat, \n" +
+"requires little technology, but a great deal of cleverness.\n" +
+"It is a very simple and effective way to catch large numbers of fish which, " +
+"in the past, were needed not only to feed people, but also their many dogs."
+
+castNetDesc = "A casting net, also called a throw net, is a net used for fishing.\n" +
+"It is a circular net with small weights distributed around its edge.\n" +
+"The net is cast or thrown by hand in such a manner that it spreads out while it's in the air, before it sinks into the water."=
+
+explosivesDesc = "Blast fishing, when dynamite or other explosives are used to stun or kill fish, " +
+"is a practice used in many villages and isolated regions of the world.\n" +
+"Hundreds of fish can be seen strewn across the reef left as bycatch, such as the tropical fish in Thailand."
+
+trawlDesc = "One of the most widely used commercial fishing methods.\n" +
+"Trawling is performed in many ways, in depths of water ranging from just a few meters to 1600 meters.\n" +
+"Trawling is a method of fishing that involves pulling a fishing net through the water behind one or more boats.\n" +
+"The net used for trawling is called a trawl.\n" +
+"This principle requires netting bags which are towed through water to catch different species of fishes, " +
+"or sometimes, targeted species."
+
+powerCatamaranDesc = "Boat Length: 25 to 40 feet\n" +
+"Construction: Usually fiberglass, sometimes aluminum twin-hull design\n" +
+"Description: Twin deep-V hull sponsons connected by a wide deck differentiate this design from a mono-hull.\n" +
+"Desirable for its soft ride. Includes a cockpit and a console or cabin, often configured much like a center-console.\n" +
+"Propulsion: Twin outboards\n"
+"Purpose: Usually nearshore and offshore fishing, but adaptable to inshore waters, depending on size and rigging"
+
