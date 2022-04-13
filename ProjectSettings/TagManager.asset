@@ -13,6 +13,8 @@ TagManager:
   - Squid
   - Mackrel
   - Pause Mode
+  - FishingPoleEduText
+  - BuyFishPoleButton
   layers:
   - Default
   - TransparentFX
