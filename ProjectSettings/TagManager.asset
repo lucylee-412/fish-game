@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Pause Menu
   - Play Mode
+  - StoreDoor
   layers:
   - Default
   - TransparentFX
