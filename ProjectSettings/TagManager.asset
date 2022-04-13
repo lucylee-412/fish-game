@@ -7,9 +7,12 @@ TagManager:
   - Fishing Pole
   - Cast Net
   - Ground
-  - Pause Menu
   - Play Mode
   - StoreDoor
+  - Nightcrawler
+  - Squid
+  - Mackrel
+  - Pause Mode
   layers:
   - Default
   - TransparentFX

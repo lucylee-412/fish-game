@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class PauseResumeMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
-    public GameObject pauseBox;
     [SerializeField] GameObject[] pauseMode;
     [SerializeField] GameObject[] playMode;
 
@@ -20,7 +18,7 @@ public class PauseResumeMenu : MonoBehaviour
         foreach (GameObject g in pauseMode)
             g.SetActive(false);*/
       
-        pauseMode = GameObject.FindGameObjectsWithTag("Pause Menu");
+        pauseMode = GameObject.FindGameObjectsWithTag("Pause Mode");
         playMode = GameObject.FindGameObjectsWithTag("Play Mode");
         foreach(GameObject g in playMode)
         {
@@ -52,21 +50,29 @@ public class PauseResumeMenu : MonoBehaviour
     }
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        foreach (GameObject g in playMode)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in pauseMode)
+        {
+            g.SetActive(false);
+        }
         Time.timeScale = 1.0f;
         GameIsPaused = false;
 
     }
     public void Pause()
     {
-        foreach (GameObject g in playMode)
-        {
-            g.SetActive(false);
-        }
         foreach (GameObject g in pauseMode)
         {
             g.SetActive(true);
         }
+        foreach (GameObject g in playMode)
+        {
+            g.SetActive(false);
+        }
+
         Time.timeScale = 0.0f;
         GameIsPaused = true;
 
