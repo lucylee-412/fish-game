@@ -774,8 +774,6 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
 --- !u!1 &400749607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,8 +1216,6 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
 --- !u!1 &745149679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,8 +1464,6 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
 --- !u!1 &903450978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,8 +1501,6 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 289509593}
   squidBait: {fileID: 542620377}
   mackrelBait: {fileID: 1935456990}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
 --- !u!114 &903450980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,8 +1710,51 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 289509593}
   squidBait: {fileID: 542620377}
   mackrelBait: {fileID: 1935456990}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
+--- !u!1 &1064555166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1064555167}
+  - component: {fileID: 1064555168}
+  m_Layer: 0
+  m_Name: PlayerMoney
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064555167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064555166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11625083, y: 0.42235065, z: -78.66633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064555168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064555166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec7e071ffc8fd94da28a18b1d608d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMoney: 0
+  playerName: 
 --- !u!1 &1212674067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,8 +2206,6 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
-  fishPoleText: {fileID: 0}
-  fishPoleButton: {fileID: 0}
 --- !u!1 &2007512521
 GameObject:
   m_ObjectHideFlags: 0
