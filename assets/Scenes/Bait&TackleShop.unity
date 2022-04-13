@@ -769,11 +769,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187dcc1586804de4781f7c6e93459f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishingPole: {fileID: 0}
-  castNet: {fileID: 0}
-  nightcrawlerBait: {fileID: 0}
-  squidBait: {fileID: 0}
-  mackrelBait: {fileID: 0}
+  fishingPole: {fileID: 1018212345}
+  castNet: {fileID: 788878095}
+  nightcrawlerBait: {fileID: 289509593}
+  squidBait: {fileID: 542620377}
+  mackrelBait: {fileID: 1935456990}
+--- !u!1 &305824962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305824963}
+  - component: {fileID: 305824965}
+  - component: {fileID: 305824964}
+  m_Layer: 5
+  m_Name: Item Info
+  m_TagString: BuyFishPoleButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &305824963
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305824962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 903450983}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &305824964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305824962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Fishing Pole Cost:   $500
+
+    Effect On Ecosystem: Negligible'
+--- !u!222 &305824965
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305824962}
+  m_CullTransparentMesh: 1
 --- !u!1 &400749607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,11 +1292,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187dcc1586804de4781f7c6e93459f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishingPole: {fileID: 0}
-  castNet: {fileID: 0}
-  nightcrawlerBait: {fileID: 0}
-  squidBait: {fileID: 0}
-  mackrelBait: {fileID: 0}
+  fishingPole: {fileID: 1018212345}
+  castNet: {fileID: 788878095}
+  nightcrawlerBait: {fileID: 289509593}
+  squidBait: {fileID: 542620377}
+  mackrelBait: {fileID: 1935456990}
 --- !u!1 &745149679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 745149682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 903450984}
+        m_TargetAssemblyTypeName: ButtonFunctions, Assembly-CSharp
+        m_MethodName: BuyFishingPoleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &745149682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,11 +1552,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187dcc1586804de4781f7c6e93459f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishingPole: {fileID: 0}
-  castNet: {fileID: 0}
-  nightcrawlerBait: {fileID: 0}
-  squidBait: {fileID: 0}
-  mackrelBait: {fileID: 0}
+  fishingPole: {fileID: 1018212345}
+  castNet: {fileID: 788878095}
+  nightcrawlerBait: {fileID: 289509593}
+  squidBait: {fileID: 542620377}
+  mackrelBait: {fileID: 1935456990}
+--- !u!1 &795782372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795782373}
+  - component: {fileID: 795782375}
+  - component: {fileID: 795782374}
+  m_Layer: 5
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &795782373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795782372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2038416710}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 325, y: 200}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795782374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795782372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Money: $'
+--- !u!222 &795782375
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795782372}
+  m_CullTransparentMesh: 1
 --- !u!1 &903450978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1649,7 @@ GameObject:
   - component: {fileID: 903450981}
   - component: {fileID: 903450980}
   - component: {fileID: 903450979}
+  - component: {fileID: 903450984}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1493,14 +1666,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 903450978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187dcc1586804de4781f7c6e93459f8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 254354c7d0f298a44ba9eb6f9b5afc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishPoleText: []
+  fishPoleButton: []
   fishingPole: {fileID: 1018212345}
-  castNet: {fileID: 788878095}
-  nightcrawlerBait: {fileID: 289509593}
-  squidBait: {fileID: 542620377}
-  mackrelBait: {fileID: 1935456990}
 --- !u!114 &903450980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,6 +1746,7 @@ RectTransform:
   m_Children:
   - {fileID: 1234066438}
   - {fileID: 745149680}
+  - {fileID: 305824963}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1583,6 +1755,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &903450984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903450978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNameInput: {fileID: 0}
 --- !u!1 &1018212345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1780,7 @@ GameObject:
   - component: {fileID: 1018212346}
   - component: {fileID: 1018212348}
   - component: {fileID: 1018212349}
+  - component: {fileID: 1018212350}
   m_Layer: 0
   m_Name: Fishing Pole
   m_TagString: Fishing Pole
@@ -1710,6 +1896,21 @@ MonoBehaviour:
   nightcrawlerBait: {fileID: 289509593}
   squidBait: {fileID: 542620377}
   mackrelBait: {fileID: 1935456990}
+--- !u!114 &1018212350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018212345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254354c7d0f298a44ba9eb6f9b5afc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishPoleText: []
+  fishPoleButton: []
+  fishingPole: {fileID: 0}
 --- !u!1 &1064555166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064555167}
   - component: {fileID: 1064555168}
+  - component: {fileID: 1064555169}
   m_Layer: 0
   m_Name: PlayerMoney
   m_TagString: Untagged
@@ -1755,6 +1957,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoney: 0
   playerName: 
+--- !u!114 &1064555169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064555166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e6993509c160445bd74a725a56cc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  moneyTxt: {fileID: 795782374}
+  levelTxt: {fileID: 0}
+  nameTxt: {fileID: 0}
 --- !u!1 &1212674067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,11 +2419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187dcc1586804de4781f7c6e93459f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishingPole: {fileID: 0}
-  castNet: {fileID: 0}
-  nightcrawlerBait: {fileID: 0}
-  squidBait: {fileID: 0}
-  mackrelBait: {fileID: 0}
+  fishingPole: {fileID: 1018212345}
+  castNet: {fileID: 788878095}
+  nightcrawlerBait: {fileID: 289509593}
+  squidBait: {fileID: 542620377}
+  mackrelBait: {fileID: 1935456990}
 --- !u!1 &2007512521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2656,7 @@ RectTransform:
   - {fileID: 104876480}
   - {fileID: 106196794}
   - {fileID: 247490799}
+  - {fileID: 795782373}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

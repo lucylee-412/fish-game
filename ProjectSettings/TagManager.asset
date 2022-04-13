@@ -15,6 +15,7 @@ TagManager:
   - Pause Mode
   - FishingPoleEduText
   - BuyFishPoleButton
+  - PierFishingSpot
   layers:
   - Default
   - TransparentFX

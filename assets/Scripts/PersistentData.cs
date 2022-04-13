@@ -42,6 +42,14 @@ public class PersistentData : MonoBehaviour
         playerName = s;
     }
 
+    public void SubtractMoney(int m)
+    {
+        playerMoney -= m;
+    }
+    public void AddMoney(int m)
+    {
+        playerMoney += m;
+    }
     public void SetMoney(int m)
     {
         playerMoney = m;
