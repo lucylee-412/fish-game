@@ -1,9 +1,11 @@
 fishPoleDesc = "A long, elastic rod used by fishermen to catch fish by manipulating a line ending in a hook.\n" +
 "At its simplest form, a fishing rod is a straight stick or pole with a line attached to one end.\n" +
 "Modern rods, however, generally have the line stored on a reel mounted at the rod handle which controls the line retrieval, " +
-"as well as line-guiding swivels that reduce tangling.\n"
-To better entice fish, bait or lures are dressed on one or more hooks attached to the line and a bite indicator is used, " +
-"some of which might be incorporated as part of the rod itself."
+"as well as line-guiding swivels that reduce tangling.\n" + 
+"To better entice fish, bait or lures are dressed on one or more hooks attached to the line and a bite indicator is used, " +
+"some of which might be incorporated as part of the rod itself.\n" +
+"Fishing using a rod & reel is considered one of the most sustainable fishing methods, as non-targeted species (called bycatch) " +
+"can be released immediately."
 
 shovelDesc = "This fishing method, developed long ago by the indigenous people of Arctic Alaska, the Iñupiat, \n" +
 "requires little technology, but a great deal of cleverness.\n" +
