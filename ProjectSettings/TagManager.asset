@@ -17,6 +17,8 @@ TagManager:
   - BuyFishPoleButton
   - Money
   - TriggerCanvas
+  - PierFishingSpot
+  - LeaveFishingSpot
   layers:
   - Default
   - TransparentFX

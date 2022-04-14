@@ -538,7 +538,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a86dde42f4b08694baab14d13ce460a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -558,8 +558,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704295775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.98, y: -3.0484052, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.56, y: -2.56, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 1175546082}
   - component: {fileID: 1175546081}
   - component: {fileID: 1175546080}
+  - component: {fileID: 1175546083}
   m_Layer: 0
   m_Name: basicDoor
   m_TagString: StoreDoor
@@ -647,7 +648,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: b441d291197428347803019252bc2af4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -667,12 +668,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175546079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.6763163, y: -3.5300968, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.54, y: -3.3, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175546083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175546079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a071fe9219948194d809e24c289fcbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeDoor: {fileID: 0}
+  player: {fileID: 0}
+  fishingSpot: {fileID: 0}
+  fishingSprite: {fileID: 0}
+  walkingSprite: {fileID: 0}
 --- !u!1 &1241508029
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,9 +840,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1421593251}
   - component: {fileID: 1421593250}
+  - component: {fileID: 1421593252}
   m_Layer: 0
   m_Name: FishingCollider
-  m_TagString: Untagged
+  m_TagString: PierFishingSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,6 +888,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421593252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421593249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a071fe9219948194d809e24c289fcbf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeDoor: {fileID: 1175546079}
+  player: {fileID: 2122566212}
+  fishingSpot: {fileID: 0}
+  fishingSprite: {fileID: 21300000, guid: 4609be49312d8fc45be703be38e79d3b, type: 3}
+  walkingSprite: {fileID: 21300000, guid: d0f9b51320869664fa0f7a08b07f1dc6, type: 3}
 --- !u!1 &1882420280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,8 +1187,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122566212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.69, y: -3.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.75, y: -3.3, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

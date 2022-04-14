@@ -19,13 +19,14 @@ public class EduAndBuy : MonoBehaviour
         fishPoleButton = GameObject.FindGameObjectsWithTag("BuyFishPoleButton");
         fishPoleText = GameObject.FindGameObjectsWithTag("FishingPoleEduText");
 
+
         foreach (GameObject g in fishPoleButton)
         {
-            g.SetActive(false);
+            g.SetActive(true);
         }
         foreach (GameObject g in fishPoleText)
         {
-            g.SetActive(false);
+            g.SetActive(true);
         }
     }
 

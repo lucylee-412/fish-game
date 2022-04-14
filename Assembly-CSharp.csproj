@@ -62,11 +62,14 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PauseResumeMenu.cs" />
     <Compile Include="Assets\Scripts\EduAndBuy.cs" />
-    <Compile Include="Assets\StartMenu.cs" />
+    <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\PersistentData.cs" />
     <Compile Include="Assets\UnderwaterFantasy\Scripts\Done_BGScroller.cs" />
     <Compile Include="Assets\Scripts\ButtonFunctions.cs" />
+    <Compile Include="Assets\Scripts\LandAndPierTriggers.cs" />
+    <Compile Include="Assets\Scripts\DoorExit.cs" />
+    <Compile Include="Assets\Scripts\FishingScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
