@@ -15,6 +15,8 @@ TagManager:
   - Pause Mode
   - FishingPoleEduText
   - BuyFishPoleButton
+  - Money
+  - TriggerCanvas
   layers:
   - Default
   - TransparentFX

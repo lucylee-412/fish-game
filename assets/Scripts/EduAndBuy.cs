@@ -7,12 +7,15 @@ public class EduAndBuy : MonoBehaviour
     [SerializeField] GameObject[] fishPoleText;
     [SerializeField] GameObject[] fishPoleButton;
     [SerializeField] GameObject fishingPole;
+    [SerializeField] GameObject moneyAmt;
 
     // Start is called before the first frame update
     void Start()
     {
         if (fishingPole == null)
             fishingPole = GameObject.FindGameObjectWithTag("Fishing Pole");
+        moneyAmt = GameObject.FindGameObjectWithTag("TriggerCanvas");
+        moneyAmt.SetActive(true);
         fishPoleButton = GameObject.FindGameObjectsWithTag("BuyFishPoleButton");
         fishPoleText = GameObject.FindGameObjectsWithTag("FishingPoleEduText");
 
@@ -47,8 +50,7 @@ public class EduAndBuy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (this.gameObject.tag == "Fishing Pole")
-        {
-            Debug.Log("This is the fishing pole!");
+        {            
             foreach (GameObject g in fishPoleButton)
             {
                 g.SetActive(true);

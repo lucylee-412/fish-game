@@ -10,8 +10,7 @@ public class Equipment : MonoBehaviour
     [SerializeField] GameObject nightcrawlerBait;
     [SerializeField] GameObject squidBait;
     [SerializeField] GameObject mackrelBait;
-    [SerializeField] GameObject[] fishPoleText;
-    [SerializeField] GameObject[] fishPoleButton;
+
     const int fishPoleCost = 500;
     const int castNetCost = 1000;
     const int nightcrawlerCost = 250;
@@ -33,19 +32,6 @@ public class Equipment : MonoBehaviour
         if (mackrelBait == null)
             mackrelBait = GameObject.FindGameObjectWithTag("Mackrel");
 
-        fishPoleButton = GameObject.FindGameObjectsWithTag("BuyFishPoleButton");
-        fishPoleText = GameObject.FindGameObjectsWithTag("FishingPoleEduText");
-
-        foreach (GameObject g in fishPoleButton)
-        {
-            g.SetActive(false);
-        }
-        foreach (GameObject g in fishPoleText)
-        {
-            g.SetActive(false);
-        }
-
-
     }
 
     // Update is called once per frame
@@ -53,8 +39,12 @@ public class Equipment : MonoBehaviour
     {
         
     }
+    public int GetFishPoleCost()
+    {
+        return fishPoleCost;
+    }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+   /* private void OnTriggerEnter2D(Collider2D collider)
     {
         if(this.gameObject.tag == "Fishing Pole")
         {
@@ -114,5 +104,5 @@ public class Equipment : MonoBehaviour
         {
             Debug.Log("You got the right one bub!");
         }
-    }
+    }*/
 }

@@ -7,7 +7,6 @@ public class MoneyKeeper : MonoBehaviour
 {
     [SerializeField] int money;
     [SerializeField] Text moneyTxt;
-    [SerializeField] Text levelTxt;
     [SerializeField] Text nameTxt;
     // Start is called before the first frame update
     void Start()
