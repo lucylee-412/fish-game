@@ -26,7 +26,7 @@ public class PersistentData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerMoney = playerMoneyStart;
+        playerMoney = 1000;
         playerName = "";
 
     }
