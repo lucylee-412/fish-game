@@ -28,4 +28,16 @@ public class MoneyKeeper : MonoBehaviour
     {
         nameTxt.text = "Hi, " + PersistentData.Instance.GetName();
     }
+    public void AddMoney(int m)
+    {
+        money += m;
+        DisplayMoney();
+        PersistentData.Instance.SetMoney(money);
+    }
+    public void SubtractMoney(int m)
+    {
+        money -= m;
+        DisplayMoney();
+        PersistentData.Instance.SetMoney(money);
+    }
 }
