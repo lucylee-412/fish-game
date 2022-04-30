@@ -43,66 +43,82 @@ public class Equipment : MonoBehaviour
     {
         return fishPoleCost;
     }
-
-   /* private void OnTriggerEnter2D(Collider2D collider)
+    public int GetCastNetCost()
     {
-        if(this.gameObject.tag == "Fishing Pole")
-        {
-            Debug.Log("This is the fishing pole!");
-            foreach (GameObject g in fishPoleButton)
-            {
-                g.SetActive(true);
-            }
-            foreach (GameObject g in fishPoleText)
-            {
-                g.SetActive(true);
-            }
-        }
-        else if (this.gameObject.tag == "Cast Net")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Nightcrawler")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Squid")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Mackrel")
-        {
-            Debug.Log("You got the right one bub!");
-        }
+        return castNetCost;
     }
-    private void OnTriggerExit2D(Collider2D collider)
+    public int GetNightcrawlerCost()
     {
-        if (this.gameObject.tag == "Fishing Pole")
-        {
-            foreach (GameObject g in fishPoleButton)
-            {
-                g.SetActive(false);
-            }
-            foreach (GameObject g in fishPoleText)
-            {
-                g.SetActive(false);
-            }
-        }
-        else if (this.gameObject.tag == "Cast Net")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Nightcrawler")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Squid")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-        else if (this.gameObject.tag == "Mackrel")
-        {
-            Debug.Log("You got the right one bub!");
-        }
-    }*/
+        return nightcrawlerCost;
+    }
+    public int GetSquidCost()
+    {
+        return squidCost;
+    }
+    public int GetMackrelCost()
+    {
+        return mackrelCost;
+    }
+
+    /* private void OnTriggerEnter2D(Collider2D collider)
+     {
+         if(this.gameObject.tag == "Fishing Pole")
+         {
+             Debug.Log("This is the fishing pole!");
+             foreach (GameObject g in fishPoleButton)
+             {
+                 g.SetActive(true);
+             }
+             foreach (GameObject g in fishPoleText)
+             {
+                 g.SetActive(true);
+             }
+         }
+         else if (this.gameObject.tag == "Cast Net")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Nightcrawler")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Squid")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Mackrel")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+     }
+     private void OnTriggerExit2D(Collider2D collider)
+     {
+         if (this.gameObject.tag == "Fishing Pole")
+         {
+             foreach (GameObject g in fishPoleButton)
+             {
+                 g.SetActive(false);
+             }
+             foreach (GameObject g in fishPoleText)
+             {
+                 g.SetActive(false);
+             }
+         }
+         else if (this.gameObject.tag == "Cast Net")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Nightcrawler")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Squid")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+         else if (this.gameObject.tag == "Mackrel")
+         {
+             Debug.Log("You got the right one bub!");
+         }
+     }*/
 }

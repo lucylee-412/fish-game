@@ -7,8 +7,13 @@ using UnityEngine.UI;
 public class ButtonFunctions : MonoBehaviour
 {
     [SerializeField] GameObject moneyKeeper;
+    const int fishingpoleCost = 500;
+    const int castNetCost = 2000;
+    const int nightcrawlerCost = 500;
+    const int squidCost = 2500;
+    const int mackrelCost = 5000;
     //[SerializeField] InputField playerNameInput;
-    //[SerializeField] int money;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +48,34 @@ public class ButtonFunctions : MonoBehaviour
 
     public void BuyFishingPoleButton()
     {
-        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(500);
+        if (!PersistentData.Instance.GetHasFishingPole())
+        {
+            PersistentData.Instance.SetHasFishingPole();
+            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingpoleCost);
+        }
         
+    }
+    public void BuyCastNetButton()
+    {
+        if (!PersistentData.Instance.GetHasCastNet())
+        {
+            PersistentData.Instance.SetHasCastNet();
+            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(castNetCost);
+        }
+
+    }
+    public void BuyNightcrawlersButton()
+    {
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(nightcrawlerCost);
+    }
+
+    public void BuySquidButton()
+    {
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(squidCost);
+    }
+    public void BuyMackrelButton()
+    {
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(mackrelCost);
     }
 
 }

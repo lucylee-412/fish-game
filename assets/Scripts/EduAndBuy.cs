@@ -4,30 +4,65 @@ using UnityEngine;
 
 public class EduAndBuy : MonoBehaviour
 {
-    [SerializeField] GameObject[] fishPoleText;
     [SerializeField] GameObject[] fishPoleButton;
-    [SerializeField] GameObject fishingPole;
+    [SerializeField] GameObject[] castNetButton;
+    [SerializeField] GameObject[] nightcrawlerButton;
+    [SerializeField] GameObject[] squidButton;
+    [SerializeField] GameObject[] mackrelButton;
     [SerializeField] GameObject moneyAmt;
+
+    private void Awake()
+    {
+        moneyAmt = GameObject.FindGameObjectWithTag("TriggerCanvas");
+        moneyAmt.SetActive(true);
+        fishPoleButton = GameObject.FindGameObjectsWithTag("BuyFishPoleButton");
+        castNetButton = GameObject.FindGameObjectsWithTag("BuyCastNetButton");
+        nightcrawlerButton = GameObject.FindGameObjectsWithTag("BuyNightcrawlersButton");
+        squidButton = GameObject.FindGameObjectsWithTag("BuySquidButton");
+        mackrelButton = GameObject.FindGameObjectsWithTag("BuyMackrelButton");
+
+        /*foreach (GameObject g in fishPoleButton)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in castNetButton)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in nightcrawlerButton)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in squidButton)
+        {
+            g.SetActive(true);
+        }
+        foreach (GameObject g in mackrelButton)
+        {
+            g.SetActive(true);
+        }*/
+
+        DisplayGameObject(fishPoleButton);
+        DisplayGameObject(castNetButton);
+        DisplayGameObject(nightcrawlerButton);
+        DisplayGameObject(squidButton);
+        DisplayGameObject(mackrelButton);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        if (fishingPole == null)
-            fishingPole = GameObject.FindGameObjectWithTag("Fishing Pole");
-        moneyAmt = GameObject.FindGameObjectWithTag("TriggerCanvas");
-        moneyAmt.SetActive(true);
-        fishPoleButton = GameObject.FindGameObjectsWithTag("BuyFishPoleButton");
-        fishPoleText = GameObject.FindGameObjectsWithTag("FishingPoleEduText");
+        /* foreach (GameObject g in fishPoleButton)
+         {
+             g.SetActive(false);
+         }*/
+        RemoveGameObjectDisplay(fishPoleButton);
+        RemoveGameObjectDisplay(castNetButton);
+        RemoveGameObjectDisplay(nightcrawlerButton);
+        RemoveGameObjectDisplay(squidButton);
+        RemoveGameObjectDisplay(mackrelButton);
 
 
-        foreach (GameObject g in fishPoleButton)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in fishPoleText)
-        {
-            g.SetActive(true);
-        }
     }
 
     // Update is called once per frame
@@ -36,76 +71,68 @@ public class EduAndBuy : MonoBehaviour
         
     }
 
-    public void DisplayFishPoleEdu()
+    public void DisplayGameObject(GameObject[] gameObjectName)
     {
-        foreach (GameObject g in fishPoleButton)
-        {
-            g.SetActive(false);
-        }
-        foreach (GameObject g in fishPoleText)
+        foreach (GameObject g in gameObjectName)
         {
             g.SetActive(true);
         }
+
+    }
+    public void RemoveGameObjectDisplay(GameObject[] gameObjectName)
+    {
+        foreach (GameObject g in gameObjectName)
+        {
+            g.SetActive(false);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (this.gameObject.tag == "Fishing Pole")
-        {            
-            foreach (GameObject g in fishPoleButton)
-            {
-                g.SetActive(true);
-            }
-            foreach (GameObject g in fishPoleText)
-            {
-                g.SetActive(true);
-            }
-        }
-        else if (this.gameObject.tag == "Cast Net")
         {
-            Debug.Log("You got the right one bub!");
+            DisplayGameObject(fishPoleButton);
+        }
+        if (this.gameObject.tag == "Cast Net")
+        {
+            DisplayGameObject(castNetButton);
         }
         else if (this.gameObject.tag == "Nightcrawler")
         {
-            Debug.Log("You got the right one bub!");
+            DisplayGameObject(nightcrawlerButton);
         }
         else if (this.gameObject.tag == "Squid")
         {
-            Debug.Log("You got the right one bub!");
+            DisplayGameObject(squidButton);
         }
         else if (this.gameObject.tag == "Mackrel")
         {
-            Debug.Log("You got the right one bub!");
+            DisplayGameObject(mackrelButton);
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (this.gameObject.tag == "Fishing Pole")
         {
-            foreach (GameObject g in fishPoleButton)
-            {
-                g.SetActive(false);
-            }
-            foreach (GameObject g in fishPoleText)
-            {
-                g.SetActive(false);
-            }
+            RemoveGameObjectDisplay(fishPoleButton);
+
         }
         else if (this.gameObject.tag == "Cast Net")
         {
-            Debug.Log("You got the right one bub!");
+            RemoveGameObjectDisplay(castNetButton);
         }
         else if (this.gameObject.tag == "Nightcrawler")
         {
-            Debug.Log("You got the right one bub!");
+            RemoveGameObjectDisplay(nightcrawlerButton);
         }
         else if (this.gameObject.tag == "Squid")
         {
-            Debug.Log("You got the right one bub!");
+            RemoveGameObjectDisplay(squidButton);
         }
         else if (this.gameObject.tag == "Mackrel")
         {
-            Debug.Log("You got the right one bub!");
+            RemoveGameObjectDisplay(mackrelButton);
         }
     }
 }

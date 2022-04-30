@@ -10,14 +10,14 @@ public class PauseResumeMenu : MonoBehaviour
     [SerializeField] GameObject[] playMode;
 
 
-    void Start()
-    {           /*
-        pauseMode = GameObject.FindGameObjectsWithTag("ShowWhenPaused");
-        resumeMode = GameObject.FindGameObjectsWithTag("ShowWhenResumed");
 
-        foreach (GameObject g in pauseMode)
-            g.SetActive(false);*/
-      
+
+
+
+
+    void Start()
+    {
+        
         pauseMode = GameObject.FindGameObjectsWithTag("Pause Mode");
         playMode = GameObject.FindGameObjectsWithTag("Play Mode");
         foreach(GameObject g in playMode)
@@ -36,17 +36,17 @@ public class PauseResumeMenu : MonoBehaviour
     }
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (GameIsPaused == true)
         {
-            if(GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }*/
+            AudioListener.volume = 0.0f;
+
+        }
+
+        else
+        {
+            AudioListener.volume = 1.0f;
+
+        }
     }
     public void Resume()
     {
@@ -75,7 +75,6 @@ public class PauseResumeMenu : MonoBehaviour
 
         Time.timeScale = 0.0f;
         GameIsPaused = true;
-
     }
 
     public void LoadMenu()
