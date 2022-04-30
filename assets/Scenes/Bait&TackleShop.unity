@@ -1678,7 +1678,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   fishingPole: {fileID: 1018212345}
-  moneyAmt: {fileID: 0}
+  moneyAmt: {fileID: 1671034409}
 --- !u!114 &903450980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameInput: {fileID: 0}
+  moneyKeeper: {fileID: 1897379916}
 --- !u!1 &1018212345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,9 +2557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e6993509c160445bd74a725a56cc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
+  currentMoney: 0
   moneyTxt: {fileID: 1671034410}
-  nameTxt: {fileID: 0}
 --- !u!4 &1897379919
 Transform:
   m_ObjectHideFlags: 0

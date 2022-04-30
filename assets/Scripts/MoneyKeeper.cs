@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class MoneyKeeper : MonoBehaviour
 {
-    [SerializeField] int money;
+    [SerializeField] int currentMoney;
     [SerializeField] Text moneyTxt;
-    [SerializeField] Text nameTxt;
+    //[SerializeField] Text nameTxt;
     // Start is called before the first frame update
     void Start()
     {
-        money = PersistentData.Instance.GetMoney();
-        DisplayMoney();
+        currentMoney = PersistentData.Instance.GetMoney();
+        moneyTxt.text = "Money: $" + currentMoney;
     }
 
     // Update is called once per frame
@@ -20,24 +20,32 @@ public class MoneyKeeper : MonoBehaviour
     {
         
     }
-    public void DisplayMoney()
+    public void UpdateMoneyDisplay()
     {
-        moneyTxt.text = "Money: $" + money;
+        moneyTxt.text = "Money: $" + PersistentData.Instance.GetMoney();
     }
+    /*
     public void DisplayName()
     {
         nameTxt.text = "Hi, " + PersistentData.Instance.GetName();
-    }
+    }*/
     public void AddMoney(int m)
     {
-        money += m;
-        DisplayMoney();
-        PersistentData.Instance.SetMoney(money);
+        currentMoney += m;
+        PersistentData.Instance.SetMoney(currentMoney);
+        UpdateMoneyDisplay();
     }
     public void SubtractMoney(int m)
     {
-        money -= m;
-        DisplayMoney();
-        PersistentData.Instance.SetMoney(money);
+        if (currentMoney - m >= 0)
+        {
+            currentMoney -= m;
+            PersistentData.Instance.SetMoney(currentMoney);
+            UpdateMoneyDisplay();
+        }
+        else
+        {
+            Debug.Log("Not enough money!");
+        }
     }
 }

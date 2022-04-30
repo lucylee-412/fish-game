@@ -6,19 +6,17 @@ using UnityEngine.UI;
 
 public class ButtonFunctions : MonoBehaviour
 {
-    [SerializeField] InputField playerNameInput;
-    [SerializeField] int money;
-    Equipment fishPoleTest;
-    int tempMoney;
-    MoneyKeeper moneyKeeper;
+    [SerializeField] GameObject moneyKeeper;
+    //[SerializeField] InputField playerNameInput;
+    //[SerializeField] int money;
+
     // Start is called before the first frame update
     void Start()
     {
-        if (fishPoleTest == null)
-            fishPoleTest = GameObject.Find("Fishing Pole").GetComponent<Equipment>();
-        money = PersistentData.Instance.GetMoney();
-        tempMoney = fishPoleTest.GetFishPoleCost();
-        moneyKeeper = GameObject.FindGameObjectWithTag("GameController").GetComponent<MoneyKeeper>();
+        if(moneyKeeper == null)
+        {
+            moneyKeeper = GameObject.FindGameObjectWithTag("GameController");
+        }
     }
 
     // Update is called once per frame
@@ -34,8 +32,6 @@ public class ButtonFunctions : MonoBehaviour
 
     public void PlayGame()
     {
-        string s = playerNameInput.text;
-        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Land&Pier");
 
     }
@@ -47,7 +43,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void BuyFishingPoleButton()
     {
-        moneyKeeper.SubtractMoney(500);
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(500);
         
     }
 
