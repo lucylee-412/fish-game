@@ -10,7 +10,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasCastNet;
     [SerializeField] bool hasFishingBoat;
 
-    const int playerMoneyStart = 100000;
+    const int playerMoneyStart = 1000;
 
     public static PersistentData Instance;
 
