@@ -9,6 +9,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject moneyKeeper;
     const int fishingpoleCost = 500;
     const int castNetCost = 2000;
+    const int fishingBoatCost = 10000;
     const int nightcrawlerCost = 500;
     const int squidCost = 2500;
     const int mackrelCost = 5000;
@@ -78,4 +79,8 @@ public class ButtonFunctions : MonoBehaviour
         moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(mackrelCost);
     }
 
+    public void BuyBoatButton()
+    {
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingBoatCost);
+    }
 }
