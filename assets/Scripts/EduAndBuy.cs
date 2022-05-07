@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EduAndBuy : MonoBehaviour
 {
     [SerializeField] GameObject[] fishPoleButton;
     [SerializeField] GameObject[] castNetButton;
+    [SerializeField] GameObject[] fishBoatButton;
     [SerializeField] GameObject[] nightcrawlerButton;
     [SerializeField] GameObject[] squidButton;
     [SerializeField] GameObject[] mackrelButton;
     [SerializeField] GameObject moneyAmt;
+
 
     private void Awake()
     {
@@ -20,47 +23,28 @@ public class EduAndBuy : MonoBehaviour
         nightcrawlerButton = GameObject.FindGameObjectsWithTag("BuyNightcrawlersButton");
         squidButton = GameObject.FindGameObjectsWithTag("BuySquidButton");
         mackrelButton = GameObject.FindGameObjectsWithTag("BuyMackrelButton");
+        fishBoatButton = GameObject.FindGameObjectsWithTag("BoatShopVersion");
 
-        /*foreach (GameObject g in fishPoleButton)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in castNetButton)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in nightcrawlerButton)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in squidButton)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in mackrelButton)
-        {
-            g.SetActive(true);
-        }*/
 
         DisplayGameObject(fishPoleButton);
         DisplayGameObject(castNetButton);
         DisplayGameObject(nightcrawlerButton);
         DisplayGameObject(squidButton);
         DisplayGameObject(mackrelButton);
+        DisplayGameObject(fishBoatButton);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        /* foreach (GameObject g in fishPoleButton)
-         {
-             g.SetActive(false);
-         }*/
+
         RemoveGameObjectDisplay(fishPoleButton);
         RemoveGameObjectDisplay(castNetButton);
         RemoveGameObjectDisplay(nightcrawlerButton);
         RemoveGameObjectDisplay(squidButton);
         RemoveGameObjectDisplay(mackrelButton);
+        RemoveGameObjectDisplay(fishBoatButton);
 
 
     }
@@ -70,6 +54,7 @@ public class EduAndBuy : MonoBehaviour
     {
         
     }
+
 
     public void DisplayGameObject(GameObject[] gameObjectName)
     {
@@ -110,6 +95,10 @@ public class EduAndBuy : MonoBehaviour
         {
             DisplayGameObject(mackrelButton);
         }
+        else if (this.gameObject.tag == "Boat")
+        {
+            DisplayGameObject(fishBoatButton);
+        }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
@@ -133,6 +122,10 @@ public class EduAndBuy : MonoBehaviour
         else if (this.gameObject.tag == "Mackrel")
         {
             RemoveGameObjectDisplay(mackrelButton);
+        }
+        else if (this.gameObject.tag == "Boat")
+        {
+            RemoveGameObjectDisplay(fishBoatButton);
         }
     }
 }

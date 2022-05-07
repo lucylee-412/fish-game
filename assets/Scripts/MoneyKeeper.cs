@@ -7,6 +7,7 @@ public class MoneyKeeper : MonoBehaviour
 {
     [SerializeField] int currentMoney;
     [SerializeField] Text moneyTxt;
+
     //[SerializeField] Text nameTxt;
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,7 @@ public class MoneyKeeper : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough money!");
+            Debug.Log("Not enough Money!");
         }
     }
 }

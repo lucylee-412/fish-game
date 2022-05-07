@@ -24,6 +24,8 @@ TagManager:
   - BuySquidButton
   - BuyMackrelButton
   - Background
+  - BoatShopVersion
+  - Boat
   layers:
   - Default
   - TransparentFX
