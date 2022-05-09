@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Land&Pier.unity
     guid: b2ca99213d2583c47bed977659100e33
   - enabled: 1
-    path: Assets/Scenes/Fishing Scene.unity
+    path: Assets/Scenes/FishingPole.unity
     guid: a7f14b0e00941bc43b2eb33a76d79a0b
+  - enabled: 1
+    path: Assets/Scenes/CastNet.unity
+    guid: 81b2c4ccf5707eb4ea36bd0f5f217bf8
+  - enabled: 1
+    path: Assets/Scenes/OceanFishing.unity
+    guid: eeffd720404621e4db0f28fc7e21f93c
   m_configObjects: {}

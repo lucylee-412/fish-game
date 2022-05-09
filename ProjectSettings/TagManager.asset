@@ -26,6 +26,11 @@ TagManager:
   - Background
   - BoatShopVersion
   - Boat
+  - GoFishPoleButton
+  - GoCastNetButton
+  - GoBoatButton
+  - FishingQuestion
+  - NoEquipmentText
   layers:
   - Default
   - TransparentFX

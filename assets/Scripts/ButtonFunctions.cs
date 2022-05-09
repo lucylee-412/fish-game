@@ -83,4 +83,19 @@ public class ButtonFunctions : MonoBehaviour
     {
         moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingBoatCost);
     }
+
+    public void GoFishingWithPole()
+    {
+        SceneManager.LoadScene("FishingPole");
+    }
+
+    public void GoFishingWithCastNet()
+    {
+        SceneManager.LoadScene("CastNet");
+    }
+
+    public void GoFishingOnOcean()
+    {
+        SceneManager.LoadScene("OceanFishing");
+    }
 }

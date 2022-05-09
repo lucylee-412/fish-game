@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LandAndPierTriggers : MonoBehaviour
@@ -11,6 +12,34 @@ public class LandAndPierTriggers : MonoBehaviour
     SpriteRenderer spriteRenderer;
     [SerializeField] Sprite fishingSprite;
     [SerializeField] Sprite walkingSprite;
+    [SerializeField] bool hasFishPole;
+    [SerializeField] bool hasCastNet;
+    [SerializeField] bool hasBoat;
+
+    [SerializeField] GameObject goFishWithPoleButton;
+    [SerializeField] GameObject goFishWithNetButton;
+    [SerializeField] GameObject goFishWithBoatButton;
+    [SerializeField] GameObject fishingQuestion;
+    [SerializeField] GameObject noEquipmentText;
+
+
+
+    private void Awake()
+    {
+        if (goFishWithBoatButton == null)
+            goFishWithBoatButton = GameObject.FindGameObjectWithTag("GoBoatButton");
+        if (goFishWithNetButton == null)
+            goFishWithNetButton = GameObject.FindGameObjectWithTag("GoCastNetButton");
+        if (goFishWithPoleButton == null)
+            goFishWithPoleButton = GameObject.FindGameObjectWithTag("GoFishPoleButton");
+        if (fishingQuestion == null)
+            fishingQuestion = GameObject.FindGameObjectWithTag("FishingQuestion");
+        if (noEquipmentText == null)
+            noEquipmentText = GameObject.FindGameObjectWithTag("NoEquipmentText");
+
+        //used to ensure canvas is used at least once to make sure it can be turned active or inactive
+        goFishWithPoleButton.SetActive(true);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +49,13 @@ public class LandAndPierTriggers : MonoBehaviour
             fishingSpot = GameObject.FindGameObjectWithTag("PierFishingSpot");
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player");
+        hasFishPole = PersistentData.Instance.GetHasFishingPole();
+        hasCastNet = PersistentData.Instance.GetHasCastNet();
+        hasBoat = PersistentData.Instance.GetHasFishingBoat();
+
         spriteRenderer = player.GetComponent<SpriteRenderer>();
+
+        SetAllButtonsFalse();
     }
 
     // Update is called once per frame
@@ -37,13 +72,32 @@ public class LandAndPierTriggers : MonoBehaviour
 
         if (this.gameObject.tag == "PierFishingSpot")
         {
-            SceneManager.LoadScene("Fishing Scene");
+            fishingQuestion.SetActive(true);
+            if (hasFishPole == true)
+                goFishWithPoleButton.SetActive(true);
+            if(hasCastNet == true)
+                goFishWithNetButton.SetActive(true);
+            if(hasBoat == true)
+                goFishWithBoatButton.SetActive (true);
+            if(hasFishPole == false && hasCastNet == false && hasBoat == false)
+            {
+                noEquipmentText.SetActive(true);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
+        SetAllButtonsFalse();
         
-        
+    }
+
+    public void SetAllButtonsFalse()
+    {
+        goFishWithPoleButton.SetActive(false);
+        goFishWithNetButton.SetActive(false);
+        goFishWithBoatButton.SetActive(false);
+        fishingQuestion.SetActive(false);
+        noEquipmentText.SetActive(false);
     }
 }
