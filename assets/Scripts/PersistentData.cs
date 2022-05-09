@@ -10,7 +10,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasCastNet;
     [SerializeField] bool hasFishingBoat;
 
-    const int playerMoneyStart = 1000;
+    const int playerMoneyStart = 100000;
 
     public static PersistentData Instance;
 
@@ -65,48 +65,27 @@ public class PersistentData : MonoBehaviour
         return playerMoney;
     }
     
-    public void SetHasFishingPole()
+    public void SetHasFishingPole(bool value)
     {
-        if(hasFishingPole == false)
-        {
-            hasFishingPole = true;
-        }
-        else
-        {
-            hasFishingPole = false;
-        }
+        hasFishingPole = value;
     }
 
     public bool GetHasFishingPole()
     {
         return hasFishingPole;
     }
-    public void SetHasCastNet()
+    public void SetHasCastNet(bool value)
     {
-        if (hasCastNet == false)
-        {
-            hasCastNet = true;
-        }
-        else
-        {
-            hasCastNet = false;
-        }
+        hasCastNet = value;
     }
 
     public bool GetHasCastNet()
     {
         return hasCastNet;
     }
-    public void SetHasFishingBoat()
+    public void SetHasFishingBoat(bool value)
     {
-        if (hasFishingBoat == false)
-        {
-            hasFishingBoat = true;
-        }
-        else
-        {
-            hasFishingBoat = false;
-        }
+        hasFishingBoat = value;
     }
 
     public bool GetHasFishingBoat()

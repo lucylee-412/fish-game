@@ -823,7 +823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyKeeper: {fileID: 0}
+  moneyKeeper: {fileID: 1897379916}
+  eventController: {fileID: 0}
 --- !u!1 &247490798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 1897379916}
+  eventController: {fileID: 0}
 --- !u!1 &936642424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,7 +5085,7 @@ GameObject:
   - component: {fileID: 2038416707}
   - component: {fileID: 2038416712}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas - Puase/Resum & Signage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5385,6 +5387,7 @@ MonoBehaviour:
   movement: 4
   rigid: {fileID: 2122566214}
   isFacingRight: 1
+  levelNum: 0
 --- !u!50 &2122566214
 Rigidbody2D:
   serializedVersion: 4

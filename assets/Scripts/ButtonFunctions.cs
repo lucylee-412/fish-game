@@ -13,6 +13,8 @@ public class ButtonFunctions : MonoBehaviour
     const int nightcrawlerCost = 500;
     const int squidCost = 2500;
     const int mackrelCost = 5000;
+    [SerializeField] GameObject eventController;
+    int levelNum;
     //[SerializeField] InputField playerNameInput;
 
 
@@ -22,6 +24,12 @@ public class ButtonFunctions : MonoBehaviour
         if(moneyKeeper == null)
         {
             moneyKeeper = GameObject.FindGameObjectWithTag("GameController");
+        }
+        levelNum = SceneManager.GetActiveScene().buildIndex;
+
+        if(levelNum >= 4)
+        {
+            eventController = GameObject.FindGameObjectWithTag("Event Trigger");
         }
     }
 
@@ -51,7 +59,7 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasFishingPole())
         {
-            PersistentData.Instance.SetHasFishingPole();
+            PersistentData.Instance.SetHasFishingPole(true);
             moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingpoleCost);
         }
         
@@ -60,10 +68,18 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasCastNet())
         {
-            PersistentData.Instance.SetHasCastNet();
+            PersistentData.Instance.SetHasCastNet(true);
             moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(castNetCost);
         }
 
+    }
+    public void BuyBoatButton()
+    {
+        if (!PersistentData.Instance.GetHasFishingBoat())
+        {
+            PersistentData.Instance.SetHasFishingBoat(true);
+            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingBoatCost);
+        }
     }
     public void BuyNightcrawlersButton()
     {
@@ -79,10 +95,6 @@ public class ButtonFunctions : MonoBehaviour
         moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(mackrelCost);
     }
 
-    public void BuyBoatButton()
-    {
-        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingBoatCost);
-    }
 
     public void GoFishingWithPole()
     {
@@ -97,5 +109,22 @@ public class ButtonFunctions : MonoBehaviour
     public void GoFishingOnOcean()
     {
         SceneManager.LoadScene("OceanFishing");
+    }
+
+    public void AcceptEvent()
+    {
+        int eventNum = eventController.GetComponent<EducationEvents>().eventNum;
+        if(eventNum == 1)
+        {
+            PersistentData.Instance.SetHasFishingPole(false);
+            eventController.GetComponent<EducationEvents>().eventCanvas.SetActive(false);
+            eventController.GetComponent<EducationEvents>().educationCanvas.SetActive(true);
+
+        }
+    }
+
+    public void OkEvent()
+    {
+        SceneManager.LoadScene("Land&Pier");
     }
 }
