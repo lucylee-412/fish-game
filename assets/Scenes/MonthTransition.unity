@@ -539,6 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
+  LandAndPierTrigger: {fileID: 0}
 --- !u!1 &688183326
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +835,7 @@ GameObject:
   - component: {fileID: 1404212880}
   - component: {fileID: 1404212879}
   - component: {fileID: 1404212878}
+  - component: {fileID: 1404212882}
   m_Layer: 5
   m_Name: Canvas - Transition
   m_TagString: Untagged
@@ -927,6 +929,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1404212882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404212877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e11f28c6c2764c489f6144b59011363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallFishCaught: {fileID: 1801031067}
+  mediumFishCaught: {fileID: 1484265693}
+  largeFishCaught: {fileID: 1745290402}
+  moneyMade: {fileID: 548389978}
+  smallFishCaughtAmt: 0
+  mediumFishCaughtAmt: 0
+  largeFishCaughtAmt: 0
+  moneyAmt: 0
 --- !u!1 &1484265691
 GameObject:
   m_ObjectHideFlags: 0

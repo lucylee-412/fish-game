@@ -46,6 +46,8 @@ public class EducationEvents : MonoBehaviour
     [SerializeField] public GameObject eventCanvas;
     [SerializeField] public GameObject educationCanvas;
     [SerializeField] public GameObject nonEduCanvas;
+    [SerializeField] GameObject okEvent;
+
     [SerializeField] TMP_Text currentEventName;
     [SerializeField] TMP_Text currentEvent;
     [SerializeField] TMP_Text didYouKnowTMP;
@@ -92,6 +94,11 @@ public class EducationEvents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (okEvent = null)
+        {
+            okEvent = GameObject.FindGameObjectWithTag("Game Controller");
+        }
+
         populateStrings();
         populateDictionaries();
         eventCanvas.SetActive(false);
@@ -192,7 +199,58 @@ public class EducationEvents : MonoBehaviour
         eventEducation.Add(5, eventEducation5);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void StartEvents()
+    {
+        eventTypeSelector = Random.Range(1, 4);
+
+        if (eventTypeSelector == 1)
+        {
+            isNonEduEvent = true;
+            if (levelNum == FISHING_POLE_SCENE)
+            {
+                do
+                {
+                    eventNum = Random.Range(1, 5);
+                } while (eventNum == 3);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum];
+
+            }
+            else if (levelNum == CAST_NET_SCENE)
+            {
+                eventNum = Random.Range(2, 5);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum];
+            }
+            else if (levelNum == BOAT_SCENE)
+            {
+                do
+                {
+                    eventNum = Random.Range(2, 6);
+                } while (eventNum == 3);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum];
+            }
+
+        }
+        else if (eventTypeSelector == 2)
+        {
+            //used to select event from range
+            eventNum = Random.Range(1, 6);
+            eventCanvas.SetActive(true);
+            currentEvent.text = events[eventNum];
+            currentEventName.text = eventNames[eventNum];
+        }
+        //No event, move on to Month Transition Scene
+        else if (eventTypeSelector >= 3)
+        {
+            okEvent.GetComponent<ButtonFunctions>().OkEvent();
+        }
+    }
+    /*public void OnTriggerEnter2D(Collider2D collision)
     {
         //used to select event type (1 = nonEduEvent, 2 = eduEvent, 3 or 4 = noEvent)
         eventTypeSelector = Random.Range(1, 4);
@@ -243,7 +301,7 @@ public class EducationEvents : MonoBehaviour
         {
             SceneManager.LoadScene("MonthTransition");
         }
-    }
+    }*/
     public void ShowEducation(int eventNumber)
     {
         eventNum = eventNumber;

@@ -47,7 +47,7 @@ public class FishKeeper : MonoBehaviour
         
     }
 
-    void CatchFish()
+    public void CatchFish()
     {
         if(levelNum == FISHING_POLE_SCENE)
         {
@@ -74,16 +74,37 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == CAST_NET_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 15;
-            mediumFishCaught = 10;
+            smallFishCaught = 10;
+            mediumFishCaught = 4;
+            if (nightcrawlers)
+            {
+                smallFishCaught = smallFishCaught * SMALL_BAIT_MOD;
+            }
+            if (squid)
+            {
+                mediumFishCaught = mediumFishCaught * MEDIUM_BAIT_MOD;
+            }
             SetFishCaughtLastMonth();
         }
         if(levelNum == BOAT_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 10;
-            mediumFishCaught = 20;
-            largeFishCaught = 30;
+            smallFishCaught = 5;
+            mediumFishCaught = 6;
+            largeFishCaught = 8;
+
+            if (nightcrawlers)
+            {
+                smallFishCaught = smallFishCaught * SMALL_BAIT_MOD;
+            }
+            if (squid)
+            {
+                mediumFishCaught = mediumFishCaught * MEDIUM_BAIT_MOD;
+            }
+            if (mackrel)
+            {
+                largeFishAmt = largeFishAmt * LARGE_BAIT_MOD;
+            }
             SetFishCaughtLastMonth();
         }
 

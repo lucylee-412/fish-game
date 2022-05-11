@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class ButtonFunctions : MonoBehaviour
 {
-    [SerializeField] GameObject moneyKeeper;
-
     int smallFishMoney;
     int mediumFishMoney;
     int largeFishMoney;
@@ -19,10 +17,12 @@ public class ButtonFunctions : MonoBehaviour
     const int squidCost = 2500;
     const int mackrelCost = 5000;
 
-    const int SMALL_FISH_SELL_PRICE = 100;
-    const int MEDIUM_FISH_SELL_PRICE = 200;
-    const int LARGE_FISH_SELL_PRICE = 300;
+    const int SMALL_FISH_SELL_PRICE = 50;
+    const int MEDIUM_FISH_SELL_PRICE = 100;
+    const int LARGE_FISH_SELL_PRICE = 150;
 
+    [SerializeField] GameObject fishKeeper;
+    [SerializeField] GameObject moneyKeeper;
     [SerializeField] GameObject eventController;
     [SerializeField] GameObject LandAndPierTrigger;
     int levelNum;
@@ -50,6 +50,10 @@ public class ButtonFunctions : MonoBehaviour
         if (LandAndPierTrigger == null)
         {
             LandAndPierTrigger = GameObject.FindGameObjectWithTag("PierFishingSpot");
+        }
+        if(fishKeeper == null)
+        {
+            fishKeeper = GameObject.FindGameObjectWithTag("FishKeeper");
         }
         curMonth = PersistentData.Instance.GetMonth();
 
@@ -268,6 +272,12 @@ public class ButtonFunctions : MonoBehaviour
         PersistentData.Instance.SetSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
         PersistentData.Instance.SetMediumFish(PersistentData.Instance.GetMediumFishCaughtLM());
         PersistentData.Instance.SetLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
+
+        //set bait to 0
+        PersistentData.Instance.SetHasNightcrawlers(false);
+        PersistentData.Instance.SetHasSquid(false);
+        PersistentData.Instance.SetHasMackrel(false);
+
     }
 
     void FinalizePlayerMoney()
@@ -278,6 +288,13 @@ public class ButtonFunctions : MonoBehaviour
 
         PersistentData.Instance.SetMoneyMadeLastMonth(smallFishMoney + mediumFishMoney + largeFishMoney);
 
-        moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(smallFishMoney + mediumFishMoney + largeFishMoney);
+        int curMoney = PersistentData.Instance.GetMoney();
+        PersistentData.Instance.SetMoney(curMoney - (smallFishMoney + mediumFishMoney + largeFishMoney));
+    }
+
+    public void StartEvents()
+    {
+        fishKeeper.GetComponent<FishKeeper>().CatchFish();
+        eventController.GetComponent<EducationEvents>().StartEvents();
     }
 }
