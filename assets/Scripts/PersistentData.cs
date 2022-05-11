@@ -9,6 +9,10 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasFishingPole;
     [SerializeField] bool hasCastNet;
     [SerializeField] bool hasFishingBoat;
+    [SerializeField] int smallFish;
+    [SerializeField] int mediumFish;
+    [SerializeField] int largeFish;
+    [SerializeField] int month;
 
     const int playerMoneyStart = 100000;
 
@@ -36,7 +40,10 @@ public class PersistentData : MonoBehaviour
         hasFishingPole = false;
         hasCastNet = false;
         hasFishingBoat = false;
-
+        smallFish = 100;
+        mediumFish = 100;
+        largeFish = 100;
+        month = 5;
     }
 
     // Update is called once per frame
@@ -91,5 +98,45 @@ public class PersistentData : MonoBehaviour
     public bool GetHasFishingBoat()
     {
         return hasFishingBoat;
+    }
+
+    public void SetSmallFish(int sf)
+    {
+        smallFish = sf;
+    }
+
+    public int GetSmallFish()
+    {
+        return smallFish;
+    }
+
+    public void SetMediumFish(int mf)
+    {
+        mediumFish = mf;
+    }
+
+    public int GetMediumFish()
+    {
+        return mediumFish;
+    }
+
+    public void SetLargeFish(int lf)
+    {
+        largeFish = lf;
+    }
+
+    public int GetLargeFish()
+    {
+        return largeFish;
+    }
+
+    public void SetMonth(int m)
+    {
+        month = m;
+    }
+
+    public int GetMonth()
+    {
+        return month;
     }
 }
