@@ -7,17 +7,31 @@ using UnityEngine.UI;
 public class ButtonFunctions : MonoBehaviour
 {
     [SerializeField] GameObject moneyKeeper;
+
+    int smallFishMoney;
+    int mediumFishMoney;
+    int largeFishMoney;
+
     const int fishingpoleCost = 500;
     const int castNetCost = 2000;
     const int fishingBoatCost = 10000;
     const int nightcrawlerCost = 500;
     const int squidCost = 2500;
     const int mackrelCost = 5000;
+
+    const int SMALL_FISH_SELL_PRICE = 100;
+    const int MEDIUM_FISH_SELL_PRICE = 200;
+    const int LARGE_FISH_SELL_PRICE = 300;
+
     [SerializeField] GameObject eventController;
     [SerializeField] GameObject LandAndPierTrigger;
     int levelNum;
     int curMonth;
     //[SerializeField] InputField playerNameInput;
+
+    const int SMALL_BAIT_MOD = 2;
+    const int MEDIUM_BAIT_MOD = 2;
+    const int LARGE_BAIT_MOD = 4;
 
 
     // Start is called before the first frame update
@@ -38,6 +52,10 @@ public class ButtonFunctions : MonoBehaviour
             LandAndPierTrigger = GameObject.FindGameObjectWithTag("PierFishingSpot");
         }
         curMonth = PersistentData.Instance.GetMonth();
+
+        smallFishMoney = 0;
+        mediumFishMoney = 0;
+        largeFishMoney = 0;
     }
 
     // Update is called once per frame
@@ -67,7 +85,7 @@ public class ButtonFunctions : MonoBehaviour
         if (!PersistentData.Instance.GetHasFishingPole())
         {
             PersistentData.Instance.SetHasFishingPole(true);
-            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingpoleCost);
+            SubtractMoney(fishingpoleCost);
         }
         
     }
@@ -76,7 +94,7 @@ public class ButtonFunctions : MonoBehaviour
         if (!PersistentData.Instance.GetHasCastNet())
         {
             PersistentData.Instance.SetHasCastNet(true);
-            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(castNetCost);
+            SubtractMoney(castNetCost);
         }
 
     }
@@ -85,21 +103,33 @@ public class ButtonFunctions : MonoBehaviour
         if (!PersistentData.Instance.GetHasFishingBoat())
         {
             PersistentData.Instance.SetHasFishingBoat(true);
-            moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(fishingBoatCost);
+            SubtractMoney(fishingBoatCost);
         }
     }
     public void BuyNightcrawlersButton()
     {
-        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(nightcrawlerCost);
+        if (!PersistentData.Instance.GetHasNightcrawlers())
+        {
+            PersistentData.Instance.SetHasNightcrawlers(true);
+            SubtractMoney(nightcrawlerCost);
+        }
     }
 
     public void BuySquidButton()
     {
-        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(squidCost);
+        if (!PersistentData.Instance.GetHasSquid())
+        {
+            PersistentData.Instance.SetHasSquid(true);
+            SubtractMoney(squidCost);
+        }
     }
     public void BuyMackrelButton()
     {
-        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(mackrelCost);
+        if (!PersistentData.Instance.GetHasMackrel())
+        {
+            PersistentData.Instance.SetHasMackrel(true);
+            SubtractMoney(mackrelCost);
+        }
     }
 
 
@@ -177,6 +207,42 @@ public class ButtonFunctions : MonoBehaviour
 
     public void OkEvent()
     {
+        bool isNonEdu = eventController.GetComponent<EducationEvents>().GetIsNonEduEvent();
+        if (isNonEdu)
+        {
+            int eventNum = eventController.GetComponent<EducationEvents>().GetEventNum();
+
+            if(eventNum == 1)
+            {
+                PersistentData.Instance.SetHasFishingPole(false);
+            }
+            else if(eventNum == 2)
+            {
+                PersistentData.Instance.SetSmallFishCaughtLM( PersistentData.Instance.GetSmallFishCaughtLM() / SMALL_BAIT_MOD);
+                PersistentData.Instance.SetMediumFishCaughtLM(PersistentData.Instance.GetMediumFishCaughtLM() / MEDIUM_BAIT_MOD);
+                PersistentData.Instance.SetLargeFishCaughtLM(PersistentData.Instance.GetLargeFishCaughtLM() / LARGE_BAIT_MOD);
+            }
+
+            else if(eventNum == 3)
+            {
+                PersistentData.Instance.SetHasCastNet(false);
+            }
+
+            else if(eventNum == 4)
+            {
+                FinalizeFishAmounts();
+                PersistentData.Instance.SetSmallFishCaughtLM(0);
+                PersistentData.Instance.SetMediumFishCaughtLM(0);
+                PersistentData.Instance.SetLargeFishCaughtLM(0);
+
+            }
+            else if(eventNum == 5)
+            {
+                PersistentData.Instance.SetHasFishingBoat(false);
+            }
+        }
+        FinalizeFishAmounts();
+        FinalizePlayerMoney();
         SceneManager.LoadScene("MonthTransition");
     }
     public void AdvanceTime()
@@ -190,5 +256,28 @@ public class ButtonFunctions : MonoBehaviour
         {
             SceneManager.LoadScene("HighScores");
         }
+    }
+
+    void SubtractMoney(int cost)
+    {
+        moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(cost);
+    }
+
+    void FinalizeFishAmounts()
+    {
+        PersistentData.Instance.SetSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
+        PersistentData.Instance.SetMediumFish(PersistentData.Instance.GetMediumFishCaughtLM());
+        PersistentData.Instance.SetLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
+    }
+
+    void FinalizePlayerMoney()
+    {
+        smallFishMoney = PersistentData.Instance.GetSmallFishCaughtLM() * SMALL_FISH_SELL_PRICE;
+        mediumFishMoney = PersistentData.Instance.GetMediumFishCaughtLM() * MEDIUM_FISH_SELL_PRICE;
+        largeFishMoney = PersistentData.Instance.GetLargeFishCaughtLM() * LARGE_FISH_SELL_PRICE;
+
+        PersistentData.Instance.SetMoneyMadeLastMonth(smallFishMoney + mediumFishMoney + largeFishMoney);
+
+        moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(smallFishMoney + mediumFishMoney + largeFishMoney);
     }
 }

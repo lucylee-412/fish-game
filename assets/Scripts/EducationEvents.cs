@@ -238,9 +238,10 @@ public class EducationEvents : MonoBehaviour
             currentEvent.text = events[eventNum];
             currentEventName.text = eventNames[eventNum];
         }
+        //No event, move on to Month Transition Scene
         else if (eventTypeSelector >= 3)
         {
-            SceneManager.LoadScene("Land&Pier");
+            SceneManager.LoadScene("MonthTransition");
         }
     }
     public void ShowEducation(int eventNumber)

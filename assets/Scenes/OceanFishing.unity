@@ -3560,6 +3560,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd59b93a367b8c74dab669674d47eed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smallFishAmt: 0
+  largeFishAmt: 0
+  mediumFishAmt: 0
+  smallFishCaught: 0
+  mediumFishCaught: 0
+  largeFishCaught: 0
+  nightcrawlers: 0
+  squid: 0
+  mackrel: 0
+  moneyKeeper: {fileID: 972982832}
 --- !u!4 &2043905394
 Transform:
   m_ObjectHideFlags: 0

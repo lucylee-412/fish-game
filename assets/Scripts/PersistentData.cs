@@ -16,6 +16,10 @@ public class PersistentData : MonoBehaviour
     [SerializeField] int mediumFish;
     [SerializeField] int largeFish;
     [SerializeField] int month;
+    [SerializeField] int smallFishCaughtLastMonth;
+    [SerializeField] int mediumFishCaughtLastMonth;
+    [SerializeField] int largeFishCaughtLastMonth;
+    [SerializeField] int moneyMadeLastMonth;
 
     const int playerMoneyStart = 100000;
     const int smallFishStart = 100;
@@ -53,6 +57,11 @@ public class PersistentData : MonoBehaviour
         mediumFish = mediumFishStart;
         largeFish = largeFishStart;
         month = 5;
+
+        smallFishCaughtLastMonth = 0;
+        mediumFishCaughtLastMonth = 0;
+        largeFishCaughtLastMonth = 0;
+        moneyMadeLastMonth = 0;
     }
 
     // Update is called once per frame
@@ -176,5 +185,41 @@ public class PersistentData : MonoBehaviour
     public int GetMonth()
     {
         return month;
+    }
+
+    public void SetMoneyMadeLastMonth(int money)
+    {
+        moneyMadeLastMonth = money;
+    }
+
+    public int GetMoneyMadeLastMonth()
+    {
+        return moneyMadeLastMonth;
+    }
+
+    public void SetSmallFishCaughtLM(int smFish)
+    {
+        smallFishCaughtLastMonth = smFish;
+    }
+    public int GetSmallFishCaughtLM()
+    {
+        return smallFishCaughtLastMonth;
+    }
+    public void SetMediumFishCaughtLM(int medFish)
+    {
+        mediumFishCaughtLastMonth = medFish;
+    }
+
+    public int GetMediumFishCaughtLM()
+    {
+        return mediumFishCaughtLastMonth;
+    }
+    public void SetLargeFishCaughtLM(int largeFish)
+    {
+        largeFishCaughtLastMonth = largeFish;
+    }
+    public int GetLargeFishCaughtLM()
+    {
+        return largeFishCaughtLastMonth;
     }
 }

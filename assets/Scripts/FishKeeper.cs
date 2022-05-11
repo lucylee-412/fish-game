@@ -51,6 +51,7 @@ public class FishKeeper : MonoBehaviour
     {
         if(levelNum == FISHING_POLE_SCENE)
         {
+            //static values for now, will become RNG at later time
             smallFishCaught = 5;
             mediumFishCaught = 2;
             largeFishAmt = 1;
@@ -67,6 +68,31 @@ public class FishKeeper : MonoBehaviour
             {
                 largeFishAmt = largeFishAmt * LARGE_BAIT_MOD;
             }
+            SetFishCaughtLastMonth();
+
+        }
+        if(levelNum == CAST_NET_SCENE)
+        {
+            //static values for now, will become RNG at later time
+            smallFishCaught = 15;
+            mediumFishCaught = 10;
+            SetFishCaughtLastMonth();
+        }
+        if(levelNum == BOAT_SCENE)
+        {
+            //static values for now, will become RNG at later time
+            smallFishCaught = 10;
+            mediumFishCaught = 20;
+            largeFishCaught = 30;
+            SetFishCaughtLastMonth();
+        }
+
+
+        void SetFishCaughtLastMonth()
+        {
+            PersistentData.Instance.SetSmallFishCaughtLM(smallFishCaught);
+            PersistentData.Instance.SetMediumFishCaughtLM(mediumFishCaught);
+            PersistentData.Instance.SetLargeFishCaughtLM(largeFishCaught);
         }
     }
 }
