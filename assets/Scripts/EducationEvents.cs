@@ -32,11 +32,13 @@ public class EducationEvents : MonoBehaviour
     [SerializeField] string nonEduEventName2;
     [SerializeField] string nonEduEventName3;
     [SerializeField] string nonEduEventName4;
+    [SerializeField] string nonEduEventName5;
 
     [SerializeField] string nonEduEvent1;
     [SerializeField] string nonEduEvent2;
     [SerializeField] string nonEduEvent3;
     [SerializeField] string nonEduEvent4;
+    [SerializeField] string nonEduEvent5;
 
     [SerializeField] public GameObject eventCanvas;
     [SerializeField] public GameObject educationCanvas;
@@ -86,7 +88,7 @@ public class EducationEvents : MonoBehaviour
         eventName5 = "Nefarious Business Proposal";
 
         event1 = "As you go to claim your catch, you see a local endangered species has found its way into your possession. You know that this fish sells for $2500 for use in the aqauriums of the criminal underworld, but it is" +
-			"illegal to remove one from its local habitat. Do you keep the fish and sell it in the criminal underworld?;
+			"illegal to remove one from its local habitat. Do you keep the fish and sell it in the criminal underworld?";
         event2 = "A upcoming storm has forced all of the other so-called 'wise' fishermen inside and you experience an embarrassment of riches in the fish department. You quickly reach your limit of fish, but no one is around" +
 			" and the fish are just begging to be cause. Do you stay and keep fishing?";
         event3 = "One of your friends has a surplus of dynamite and attempts to convince you of the benefits of fishing with explosives. After hearing them out, you can clearly see that the method is effective" +
@@ -103,15 +105,15 @@ public class EducationEvents : MonoBehaviour
         eventEducation3 = "It should come as no surprise that fishing with explosives is highly destructive to a marine ecosystem. This method of fishing is more commonly seen in developing countries" +
             "and the damage caused to reefs, which are vital for a robust marine ecosystem in many parts of the world, is immense.";
         eventEducation4 = "Oil in marine ecosystems that stem from human activity can have severe consequences for a marine ecosystem in the short term. Mammals and sealife that breach the surface" +
-			"are at greatest risk of harm as the oil floats to the surface. Quick action to contain and clean man made oil spills is crucial to protecting the marine ecosystem.;
+			"are at greatest risk of harm as the oil floats to the surface. Quick action to contain and clean man made oil spills is crucial to protecting the marine ecosystem.";
         eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, as the ocean was viewed as a place of near unlimited capacity to disperse" +
 			"waste. Subsequent research would prove this assumption false and while many places have enacted measures to prevent/limit ocean dumping, international waters and 3rd world countries " +
 			"remain largely unregulated";
         didYouKnow = "Did you know?";
 
-        nonEduEventName1 = "Broken Fishing Pole"; ;
+        nonEduEventName1 = "Broken Fishing Pole"; 
         nonEduEventName2 = "Bait Stolen";
-        nonEduEventName3 = "Broken Cast Net"; ;
+        nonEduEventName3 = "Broken Cast Net"; 
         nonEduEventName4 = "Fish Spoils";
         nonEduEventName5 = "Boat Sinks";
 
@@ -124,7 +126,7 @@ public class EducationEvents : MonoBehaviour
         nonEduEvent4 = "You have a relatively fantastic day of fishing and you catch a large number of fish. You immediately daydream of the riches in store for yourself. As you pack up your equipment to" +
 			" head home for the day, you notice a funny smell coming from your fish container. To your horror, you realize you forgot to put water in the container and all the fish have spoiled in the heat (no money this month).";
         nonEduEvent5 = "Ah this is the life. Nothing but the sea, fish, and those pesky seagulls to interupt your careful introspection as you lazily steer your boat.......right into a shallow reef." +
-        " Your boat is severely damaged and sinking. Maybe it wasn't such a good idea to name the boat The Titanic 2: Electric Bugaloo. You break off a door and float on it until rescue comes.";;
+        " Your boat is severely damaged and sinking. Maybe it wasn't such a good idea to name the boat The Titanic 2: Electric Bugaloo. You break off a door and float on it until rescue comes.";
 
 
 
