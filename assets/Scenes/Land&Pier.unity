@@ -1053,6 +1053,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &933784867
 GameObject:
@@ -1226,7 +1227,7 @@ GameObject:
   - component: {fileID: 1047558657}
   m_Layer: 5
   m_Name: PlayerName
-  m_TagString: Name
+  m_TagString: PlayerInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1887,6 +1888,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &1241508029
 GameObject:
@@ -2546,6 +2548,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 1248510707}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &1882420280
 GameObject:
@@ -2805,6 +2808,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &2101228736
 GameObject:

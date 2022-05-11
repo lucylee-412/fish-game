@@ -37,7 +37,7 @@ TagManager:
   - NonEduCanvas
   - FishKeeper
   - CatchFishButton
-  - Name
+  - PlayerInput
   layers:
   - Default
   - TransparentFX

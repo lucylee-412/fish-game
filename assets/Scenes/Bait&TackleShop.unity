@@ -826,6 +826,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 1897379916}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &247490798
 GameObject:
@@ -2675,6 +2676,7 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 1897379916}
   eventController: {fileID: 0}
+  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
 --- !u!1 &936642424
 GameObject:
@@ -4119,7 +4121,7 @@ GameObject:
   - component: {fileID: 1751957877}
   m_Layer: 5
   m_Name: PlayerName
-  m_TagString: Name
+  m_TagString: PlayerInput
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
