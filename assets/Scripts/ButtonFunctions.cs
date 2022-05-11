@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject fishKeeper;
     [SerializeField] GameObject moneyKeeper;
     [SerializeField] GameObject eventController;
+    [SerializeField] TMP_InputField playerNameInput;
     [SerializeField] GameObject LandAndPierTrigger;
     int levelNum;
     int curMonth;
@@ -75,6 +78,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void PlayGame()
     {
+        string s = playerNameInput.text;
+        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Land&Pier");
 
     }
