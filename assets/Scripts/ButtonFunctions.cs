@@ -65,7 +65,6 @@ public class ButtonFunctions : MonoBehaviour
         {
             g.SetActive(true);
         }
-
         curMonth = PersistentData.Instance.GetMonth();
 
         smallFishMoney = 0;
