@@ -1050,9 +1050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
+  fishingButtons: []
 --- !u!1 &933784867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,8 +1204,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Uh Oh! It looks like you don't have any fishing equipement. Fishing with
-    your hands isn't recommended. Go Buy some equipment in the store!
+  m_Text: Uh Oh! It looks like you don't have any fishing equipment. Fishing with
+    your hands isn't recommended. Go buy some equipment in the store!
 --- !u!222 &957941378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1705,9 +1707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
+  fishingButtons: []
 --- !u!1 &1241508029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,9 +2363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 1248510707}
   eventController: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
+  fishingButtons: []
 --- !u!1 &1882420280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,9 +2623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
+  fishingButtons: []
 --- !u!1 &2101228736
 GameObject:
   m_ObjectHideFlags: 0
