@@ -9,12 +9,18 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasFishingPole;
     [SerializeField] bool hasCastNet;
     [SerializeField] bool hasFishingBoat;
+    [SerializeField] bool hasNightcrawlers;
+    [SerializeField] bool hasSquid;
+    [SerializeField] bool hasMackrel;
     [SerializeField] int smallFish;
     [SerializeField] int mediumFish;
     [SerializeField] int largeFish;
     [SerializeField] int month;
 
     const int playerMoneyStart = 100000;
+    const int smallFishStart = 100;
+    const int mediumFishStart = 100;
+    const int largeFishStart = 100;
 
     public static PersistentData Instance;
 
@@ -40,9 +46,12 @@ public class PersistentData : MonoBehaviour
         hasFishingPole = false;
         hasCastNet = false;
         hasFishingBoat = false;
-        smallFish = 100;
-        mediumFish = 100;
-        largeFish = 100;
+        hasNightcrawlers = false;
+        hasSquid = false;
+        hasMackrel = false;
+        smallFish = smallFishStart;
+        mediumFish = mediumFishStart;
+        largeFish = largeFishStart;
         month = 5;
     }
 
@@ -89,6 +98,35 @@ public class PersistentData : MonoBehaviour
     public bool GetHasCastNet()
     {
         return hasCastNet;
+    }
+
+    public void SetHasNightcrawlers(bool value)
+    {
+        hasNightcrawlers = value;
+    }
+
+    public bool GetHasNightcrawlers()
+    {
+        return hasNightcrawlers;
+    }
+    public void SetHasSquid(bool value)
+    {
+        hasSquid = value;
+    }
+
+    public bool GetHasSquid()
+    {
+        return hasSquid;
+    }
+
+    public void SetHasMackrel(bool value)
+    {
+        hasMackrel = value;
+    }
+
+    public bool GetHasMackrel()
+    {
+        return hasMackrel;
     }
     public void SetHasFishingBoat(bool value)
     {

@@ -136,8 +136,8 @@ public class EducationEvents : MonoBehaviour
             "and the damage caused to reefs, which are vital for a robust marine ecosystem in many parts of the world, is immense.";
         eventEducation4 = "Oil in marine ecosystems that stem from human activity can have severe consequences for a marine ecosystem in the short term. Mammals and sealife that breach the surface" +
 			"are at greatest risk of harm as the oil floats to the surface. Quick action to contain and clean man made oil spills is crucial to protecting the marine ecosystem.";
-        eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, as the ocean was viewed as a place of near unlimited capacity to disperse" +
-			"waste. Subsequent research would prove this assumption false and while many places have enacted measures to prevent/limit ocean dumping, international waters and 3rd world countries " +
+        eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, as the ocean was viewed as a place of near unlimited capacity to disperse " +
+			"waste. Subsequent research would prove this assumption false and while many places have enacted measures to prevent/limit ocean dumping, international waters and underdeveloped countries " +
 			"remain largely unregulated";
         didYouKnow = "Did you know?";
 

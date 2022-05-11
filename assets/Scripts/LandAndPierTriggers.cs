@@ -26,16 +26,11 @@ public class LandAndPierTriggers : MonoBehaviour
 
     private void Awake()
     {
-        if (goFishWithBoatButton == null)
-            goFishWithBoatButton = GameObject.FindGameObjectWithTag("GoBoatButton");
-        if (goFishWithNetButton == null)
-            goFishWithNetButton = GameObject.FindGameObjectWithTag("GoCastNetButton");
-        if (goFishWithPoleButton == null)
-            goFishWithPoleButton = GameObject.FindGameObjectWithTag("GoFishPoleButton");
-        if (fishingQuestion == null)
-            fishingQuestion = GameObject.FindGameObjectWithTag("FishingQuestion");
-        if (noEquipmentText == null)
-            noEquipmentText = GameObject.FindGameObjectWithTag("NoEquipmentText");
+        goFishWithBoatButton = GameObject.FindGameObjectWithTag("GoBoatButton");
+        goFishWithNetButton = GameObject.FindGameObjectWithTag("GoCastNetButton");
+        goFishWithPoleButton = GameObject.FindGameObjectWithTag("GoFishPoleButton");
+        fishingQuestion = GameObject.FindGameObjectWithTag("FishingQuestion");
+        noEquipmentText = GameObject.FindGameObjectWithTag("NoEquipmentText");
 
         //used to ensure canvas is used at least once to make sure it can be turned active or inactive
         goFishWithPoleButton.SetActive(true);

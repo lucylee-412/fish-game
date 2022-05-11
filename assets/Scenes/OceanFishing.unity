@@ -936,6 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 1971763675}
+  LandAndPierTrigger: {fileID: 0}
 --- !u!1 &471729871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1028,7 @@ GameObject:
   - component: {fileID: 581054142}
   - component: {fileID: 581054141}
   m_Layer: 5
-  m_Name: Event Title (TMP)
+  m_Name: Did You Know?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,6 +1494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 1971763675}
+  LandAndPierTrigger: {fileID: 0}
 --- !u!114 &927703980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,6 +2030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 1971763675}
+  LandAndPierTrigger: {fileID: 0}
 --- !u!1 &1250154618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,8 +2407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441200878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.82, y: -1.14, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.38, y: -1.08, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -3060,6 +3063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 1971763675}
+  LandAndPierTrigger: {fileID: 0}
 --- !u!1 &1846759251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,6 +3283,7 @@ MonoBehaviour:
   currentEventName: {fileID: 1614315759}
   currentEvent: {fileID: 935172680}
   didYouKnowTMP: {fileID: 581054141}
+  currentEducation: {fileID: 2025191548}
   currentNonEduName: {fileID: 39621573}
   currentNonEdu: {fileID: 914700847}
   eventTypeSelector: 0
@@ -3526,3 +3531,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025191546}
   m_CullTransparentMesh: 1
+--- !u!1 &2043905392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043905394}
+  - component: {fileID: 2043905393}
+  m_Layer: 0
+  m_Name: FishKeeper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2043905393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043905392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd59b93a367b8c74dab669674d47eed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2043905394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043905392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.3933883, y: -0.5443711, z: -44.99249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

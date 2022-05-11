@@ -14,7 +14,9 @@ public class ButtonFunctions : MonoBehaviour
     const int squidCost = 2500;
     const int mackrelCost = 5000;
     [SerializeField] GameObject eventController;
+    [SerializeField] GameObject LandAndPierTrigger;
     int levelNum;
+    int curMonth;
     //[SerializeField] InputField playerNameInput;
 
 
@@ -31,6 +33,11 @@ public class ButtonFunctions : MonoBehaviour
         {
             eventController = GameObject.FindGameObjectWithTag("Event Trigger");
         }
+        if (LandAndPierTrigger == null)
+        {
+            LandAndPierTrigger = GameObject.FindGameObjectWithTag("PierFishingSpot");
+        }
+        curMonth = PersistentData.Instance.GetMonth();
     }
 
     // Update is called once per frame
@@ -98,16 +105,19 @@ public class ButtonFunctions : MonoBehaviour
 
     public void GoFishingWithPole()
     {
+        LandAndPierTrigger.GetComponent<LandAndPierTriggers>().SetAllButtonsFalse();
         SceneManager.LoadScene("FishingPole");
     }
 
     public void GoFishingWithCastNet()
     {
+        LandAndPierTrigger.GetComponent<LandAndPierTriggers>().SetAllButtonsFalse();
         SceneManager.LoadScene("CastNet");
     }
 
     public void GoFishingOnOcean()
     {
+        LandAndPierTrigger.GetComponent<LandAndPierTriggers>().SetAllButtonsFalse();
         SceneManager.LoadScene("OceanFishing");
     }
 
@@ -171,6 +181,14 @@ public class ButtonFunctions : MonoBehaviour
     }
     public void AdvanceTime()
     {
-        SceneManager.LoadScene("Land&Pier");
+        if(curMonth < 12)
+        {
+            PersistentData.Instance.SetMonth(curMonth + 1);
+            SceneManager.LoadScene("Land&Pier");
+        }
+        else
+        {
+            SceneManager.LoadScene("HighScores");
+        }
     }
 }
