@@ -113,13 +113,55 @@ public class ButtonFunctions : MonoBehaviour
 
     public void AcceptEvent()
     {
-        int eventNum = eventController.GetComponent<EducationEvents>().eventNum;
+        int eventNum = eventController.GetComponent<EducationEvents>().GetEventNum();
+
+        //below we will need to populate effects to events
         if(eventNum == 1)
         {
-            PersistentData.Instance.SetHasFishingPole(false);
-            eventController.GetComponent<EducationEvents>().eventCanvas.SetActive(false);
-            eventController.GetComponent<EducationEvents>().educationCanvas.SetActive(true);
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 2)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 3)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 4)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 5)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+    }
 
+    public void DeclineEvent()
+    {
+        int eventNum = eventController.GetComponent<EducationEvents>().GetEventNum();
+
+        //below we will need to populate effects to events
+        if (eventNum == 1)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 2)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 3)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 4)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+        }
+        else if (eventNum == 5)
+        {
+            eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
         }
     }
 

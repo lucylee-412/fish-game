@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class EducationEvents : MonoBehaviour
@@ -11,6 +12,8 @@ public class EducationEvents : MonoBehaviour
     Dictionary<int, string> eventNames;
     Dictionary<int, string> eventEducation;
     Dictionary<int, string> nonEduEvents;
+    Dictionary<int, string> nonEduEventNames;
+
     [SerializeField] string eventName1;
     [SerializeField] string eventName2; 
     [SerializeField] string eventName3;
@@ -42,10 +45,22 @@ public class EducationEvents : MonoBehaviour
 
     [SerializeField] public GameObject eventCanvas;
     [SerializeField] public GameObject educationCanvas;
+    [SerializeField] public GameObject nonEduCanvas;
     [SerializeField] TMP_Text currentEventName;
     [SerializeField] TMP_Text currentEvent;
+    [SerializeField] TMP_Text didYouKnowTMP;
+    [SerializeField] TMP_Text currentEducation;
+    [SerializeField] TMP_Text currentNonEduName;
+    [SerializeField] TMP_Text currentNonEdu;
 
-    public int eventNum;
+    public static int eventNum;
+    public static bool isNonEduEvent;
+    public int eventTypeSelector;
+    public int levelNum;
+
+    const int FISHING_POLE_SCENE = 4;
+    const int CAST_NET_SCENE = 5;
+    const int BOAT_SCENE = 6;
 
 
 
@@ -53,7 +68,11 @@ public class EducationEvents : MonoBehaviour
     {
         eventNames = new Dictionary<int, string>();
         events = new Dictionary<int, string>();
-        if(eventCanvas == null)
+        eventEducation = new Dictionary<int, string>();
+        nonEduEvents = new Dictionary<int, string>(); ;
+        nonEduEventNames = new Dictionary<int, string>();
+
+        if (eventCanvas == null)
         {
             eventCanvas = GameObject.FindGameObjectWithTag("EventCanvas");
         }
@@ -61,8 +80,14 @@ public class EducationEvents : MonoBehaviour
         {
             educationCanvas = GameObject.FindGameObjectWithTag("EducationalCanvas");
         }
+        if (nonEduCanvas == null)
+        {
+            nonEduCanvas = GameObject.FindGameObjectWithTag("NonEduCanvas");
+        }
         eventCanvas.SetActive(true);
         educationCanvas.SetActive(true);
+        nonEduCanvas.SetActive(true);
+
     }
     // Start is called before the first frame update
     void Start()
@@ -71,6 +96,11 @@ public class EducationEvents : MonoBehaviour
         populateDictionaries();
         eventCanvas.SetActive(false);
         educationCanvas.SetActive(false);
+        nonEduCanvas.SetActive(false);
+        levelNum = SceneManager.GetActiveScene().buildIndex;
+
+        eventNum = 0;
+        isNonEduEvent = false;
     }
 
     // Update is called once per frame
@@ -82,7 +112,7 @@ public class EducationEvents : MonoBehaviour
     void populateStrings()
     {
         eventName1 = "Illegal Fish Caught";
-        eventName2 = "Fishing Limit Reahed";
+        eventName2 = "Fishing Limit Reached";
         eventName3 = "Fishing with Explosives!";
         eventName4 = "Oil Spill";
         eventName5 = "Nefarious Business Proposal";
@@ -95,8 +125,8 @@ public class EducationEvents : MonoBehaviour
 			"and you can turn a quick profit of $10,000 in one month. Do you want to fish with explosives?";
         event4 = "An oil tanker owned by 'TotallyNotTheBadGuys Petroleum' has hit a reef and caused a devastating oil spill. The local authorities are calling all able boats to help in the cleanup effort" +
             " Will you answer the call (lose out on catching any fish this month)?";
-        event5 = "A local business man that claims he is 'totally on the up and up' offers you $10,000 dollars to head out to see and drop 'a totally harmless' package deep out at sea." +
-            "The money is far more than you can make fishing, and the oceans a big place, right? What do you do?";
+        event5 = "A local business man that claims he is 'totally on the up and up' offers you $10,000 dollars to head out to the deep ocean and drop 'a totally harmless' package deep out at sea." +
+            "The money is far more than you can make fishing in one month and the oceans a big place, right? What do you do?";
 
         eventEducation1 = "Many fish are protected by various government agencies all over the globe. Taking fish directly from reefs for use in aquariums can be harmful to a marine population if left" +
 			"unregulated. Punishments for keeping protected fish range from fines to jail time in extreme cases.";
@@ -128,9 +158,6 @@ public class EducationEvents : MonoBehaviour
         nonEduEvent5 = "Ah this is the life. Nothing but the sea, fish, and those pesky seagulls to interupt your careful introspection as you lazily steer your boat.......right into a shallow reef." +
         " Your boat is severely damaged and sinking. Maybe it wasn't such a good idea to name the boat The Titanic 2: Electric Bugaloo. You break off a door and float on it until rescue comes.";
 
-
-
-
     }
     void populateDictionaries()
     {
@@ -145,13 +172,95 @@ public class EducationEvents : MonoBehaviour
         eventNames.Add(3, eventName3);
         eventNames.Add(4, eventName4);
         eventNames.Add(5, eventName5);
+
+        nonEduEvents.Add(1, nonEduEvent1);
+        nonEduEvents.Add(2, nonEduEvent2);
+        nonEduEvents.Add(3, nonEduEvent3);
+        nonEduEvents.Add(4, nonEduEvent4);
+        nonEduEvents.Add(5, nonEduEvent5);
+
+        nonEduEventNames.Add(1, nonEduEventName1);
+        nonEduEventNames.Add(2, nonEduEventName2);
+        nonEduEventNames.Add(3, nonEduEventName3);
+        nonEduEventNames.Add(4, nonEduEventName4);
+        nonEduEventNames.Add(5, nonEduEventName5);
+
+        eventEducation.Add(1, eventEducation1);
+        eventEducation.Add(2, eventEducation2);
+        eventEducation.Add(3, eventEducation3);
+        eventEducation.Add(4, eventEducation4);
+        eventEducation.Add(5, eventEducation5);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        eventNum = Random.Range(1, 1);
-        eventCanvas.SetActive(true);
-        currentEvent.text = events[eventNum];
-        currentEventName.text = eventNames[eventNum];
+        //used to select event type (1 = nonEduEvent, 2 = eduEvent, 3 or 4 = noEvent)
+        eventTypeSelector = Random.Range(1, 4);
+
+        if (eventTypeSelector == 1)
+        {
+            isNonEduEvent = true;
+            if(levelNum == FISHING_POLE_SCENE)
+            {
+                do
+                {
+                    eventNum = Random.Range(1, 5);
+                } while (eventNum == 3);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum]; 
+
+            }
+            else if (levelNum == CAST_NET_SCENE)
+            {
+                eventNum = Random.Range(2, 5);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum];
+            }
+            else if(levelNum == BOAT_SCENE)
+            {
+                do
+                {
+                    eventNum = Random.Range(2, 6);
+                } while (eventNum == 3);
+                nonEduCanvas.SetActive(true);
+                currentNonEduName.text = nonEduEventNames[eventNum];
+                currentNonEdu.text = nonEduEvents[eventNum];
+            }
+
+        }
+        else if (eventTypeSelector == 2)
+        {
+            //used to select event from range
+            eventNum = Random.Range(1, 6);
+            eventCanvas.SetActive(true);
+            currentEvent.text = events[eventNum];
+            currentEventName.text = eventNames[eventNum];
+        }
+        else if (eventTypeSelector >= 3)
+        {
+            SceneManager.LoadScene("Land&Pier");
+        }
     }
+    public void ShowEducation(int eventNumber)
+    {
+        eventNum = eventNumber;
+        eventCanvas.SetActive(false);
+        educationCanvas.SetActive(true);
+        currentEducation.text = eventEducation[eventNum];
+        didYouKnowTMP.text = didYouKnow;
+    }
+
+
+    public int GetEventNum()
+    {
+        return eventNum;
+    }
+    public bool GetIsNonEduEvent()
+    {
+        return isNonEduEvent;
+    }
+
+ 
 }
