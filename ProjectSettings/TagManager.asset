@@ -35,6 +35,7 @@ TagManager:
   - EventCanvas
   - EducationalCanvas
   - NonEduCanvas
+  - FishKeeper
   layers:
   - Default
   - TransparentFX

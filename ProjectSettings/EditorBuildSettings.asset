@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OceanFishing.unity
     guid: eeffd720404621e4db0f28fc7e21f93c
+  - enabled: 1
+    path: Assets/Scenes/MonthTransition.unity
+    guid: c458eb7350c23a644a5a7032d6000970
   m_configObjects: {}

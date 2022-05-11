@@ -167,6 +167,10 @@ public class ButtonFunctions : MonoBehaviour
 
     public void OkEvent()
     {
+        SceneManager.LoadScene("MonthTransition");
+    }
+    public void AdvanceTime()
+    {
         SceneManager.LoadScene("Land&Pier");
     }
 }
