@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class MoneyKeeper : MonoBehaviour
 {
     [SerializeField] int currentMoney;
+    [SerializeField] string currentName;
     [SerializeField] Text moneyTxt;
-
-    //[SerializeField] Text nameTxt;
+    [SerializeField] Text nameTxt;
+    
     // Start is called before the first frame update
     void Start()
     {
         currentMoney = PersistentData.Instance.GetMoney();
+        currentName = PersistentData.Instance.GetName();
         moneyTxt.text = "Money: $" + currentMoney;
+        nameTxt.text = "Player: " + currentName;
     }
 
     // Update is called once per frame
@@ -25,11 +28,11 @@ public class MoneyKeeper : MonoBehaviour
     {
         moneyTxt.text = "Money: $" + PersistentData.Instance.GetMoney();
     }
-    /*
+    
     public void DisplayName()
     {
-        nameTxt.text = "Hi, " + PersistentData.Instance.GetName();
-    }*/
+        nameTxt.text = "Player " + PersistentData.Instance.GetName();
+    }
     public void AddMoney(int m)
     {
         currentMoney += m;

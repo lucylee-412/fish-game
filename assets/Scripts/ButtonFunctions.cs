@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,6 +25,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject fishKeeper;
     [SerializeField] GameObject moneyKeeper;
     [SerializeField] GameObject eventController;
+    [SerializeField] TMP_InputField playerNameInput;
     [SerializeField] GameObject LandAndPierTrigger;
     [SerializeField] GameObject[] fishingButtons;
     int levelNum;
@@ -86,6 +88,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void PlayGame()
     {
+        string s = playerNameInput.text;
+        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Land&Pier");
 
     }
