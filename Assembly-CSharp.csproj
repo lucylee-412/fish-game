@@ -691,6 +691,7 @@
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
  <HintPath>C:/Users/douat/OneDrive/Pictures/Documents/GitHub/fish-game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
@@ -780,6 +781,8 @@
  <Reference Include="Unity.2D.SpriteShape.Runtime">
  <HintPath>C:/Users/douat/OneDrive/Pictures/Documents/GitHub/fish-game/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
 =======
+=======
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
  <HintPath>C:/Users/april/Documents/fish-game/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
@@ -868,7 +871,10 @@
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
  <HintPath>C:/Users/april/Documents/fish-game/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
  </Reference>
   </ItemGroup>
   <ItemGroup>

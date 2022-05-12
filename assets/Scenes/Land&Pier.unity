@@ -1950,10 +1950,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMoney: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   currentName: 
   moneyTxt: {fileID: 1659784604}
   nameTxt: {fileID: 1909653161}
 =======
+=======
+  currentName: 
+  moneyTxt: {fileID: 1659784604}
+  nameTxt: {fileID: 1909653161}
+
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
   curMonth: 0
   moneyTxt: {fileID: 925149921}
   monthTxt: {fileID: 1356349265}
@@ -2091,7 +2098,11 @@ RectTransform:
   m_AnchoredPosition: {x: 167.5, y: 202}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
 --- !u!1 &1394351602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,12 +2369,22 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1659784603}
   - {fileID: 1909653163}
 =======
   - {fileID: 925149919}
   - {fileID: 1356349267}
 >>>>>>> main
+=======
+
+  - {fileID: 1659784603}
+  - {fileID: 1909653163}
+
+  - {fileID: 925149919}
+  - {fileID: 1356349267}
+
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

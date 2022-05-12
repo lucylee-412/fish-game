@@ -827,9 +827,13 @@ MonoBehaviour:
   moneyKeeper: {fileID: 1897379916}
   eventController: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   playerNameInput: {fileID: 0}
 =======
 >>>>>>> main
+=======
+  playerNameInput: {fileID: 0}
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
   LandAndPierTrigger: {fileID: 0}
   fishingButtons: []
 --- !u!1 &247490798
@@ -2735,10 +2739,15 @@ RectTransform:
   - {fileID: 1053747290}
   - {fileID: 523570860}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 834890613}
   - {fileID: 1671034412}
 =======
 >>>>>>> main
+=======
+  - {fileID: 834890613}
+  - {fileID: 1671034412}
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2763,9 +2772,13 @@ MonoBehaviour:
   moneyKeeper: {fileID: 1897379916}
   eventController: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   playerNameInput: {fileID: 0}
 =======
 >>>>>>> main
+=======
+  playerNameInput: {fileID: 0}
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
   LandAndPierTrigger: {fileID: 0}
   fishingButtons: []
 --- !u!1 &936642424
@@ -4276,6 +4289,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 1610392841}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1671034409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,6 +4371,9 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 =======
 >>>>>>> main
+=======
+
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
 --- !u!1 &1734554763
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,6 +4942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMoney: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   currentName: 
   moneyTxt: {fileID: 1671034410}
   nameTxt: {fileID: 834890614}
@@ -4933,6 +4951,15 @@ MonoBehaviour:
   moneyTxt: {fileID: 1286137707}
   monthTxt: {fileID: 2089711286}
 >>>>>>> main
+=======
+  currentName: 
+  moneyTxt: {fileID: 1671034410}
+  nameTxt: {fileID: 834890614}
+
+  curMonth: 0
+  moneyTxt: {fileID: 1286137707}
+  monthTxt: {fileID: 2089711286}
+>>>>>>> 5aa05395114d8c3a62880c55593572dfec04b1b6
 --- !u!4 &1897379919
 Transform:
   m_ObjectHideFlags: 0
