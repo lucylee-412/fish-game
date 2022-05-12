@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -25,9 +25,9 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject fishKeeper;
     [SerializeField] GameObject moneyKeeper;
     [SerializeField] GameObject eventController;
-    [SerializeField] TMP_InputField playerNameInput;
     [SerializeField] GameObject LandAndPierTrigger;
     [SerializeField] GameObject[] fishingButtons;
+    [SerializeField] TMP_InputField playerNameInput;
     int levelNum;
     int curMonth;
     //[SerializeField] InputField playerNameInput;
@@ -35,7 +35,7 @@ public class ButtonFunctions : MonoBehaviour
     const int SMALL_BAIT_MOD = 2;
     const int MEDIUM_BAIT_MOD = 2;
     const int LARGE_BAIT_MOD = 4;
-
+    
 
     // Start is called before the first frame update
     void Start()
