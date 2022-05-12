@@ -303,7 +303,7 @@ public class ButtonFunctions : MonoBehaviour
         PersistentData.Instance.SetMoneyMadeLastMonth(smallFishMoney + mediumFishMoney + largeFishMoney);
 
         int curMoney = PersistentData.Instance.GetMoney();
-        PersistentData.Instance.SetMoney(curMoney - (smallFishMoney + mediumFishMoney + largeFishMoney));
+        PersistentData.Instance.SetMoney(curMoney + (smallFishMoney + mediumFishMoney + largeFishMoney));
     }
 
     public void StartEvents()
