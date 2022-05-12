@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonFunctions : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject eventController;
     [SerializeField] GameObject LandAndPierTrigger;
     [SerializeField] GameObject[] fishingButtons;
+    [SerializeField] TMP_InputField playerNameInput;
     int levelNum;
     int curMonth;
     //[SerializeField] InputField playerNameInput;
@@ -33,7 +35,7 @@ public class ButtonFunctions : MonoBehaviour
     const int SMALL_BAIT_MOD = 2;
     const int MEDIUM_BAIT_MOD = 2;
     const int LARGE_BAIT_MOD = 4;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +87,8 @@ public class ButtonFunctions : MonoBehaviour
 
     public void PlayGame()
     {
+        string s = playerNameInput.text;
+        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Land&Pier");
 
     }

@@ -38,6 +38,7 @@ TagManager:
   - FishKeeper
   - CatchFishButton
   - AtFishingSpotButtons
+  - Name Amt
   layers:
   - Default
   - TransparentFX

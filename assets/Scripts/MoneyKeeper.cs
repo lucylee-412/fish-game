@@ -7,6 +7,10 @@ using TMPro;
 public class MoneyKeeper : MonoBehaviour
 {
     [SerializeField] int currentMoney;
+    [SerializeField] Text moneyTxt;
+    [SerializeField] string currentName;
+    [SerializeField] Text nameTxt;
+    
     [SerializeField] int curMonth;
     [SerializeField] TMP_Text moneyTxt;
     [SerializeField] TMP_Text monthTxt;
@@ -17,7 +21,9 @@ public class MoneyKeeper : MonoBehaviour
     {
         currentMoney = PersistentData.Instance.GetMoney();
         curMonth = PersistentData.Instance.GetMonth();
-        moneyTxt.text = "Money: $" + currentMoney;
+        moneyTxt.text = "Money: $" + currentMoney();
+        currentName = PersistentData.Instance.GetName();
+        nameTxt.text = "Player: " + currentName;
         monthTxt.text = "Month: " + curMonth;
     }
 
@@ -30,11 +36,11 @@ public class MoneyKeeper : MonoBehaviour
     {
         moneyTxt.text = "Money: $" + PersistentData.Instance.GetMoney();
     }
-    /*
+    
     public void DisplayName()
     {
-        nameTxt.text = "Hi, " + PersistentData.Instance.GetName();
-    }*/
+        nameTxt.text = "Player: " + PersistentData.Instance.GetName();
+    }
     public void AddMoney(int m)
     {
         currentMoney += m;
