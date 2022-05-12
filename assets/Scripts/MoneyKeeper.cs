@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MoneyKeeper : MonoBehaviour
 {
@@ -10,13 +11,20 @@ public class MoneyKeeper : MonoBehaviour
     [SerializeField] string currentName;
     [SerializeField] Text nameTxt;
     
+    [SerializeField] int curMonth;
+    [SerializeField] TMP_Text moneyTxt;
+    [SerializeField] TMP_Text monthTxt;
+
+    //[SerializeField] Text nameTxt;
     // Start is called before the first frame update
     void Start()
     {
         currentMoney = PersistentData.Instance.GetMoney();
-        moneyTxt.text = "Money: $" + currentMoney;
+        curMonth = PersistentData.Instance.GetMonth();
+        moneyTxt.text = "Money: $" + currentMoney();
         currentName = PersistentData.Instance.GetName();
         nameTxt.text = "Player: " + currentName;
+        monthTxt.text = "Month: " + curMonth;
     }
 
     // Update is called once per frame
