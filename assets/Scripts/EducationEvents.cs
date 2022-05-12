@@ -94,9 +94,9 @@ public class EducationEvents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (okEvent = null)
+        if (okEvent == null)
         {
-            okEvent = GameObject.FindGameObjectWithTag("Game Controller");
+            okEvent = GameObject.FindGameObjectWithTag("GameController");
         }
 
         populateStrings();
@@ -201,7 +201,7 @@ public class EducationEvents : MonoBehaviour
 
     public void StartEvents()
     {
-        eventTypeSelector = Random.Range(1, 4);
+        eventTypeSelector = Random.Range(1, 5);
 
         if (eventTypeSelector == 1)
         {

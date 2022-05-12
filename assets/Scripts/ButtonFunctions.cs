@@ -25,6 +25,7 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject moneyKeeper;
     [SerializeField] GameObject eventController;
     [SerializeField] GameObject LandAndPierTrigger;
+    [SerializeField] GameObject[] fishingButtons;
     int levelNum;
     int curMonth;
     //[SerializeField] InputField playerNameInput;
@@ -54,6 +55,15 @@ public class ButtonFunctions : MonoBehaviour
         if(fishKeeper == null)
         {
             fishKeeper = GameObject.FindGameObjectWithTag("FishKeeper");
+        }
+        if(fishingButtons == null)
+        {
+            fishingButtons = GameObject.FindGameObjectsWithTag("AtFishingSpotButtons");
+        }
+
+        foreach(GameObject g in fishingButtons)
+        {
+            g.SetActive(true);
         }
         curMonth = PersistentData.Instance.GetMonth();
 
@@ -296,5 +306,19 @@ public class ButtonFunctions : MonoBehaviour
     {
         fishKeeper.GetComponent<FishKeeper>().CatchFish();
         eventController.GetComponent<EducationEvents>().StartEvents();
+    }
+
+    public void GoBack()
+    {
+        SceneManager.LoadScene("Land&Pier");
+    }
+
+    public void StartFishing()
+    {
+        foreach(GameObject g in fishingButtons)
+        {
+            g.SetActive(false);
+        }
+        StartEvents();
     }
 }
