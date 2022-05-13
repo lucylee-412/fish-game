@@ -9,9 +9,8 @@ public class MoneyKeeper : MonoBehaviour
     [SerializeField] int currentMoney;
     //[SerializeField] Text moneyTxt;
     [SerializeField] string currentName;
-    [SerializeField] Text nameTxt;
-    
     [SerializeField] int curMonth;
+    [SerializeField] TMP_Text nameTxt;
     [SerializeField] TMP_Text moneyTxt;
     [SerializeField] TMP_Text monthTxt;
 
@@ -21,8 +20,8 @@ public class MoneyKeeper : MonoBehaviour
     {
         currentMoney = PersistentData.Instance.GetMoney();
         curMonth = PersistentData.Instance.GetMonth();
-        moneyTxt.text = "Money: $" + currentMoney;
         currentName = PersistentData.Instance.GetName();
+        moneyTxt.text = "Money: $" + currentMoney;
         nameTxt.text = "Player: " + currentName;
         monthTxt.text = "Month: " + curMonth;
     }
