@@ -14,16 +14,22 @@ public class PauseResumeMenu : MonoBehaviour
 
 
 
-
-    void Start()
+    void Awake()
     {
-        
         pauseMode = GameObject.FindGameObjectsWithTag("Pause Mode");
         playMode = GameObject.FindGameObjectsWithTag("Play Mode");
-        foreach(GameObject g in playMode)
+        foreach (GameObject g in playMode)
         {
             g.SetActive(true);
         }
+        foreach (GameObject g in pauseMode)
+        {
+            g.SetActive(true);
+        }
+    }
+    void Start()
+    {
+        
         foreach (GameObject g in pauseMode)
         {
             g.SetActive(false);

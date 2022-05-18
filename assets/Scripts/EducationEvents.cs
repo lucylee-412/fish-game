@@ -244,7 +244,7 @@ public class EducationEvents : MonoBehaviour
         }
         else if (eventTypeSelector == 2)
         {
-            //used to select event from range
+            //used to select event from range CHANGED FOR TESTING
             eventNum = Random.Range(4, 6);
             eventCanvas.SetActive(true);
             currentEvent.text = events[eventNum];
