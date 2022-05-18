@@ -42,6 +42,7 @@ TagManager:
   - smallFish
   - mediumFish
   - largeFish
+  - fishSpawner
   layers:
   - Default
   - TransparentFX
