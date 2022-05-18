@@ -39,6 +39,9 @@ TagManager:
   - CatchFishButton
   - AtFishingSpotButtons
   - Name Amt
+  - smallFish
+  - mediumFish
+  - largeFish
   layers:
   - Default
   - TransparentFX
