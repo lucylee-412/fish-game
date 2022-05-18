@@ -43,6 +43,7 @@ public class EducationEvents : MonoBehaviour
     [SerializeField] string nonEduEvent4;
     [SerializeField] string nonEduEvent5;
 
+    [SerializeField] public GameObject moneykeeper;
     [SerializeField] public GameObject eventCanvas;
     [SerializeField] public GameObject educationCanvas;
     [SerializeField] public GameObject nonEduCanvas;
@@ -94,6 +95,10 @@ public class EducationEvents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(moneykeeper == null)
+        {
+            moneykeeper = GameObject.FindGameObjectWithTag("GameController");
+        }
         if (okEvent == null)
         {
             okEvent = GameObject.FindGameObjectWithTag("GameController");
@@ -127,7 +132,7 @@ public class EducationEvents : MonoBehaviour
         event1 = "As you go to claim your catch, you see a local endangered species has found its way into your possession. You know that this fish sells for $2500 for use in the aqauriums of the criminal underworld, but it is" +
 			"illegal to remove one from its local habitat. Do you keep the fish and sell it in the criminal underworld?";
         event2 = "A upcoming storm has forced all of the other so-called 'wise' fishermen inside and you experience an embarrassment of riches in the fish department. You quickly reach your limit of fish, but no one is around" +
-			" and the fish are just begging to be cause. Do you stay and keep fishing?";
+			" and the fish are just begging to be cause. Do you stay and keep fishing? (+ $5000)";
         event3 = "One of your friends has a surplus of dynamite and attempts to convince you of the benefits of fishing with explosives. After hearing them out, you can clearly see that the method is effective" +
 			"and you can turn a quick profit of $10,000 in one month. Do you want to fish with explosives?";
         event4 = "An oil tanker owned by 'TotallyNotTheBadGuys Petroleum' has hit a reef and caused a devastating oil spill. The local authorities are calling all able boats to help in the cleanup effort" +
@@ -201,7 +206,8 @@ public class EducationEvents : MonoBehaviour
 
     public void StartEvents()
     {
-        eventTypeSelector = Random.Range(1, 5);
+        //changed for testing
+        eventTypeSelector = Random.Range(2 , 2 );
 
         if (eventTypeSelector == 1)
         {
@@ -239,7 +245,7 @@ public class EducationEvents : MonoBehaviour
         else if (eventTypeSelector == 2)
         {
             //used to select event from range
-            eventNum = Random.Range(1, 6);
+            eventNum = Random.Range(4, 6);
             eventCanvas.SetActive(true);
             currentEvent.text = events[eventNum];
             currentEventName.text = eventNames[eventNum];

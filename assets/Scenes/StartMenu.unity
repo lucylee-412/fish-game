@@ -244,9 +244,9 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
-  playerNameInput: {fileID: 0}
   LandAndPierTrigger: {fileID: 0}
   fishingButtons: []
+  playerNameInput: {fileID: 0}
 --- !u!114 &231555732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,9 +1477,9 @@ MonoBehaviour:
   fishKeeper: {fileID: 0}
   moneyKeeper: {fileID: 0}
   eventController: {fileID: 0}
-  playerNameInput: {fileID: 354882535}
   LandAndPierTrigger: {fileID: 0}
   fishingButtons: []
+  playerNameInput: {fileID: 354882535}
 --- !u!114 &1594880631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,8 +1996,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

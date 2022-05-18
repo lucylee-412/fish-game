@@ -176,23 +176,34 @@ public class ButtonFunctions : MonoBehaviour
         //below we will need to populate effects to events
         if(eventNum == 1)
         {
+            moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(2500);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //50% chance of being caught when back to land scene
         }
         else if (eventNum == 2)
         {
+            moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(5000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //50% chance of being caught when back to land scene
         }
         else if (eventNum == 3)
         {
+            moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(10000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //reduce all fish populations by 50%
         }
         else if (eventNum == 4)
         {
+            PersistentData.Instance.ZeroFishCaughtLM();
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //reduce all fish populations by 10%
+
         }
         else if (eventNum == 5)
         {
+            moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(10000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //reduce all fish populations by 75%
         }
     }
 
@@ -283,9 +294,9 @@ public class ButtonFunctions : MonoBehaviour
 
     void FinalizeFishAmounts()
     {
-        PersistentData.Instance.SetSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
-        PersistentData.Instance.SetMediumFish(PersistentData.Instance.GetMediumFishCaughtLM());
-        PersistentData.Instance.SetLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
+        PersistentData.Instance.AddToSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
+        PersistentData.Instance.AddToMedFish(PersistentData.Instance.GetMediumFishCaughtLM());
+        PersistentData.Instance.AddToLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
 
         //set bait to 0
         PersistentData.Instance.SetHasNightcrawlers(false);
@@ -324,5 +335,11 @@ public class ButtonFunctions : MonoBehaviour
             g.SetActive(false);
         }
         StartEvents();
+    }
+    public void ZeroFishThisMonth()
+    {
+        PersistentData.Instance.SetLargeFishCaughtLM(0);
+        PersistentData.Instance.SetMediumFishCaughtLM(0);
+        PersistentData.Instance.SetSmallFishCaughtLM(0);
     }
 }

@@ -21,9 +21,9 @@ public class PersistentData : MonoBehaviour
     [SerializeField] int largeFishCaughtLastMonth;
     [SerializeField] int moneyMadeLastMonth;
 
-    const int playerMoneyStart = 2000;
-    const int smallFishStart = 100;
-    const int mediumFishStart = 100;
+    const int playerMoneyStart = 100000;
+    const int smallFishStart = 250;
+    const int mediumFishStart = 150;
     const int largeFishStart = 100;
 
     public static PersistentData Instance;
@@ -222,4 +222,59 @@ public class PersistentData : MonoBehaviour
     {
         return largeFishCaughtLastMonth;
     }
+    public void SubtractFromSmallFish(int amt)
+    {
+        if(smallFish - amt > 0)
+        {
+            smallFish -= amt;
+        }
+        else
+        {
+            SetSmallFish(0);
+        }
+    }
+    public void AddToSmallFish(int amt)
+    {
+        smallFish += amt;
+    }
+
+    public void SubtractFromMedFish(int amt)
+    {
+        if (mediumFish - amt > 0)
+        {
+            mediumFish -= amt;
+        }
+        else
+        {
+            mediumFish = 0;
+        }
+    }
+    public void AddToMedFish(int amt)
+    {
+        mediumFish += amt;
+    }
+    public void SubtractFromLargeFish(int amt)
+    {
+        if (largeFish - amt > 0)
+        {
+            largeFish -= amt;
+        }
+        else
+        {
+            largeFish = 0;
+        }
+    }
+    public void AddToLargeFish(int amt)
+    {
+        largeFish += amt;
+    }
+
+    public void ZeroFishCaughtLM()
+    {
+        smallFishCaughtLastMonth = 0;
+        mediumFishCaughtLastMonth = 0;
+        largeFishCaughtLastMonth = 0;
+    }
+
+
 }
