@@ -43,12 +43,12 @@ public class PauseResumeMenu : MonoBehaviour
         {
             AudioListener.volume = 0.0f; // Mute audio on pause
         }
-
         else
         {
             AudioListener.volume = 1.0f;
         }
     }
+
     public void Resume()
     {
         // Re-enable play mode
