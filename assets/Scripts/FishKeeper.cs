@@ -55,9 +55,9 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == FISHING_POLE_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 20;
-            mediumFishCaught = 2;
-            largeFishAmt = 1;
+            smallFishCaught = Random.Range(1,20);
+            mediumFishCaught = Random.Range(1,10);
+            largeFishAmt = Random.Range(1, 5);
 
             if (nightcrawlers)
             {
@@ -77,8 +77,9 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == CAST_NET_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 10;
-            mediumFishCaught = 4;
+            smallFishCaught = Random.Range(1, 15);
+            mediumFishCaught = Random.Range(1, 10);
+            largeFishAmt = Random.Range(1, 2);
             if (nightcrawlers)
             {
                 smallFishCaught = smallFishCaught * SMALL_BAIT_MOD;
@@ -92,9 +93,9 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == BOAT_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 5;
-            mediumFishCaught = 6;
-            largeFishCaught = 8;
+            smallFishCaught = Random.Range(1, 10);
+            mediumFishCaught = Random.Range(1, 10);
+            largeFishCaught = Random.Range(1, 10);
 
             if (nightcrawlers)
             {

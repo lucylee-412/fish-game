@@ -200,6 +200,7 @@ public class ButtonFunctions : MonoBehaviour
             PersistentData.Instance.ZeroFishCaughtLM();
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
             //reduce all fish populations by 10%
+            ReduceFishByPercent(.10f);
 
         }
         else if (eventNum == 5)
@@ -207,6 +208,7 @@ public class ButtonFunctions : MonoBehaviour
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(10000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
             //reduce all fish populations by 75%
+            ReduceFishByPercent(.75f);
         }
     }
 
@@ -360,5 +362,14 @@ public class ButtonFunctions : MonoBehaviour
         PersistentData.Instance.AddToSmallFish(smallFishNaturalIncrease);
         PersistentData.Instance.AddToMedFish(mediumFishNaturalIncrease);
         PersistentData.Instance.AddToLargeFish(largeFishNaturalIncrease);
+    }
+    public void ReduceFishByPercent(float percentage)
+    {
+        int smallFish = PersistentData.Instance.GetSmallFish();
+        int mediumFish = PersistentData.Instance.GetMediumFish();
+        int largeFish = PersistentData.Instance.GetLargeFish();
+        PersistentData.Instance.SubtractFromSmallFish((int)(smallFish * percentage));
+        PersistentData.Instance.SubtractFromMedFish((int)(mediumFish * percentage));
+        PersistentData.Instance.SubtractFromLargeFish((int)(largeFish * percentage));
     }
 }
