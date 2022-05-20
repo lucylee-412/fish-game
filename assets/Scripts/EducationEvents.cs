@@ -87,6 +87,10 @@ public class EducationEvents : MonoBehaviour
         {
             nonEduCanvas = GameObject.FindGameObjectWithTag("NonEduCanvas");
         }
+        //if (okEvent == null)
+        //{
+         //   okEvent = GameObject.FindGameObjectWithTag("GameController");
+        //}
         eventCanvas.SetActive(true);
         educationCanvas.SetActive(true);
         nonEduCanvas.SetActive(true);
@@ -99,11 +103,11 @@ public class EducationEvents : MonoBehaviour
         {
             moneykeeper = GameObject.FindGameObjectWithTag("GameController");
         }
-        if (okEvent == null)
-        {
-            okEvent = GameObject.FindGameObjectWithTag("GameController");
-        }
-
+       // if (okEvent == null)
+        //{
+            //okEvent = GameObject.FindGameObjectWithTag("GameController");
+        //}
+        //okEvent = GameObject.FindGameObjectWithTag("GameController");
         populateStrings();
         populateDictionaries();
         eventCanvas.SetActive(false);
@@ -207,7 +211,7 @@ public class EducationEvents : MonoBehaviour
     public void StartEvents()
     {
         //changed for testing
-        eventTypeSelector = Random.Range(2 , 2 );
+        eventTypeSelector = Random.Range(1 , 5 );
 
         if (eventTypeSelector == 1)
         {
@@ -253,7 +257,8 @@ public class EducationEvents : MonoBehaviour
         //No event, move on to Month Transition Scene
         else if (eventTypeSelector >= 3)
         {
-            okEvent.GetComponent<ButtonFunctions>().OkEvent();
+            //okEvent.GetComponent<ButtonFunctions>().OkEvent();
+            moneykeeper.GetComponent<ButtonFunctions>().OkEvent();
         }
     }
     /*public void OnTriggerEnter2D(Collider2D collision)

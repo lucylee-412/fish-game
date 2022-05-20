@@ -52,7 +52,7 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == FISHING_POLE_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 5;
+            smallFishCaught = 100;
             mediumFishCaught = 2;
             largeFishAmt = 1;
 

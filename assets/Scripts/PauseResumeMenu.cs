@@ -8,13 +8,12 @@ public class PauseResumeMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField] GameObject pauseMode;
     [SerializeField] GameObject playMode;
-    [SerializeField] GameObject pauseResumeCanvas;
+
 
     void Awake()
     {
         pauseMode = GameObject.FindGameObjectWithTag("Pause Mode");
         playMode = GameObject.FindGameObjectWithTag("Play Mode");
-        pauseResumeCanvas = GameObject.FindGameObjectWithTag("PuaseResumeCanvas");
 
 
         pauseMode.SetActive(true);

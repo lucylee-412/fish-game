@@ -11,6 +11,10 @@ public class ButtonFunctions : MonoBehaviour
     int mediumFishMoney;
     int largeFishMoney;
 
+    int smallFishNaturalIncrease;
+    int mediumFishNaturalIncrease;
+    int largeFishNaturalIncrease;   
+
     const int fishingpoleCost = 500;
     const int castNetCost = 2000;
     const int fishingBoatCost = 10000;
@@ -294,14 +298,19 @@ public class ButtonFunctions : MonoBehaviour
 
     void FinalizeFishAmounts()
     {
-        PersistentData.Instance.AddToSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
-        PersistentData.Instance.AddToMedFish(PersistentData.Instance.GetMediumFishCaughtLM());
-        PersistentData.Instance.AddToLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
+        //Subtract fish caught from fish pool
+        PersistentData.Instance.SubtractFromSmallFish(PersistentData.Instance.GetSmallFishCaughtLM());
+        PersistentData.Instance.SubtractFromMedFish(PersistentData.Instance.GetMediumFishCaughtLM());
+        PersistentData.Instance.SubtractFromLargeFish(PersistentData.Instance.GetLargeFishCaughtLM());
 
         //set bait to 0
         PersistentData.Instance.SetHasNightcrawlers(false);
         PersistentData.Instance.SetHasSquid(false);
         PersistentData.Instance.SetHasMackrel(false);
+
+        //increase fish pool naturally - currently set to 10% each month
+        FishIncreaseNatural();
+
 
     }
 
@@ -341,5 +350,16 @@ public class ButtonFunctions : MonoBehaviour
         PersistentData.Instance.SetLargeFishCaughtLM(0);
         PersistentData.Instance.SetMediumFishCaughtLM(0);
         PersistentData.Instance.SetSmallFishCaughtLM(0);
+    }
+
+    public void FishIncreaseNatural()
+    {
+        smallFishNaturalIncrease = (int)(PersistentData.Instance.GetSmallFish() * .1f);
+        mediumFishNaturalIncrease = (int)(PersistentData.Instance.GetMediumFish() * .1f);
+        largeFishNaturalIncrease = (int)(PersistentData.Instance.GetLargeFish() * .1f);
+
+        PersistentData.Instance.AddToSmallFish(smallFishNaturalIncrease);
+        PersistentData.Instance.AddToMedFish(mediumFishNaturalIncrease);
+        PersistentData.Instance.AddToLargeFish(largeFishNaturalIncrease);
     }
 }

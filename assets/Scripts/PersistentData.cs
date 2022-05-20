@@ -276,5 +276,23 @@ public class PersistentData : MonoBehaviour
         largeFishCaughtLastMonth = 0;
     }
 
+    public float GetCurrentSmallFishPercentage()
+    {
+        return smallFish / smallFishStart;
+    }
+    public float GetCurrentMedFishPercentage()
+    {
+        return mediumFish / mediumFishStart;
+    }
+    public float GetCurrentLargeFishPercentage()
+    {
+        return largeFish / largeFishStart;
+    }
+    public float GetCurrentTotalFishPercentage()
+    {
+        return (smallFish + mediumFish + largeFish) / (smallFishStart + mediumFishStart + largeFishStart);
+    }
+    
+
 
 }

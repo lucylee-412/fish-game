@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class FishSpawner : MonoBehaviour
 {
@@ -18,17 +20,32 @@ public class FishSpawner : MonoBehaviour
     [SerializeField] GameObject smallFishPrefab;
     [SerializeField] GameObject mediumFishPrefab;
     [SerializeField] GameObject largeFishPrefab;
+    [SerializeField] float percentSmallFish;
+    [SerializeField] float percentMediumFish;
+    [SerializeField] float percentLargeFish;
+    [SerializeField] float percentTotalFish;
 
     // Start is called before the first frame update
     void Start()
     {
+        percentSmallFish = PersistentData.Instance.GetCurrentSmallFishPercentage();
+        percentMediumFish = PersistentData.Instance.GetCurrentMedFishPercentage();
+        percentLargeFish = PersistentData.Instance.GetCurrentLargeFishPercentage();
+        percentTotalFish = PersistentData.Instance.GetCurrentTotalFishPercentage();
+        Debug.Log(percentSmallFish);
+        Debug.Log(percentMediumFish);
+        Debug.Log(percentLargeFish);
+
         levelNum = SceneManager.GetActiveScene().buildIndex;
 
         if(levelNum == 4 || levelNum == 5)
         {
-            smallFishNum = 5;
-            mediumFishNum = 3;
-            largeFishNum = 2;
+            smallFishNum = (int)Math.Floor(5 * percentSmallFish);
+            mediumFishNum = (int)Math.Floor(3 * percentMediumFish);
+            largeFishNum = (int)Math.Floor(2 * percentLargeFish);
+            Debug.Log(smallFishNum);
+            Debug.Log(mediumFishNum);
+            Debug.Log(largeFishNum);
             xMax = 8.422f;
             xMin = -3.530f;
             yMin = -4.725f;
@@ -36,9 +53,9 @@ public class FishSpawner : MonoBehaviour
         }
         else if (levelNum == 6)
         {
-            smallFishNum = 10;
-            mediumFishNum = 10;
-            largeFishNum = 20;
+            smallFishNum = (int)Math.Floor(10 * percentSmallFish);
+            mediumFishNum = (int)Math.Floor(10 * percentMediumFish);
+            largeFishNum = (int)Math.Floor(25 * percentLargeFish);
             xMax = 9.5f;
             xMin = -9.5f;
             yMin = -1.376f;
