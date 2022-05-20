@@ -23,7 +23,7 @@ public class PauseResumeMenu : MonoBehaviour
 
     void Start()
     {
-        Resume();
+
     }
 
     public void PlayGame()

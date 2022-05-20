@@ -984,12 +984,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishKeeper: {fileID: 0}
+  fishKeeper: {fileID: 2043905392}
   moneyKeeper: {fileID: 972982832}
   eventController: {fileID: 1971763675}
-  LandAndPierTrigger: {fileID: 0}
+  LandAndPierTrigger: {fileID: 931862234}
   fishingButtons: []
-  playerNameInput: {fileID: 0}
+  playerNameInput: {fileID: 1360049185}
 --- !u!1 &471729871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,12 +1968,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishKeeper: {fileID: 0}
-  moneyKeeper: {fileID: 0}
+  fishKeeper: {fileID: 2043905392}
+  moneyKeeper: {fileID: 972982832}
   eventController: {fileID: 1971763675}
-  LandAndPierTrigger: {fileID: 0}
+  LandAndPierTrigger: {fileID: 931862234}
   fishingButtons: []
-  playerNameInput: {fileID: 0}
+  playerNameInput: {fileID: 1360049185}
 --- !u!114 &927703980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,7 +2761,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1226153560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1226153562}
+        m_TargetAssemblyTypeName: ButtonFunctions, Assembly-CSharp
+        m_MethodName: DeclineEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1226153560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,12 +2824,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishKeeper: {fileID: 0}
+  fishKeeper: {fileID: 2043905392}
   moneyKeeper: {fileID: 972982832}
   eventController: {fileID: 1971763675}
-  LandAndPierTrigger: {fileID: 0}
+  LandAndPierTrigger: {fileID: 931862234}
   fishingButtons: []
-  playerNameInput: {fileID: 0}
+  playerNameInput: {fileID: 1360049185}
 --- !u!1 &1229577119
 GameObject:
   m_ObjectHideFlags: 0
@@ -4628,12 +4640,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe88d9eacc89f443a7a046c7a7f6809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishKeeper: {fileID: 0}
+  fishKeeper: {fileID: 2043905392}
   moneyKeeper: {fileID: 972982832}
   eventController: {fileID: 1971763675}
-  LandAndPierTrigger: {fileID: 0}
+  LandAndPierTrigger: {fileID: 931862234}
   fishingButtons: []
-  playerNameInput: {fileID: 0}
+  playerNameInput: {fileID: 1360049185}
 --- !u!1 &1845426777
 GameObject:
   m_ObjectHideFlags: 0
