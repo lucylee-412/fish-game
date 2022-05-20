@@ -6637,8 +6637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d38e11cf8e3bc4e9a24bc31b2bb57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMode: {fileID: 0}
-  playMode: {fileID: 0}
+  pauseMode: []
+  playMode: []
   pauseResumeCanvas: {fileID: 0}
 --- !u!1 &2052630748
 GameObject:

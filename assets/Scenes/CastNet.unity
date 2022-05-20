@@ -2351,7 +2351,7 @@ RectTransform:
   m_Children:
   - {fileID: 1277702692}
   m_Father: {fileID: 1916586670}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2370,8 +2370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d38e11cf8e3bc4e9a24bc31b2bb57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMode: []
-  playMode: []
+  pauseMode: {fileID: 0}
+  playMode: {fileID: 0}
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &936987409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4130,7 +4131,7 @@ RectTransform:
   m_Children:
   - {fileID: 481212258}
   m_Father: {fileID: 1916586670}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4149,8 +4150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d38e11cf8e3bc4e9a24bc31b2bb57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMode: []
-  playMode: []
+  pauseMode: {fileID: 0}
+  playMode: {fileID: 0}
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &1674072175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4698,8 +4700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d38e11cf8e3bc4e9a24bc31b2bb57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMode: []
-  playMode: []
+  pauseMode: {fileID: 936987406}
+  playMode: {fileID: 1674072172}
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &1916586667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4772,8 +4775,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1674072173}
   - {fileID: 936987407}
+  - {fileID: 1674072173}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
