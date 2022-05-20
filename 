@@ -1,0 +1,951 @@
+[33mcommit 257e9f8b1cedf81a63feb768797deefc74251b86[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri May 20 08:48:54 2022 -0400
+
+    Adjust scale and position of sky + sign + store + player
+
+[33mcommit 5e31320dc43344519d25bf083535ee5bcefdca09[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri May 20 08:12:27 2022 -0400
+
+    Adjust position/scale of counter asset
+
+[33mcommit ecee68a91f45e05b6dc000476f0640520b8bcf12[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri May 20 08:07:09 2022 -0400
+
+    Adjust position/scale of counter asset
+
+[33mcommit 98416197341ca1e66a3b21373e2fec046166a205[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 18 17:17:30 2022 -0400
+
+    Added fish spawner
+    
+    Added fish spawner - Randomly spawns feesh with randomized movement
+
+[33mcommit d60aa724dc26e80fc57ad574aa516a762cd9b0e7[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 18 16:56:18 2022 -0400
+
+    Created small/medium/large fish prefabs
+    
+    Created small/medium/large fish prefabs
+    -Created fish movement script
+
+[33mcommit 8af97ddd98ca97b64af7f1e7f78edd5f9ca3463b[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 18 15:36:01 2022 -0400
+
+    Reformatted Buttons and Text in Shop
+    
+    Changed text/buttons to Text Mesh Pro in shop
+
+[33mcommit 6f2a889cc34ca457154b5129688c713af26dc866[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 18 14:47:38 2022 -0400
+
+    Added effects to Accept Button Functions
+    
+    -Reworked Instructions Page
+    -Added effects to money from accepting events
+
+[33mcommit ce0e34c9a1f6df71174320566575c67ccc36f1bb[m
+Merge: ef92535f 9d60fea0
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 21:42:21 2022 -0400
+
+    Merge pull request #28 from lucylee-412/Debugging
+    
+    Fixing UI Text
+
+[33mcommit 9d60fea0ab0866e7834a1012b2ddf76a47d2d350[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 21:41:39 2022 -0400
+
+    Fixing UI Text
+    
+    Change Player text to TMP.
+    Remove old UI text from scenes.
+
+[33mcommit ef92535f781f8d657d0a473a64fc1b7d3e3c86f0[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 13:05:01 2022 -0400
+
+    Correct function to increment balance after event
+
+[33mcommit d84d60bfce43bddd5f2b2975d001816c8b80d9cc[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 12:58:34 2022 -0400
+
+    Update type error and variable-method syntax
+
+[33mcommit e73ae75724f0db12080872ab71d2d8547d68dbc2[m
+Merge: 6ae1f0db 5aa05395
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 12:02:52 2022 -0400
+
+    Merge pull request #27 from lucylee-412/UserInputField
+    
+    Player name InputField
+
+[33mcommit 5aa05395114d8c3a62880c55593572dfec04b1b6[m
+Merge: ff6f6c18 6ae1f0db
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Thu May 12 12:02:39 2022 -0400
+
+    Merge branch 'main' into UserInputField
+
+[33mcommit 6ae1f0db237b742e50a0204062d7ce8b043c7215[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Thu May 12 08:01:16 2022 -0400
+
+    Small fixes to description text
+
+[33mcommit 0715533b6ca82fdf987d5b0cf972fe18c4d60d8c[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Thu May 12 07:56:01 2022 -0400
+
+    Update starting balance
+
+[33mcommit 268764e1e059e9e3d86461db84ac57a23ff77f15[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Thu May 12 07:45:11 2022 -0400
+
+    Adjust XY Coordinates and scaling of shop assets
+
+[33mcommit 2e8bbd192ae2e3698cead50fdb5eda441066fae5[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Thu May 12 07:45:01 2022 -0400
+
+    Add back deleted Nightcrawlers sprite
+
+[33mcommit 0fab3e1c74dfdd92c447fed51073adfb5932bfe1[m
+Merge: ab74721e 7f001e7d
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 20:58:52 2022 -0400
+
+    Merge branch 'main' of https://github.com/lucylee-412/fish-game
+
+[33mcommit ab74721e52c16018028c5a4d8c12dfe137afe1bf[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 20:52:03 2022 -0400
+
+    Upload temporary frame for net catch success
+
+[33mcommit 547e0fb983b53173e74d05c994e051cefca47f46[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 20:49:16 2022 -0400
+
+    Upload 2nd frame of idle for cast net
+
+[33mcommit eba263d7c1923fe5cacda3768e52b4753063e81d[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 20:42:56 2022 -0400
+
+    Upload 1st frame of idle for cast net
+
+[33mcommit ff6f6c187c4a1d84bbc4646c200e39ced55259b0[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed May 11 20:15:30 2022 -0400
+
+    InputField
+
+[33mcommit ab4a8d5707dd045cb7c38d09ed4565f3078ee3fd[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed May 11 19:50:37 2022 -0400
+
+    Player name InputField
+    
+    Created InputField
+
+[33mcommit 7f001e7d7d204f69b4a9e711d63c53c0bd61f90c[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 19:18:32 2022 -0400
+
+    FishKeeper Implemented on all Fishing Scenes
+    
+    Fishing Scenes are good to go
+
+[33mcommit dbb016c35a72ad98bc4f88f6ff20816a773d24a9[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 17:29:51 2022 -0400
+
+    Small changes to buttons
+
+[33mcommit fe6dfe6f6717475c09abe204074f5dbe84b11d37[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 16:57:59 2022 -0400
+
+    Implemented Fish keeper System
+    
+    - Fishing is now live!!!!
+    - Fish Keeper system implemented with static values for now
+    - Ocean Fishing only is set up
+    - Month Transition is now operable
+    - Changed buttons on start menu page to Text-Mesh-Pro
+    - Probably some other minor changes I am forgetting right now
+
+[33mcommit bb37e996abb104db44fa51f5284bad4125bb6f85[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 15:30:45 2022 -0400
+
+    Updated 2 Scripts
+    
+    Updated Button Functions & FishKeeper
+
+[33mcommit b266222a3b5492660fcb8fbc8b47f3d7e8e33b8d[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 15:29:15 2022 -0400
+
+    Fix XY and pivot of sprite sheet for idle fishing
+
+[33mcommit 0232cc0e494decf93ba80baadfdf7ae7450641e6[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 15:28:53 2022 -0400
+
+    Filler picture to be used for fishing transition scene
+
+[33mcommit 7a9d75ac15749f05a6a975c03332fe5eb7964fcd[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 14:32:48 2022 -0400
+
+    Created FishKeeper script
+    
+    Yup Yup
+
+[33mcommit e822528b8bf0c238734ce54efa235cfba0d8d6d7[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 13:18:23 2022 -0400
+
+    Added Scenes
+    
+    - New Month Transition Scene Created
+    --Month scene populated with data and button to advance time
+    - New High Scores Scene Created
+
+[33mcommit 93b84aef7db5828f7823f775cce538d65ec3227f[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed May 11 12:55:50 2022 -0400
+
+    More Event Functionality
+    
+    Added Random Event Type Selector
+    -Ensures equipment events only happen on scenes with equipment
+    -Added non-educational events that are used for money balance
+    -Set up accept buttons so money/equipment modifiers from events can be implemented later
+
+[33mcommit 16ba9d13f73a59ccd4365d04a62fe77c4dd9799e[m
+Merge: 23cab02e dcc7efa3
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed May 11 12:00:44 2022 -0400
+
+    Merge pull request #23 from lucylee-412/Doua
+    
+    Persistent Data
+
+[33mcommit dcc7efa3a4449499760a58fe801799fd7a662950[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed May 11 12:00:21 2022 -0400
+
+    Persistent Data
+    
+    large , medium, small fish and month getters and setters
+
+[33mcommit 23cab02ee2ea7999cfc97d7a78dc4ebf9642194f[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed May 11 08:58:18 2022 -0400
+
+    Update sprite and XY coordinates for cast-net
+
+[33mcommit a812aa6d512abd92c0f43efdee2b41872c23c7d6[m
+Merge: 86dddbfd 9d4a1902
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Tue May 10 21:30:57 2022 -0400
+
+    Merge pull request #22 from lucylee-412/Doua
+    
+    fixing errors
+
+[33mcommit 9d4a1902b54a70c98159b15f6080e5441911a31f[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Tue May 10 21:30:29 2022 -0400
+
+    fixing errors
+    
+    syntax errors
+
+[33mcommit 86dddbfd6001a85592c1abb305b4672c9ca31b03[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Tue May 10 16:15:37 2022 -0400
+
+    Update EducationEvents.cs
+    
+    -Created more events
+    -created names for events
+    -created descriptions for events
+    - created education for events
+
+[33mcommit 56008e65d91bcb32faf52d76b1a4e9245e081405[m
+Merge: 23b0fded ecc8145c
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon May 9 17:42:23 2022 -0400
+
+    Merge branch 'main' of https://github.com/lucylee-412/fish-game
+
+[33mcommit 23b0fded9bd6063e060c90708e64bf1709d9b18f[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon May 9 17:42:15 2022 -0400
+
+    Added Events System
+    
+    - Added Event system (ONLY TO OCEAN FISHING SCENE)
+    - Created Event System Script
+
+[33mcommit ecc8145cb9cc07ee45391e170aefa262bc87d951[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon May 9 17:01:45 2022 -0400
+
+    Upload first frame of cast-net animation
+
+[33mcommit c5139707ad6a6f6a67dc823f38fd3d66aaf13f0b[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon May 9 14:41:39 2022 -0400
+
+    Added New Scene/ButtonFunctionalities
+    
+    Added Ocean Scene
+    Added Cast Net Scene
+    Changed previous fishing scene to Fishing Pole Scene
+    Collider at end of pier in land/pier scene now gives option to choose fishing equipment
+    Buttons added to load new scenes based on players choice
+
+[33mcommit a038c91b6b4ab87ec6b69046216af8f53fdfa6f4[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat May 7 18:09:09 2022 -0400
+
+    Delete Logs directory
+    
+    Should not be included in version control
+
+[33mcommit 6dd67222ce79864350e45e579f5dcc5936e98321[m
+Merge: 6bedebc9 3c024c0a
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat May 7 03:51:52 2022 -0400
+
+    Attempt to merge metadata conflict
+
+[33mcommit 6bedebc9e9bc796bd8cc58a103e176bf6e1ab707[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat May 7 03:49:56 2022 -0400
+
+    Metadata
+
+[33mcommit 3c024c0a72e59841f2498258e0d892c9ef8e5cc5[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Fri May 6 16:22:19 2022 -0400
+
+    Changes to Fishing Scene & Shop
+    
+    -Added Boat to Equipment
+    -Added OnTriggerCollider to Boat
+    -Added purchase button for Boat
+    -Added Edu Text to Boat purchase
+    -Fixed Collider on fisherman on fishing scene
+
+[33mcommit d69e31c7e6d8a27235817a0fa1714acbfb47f2b2[m
+Merge: 10cf9e0a 95d324d8
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 23:11:06 2022 -0400
+
+    Merge pull request #21 from lucylee-412/assets
+    
+    Assets
+
+[33mcommit 95d324d85c10e18b378fb2ff78bef8fea6f93415[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 23:10:43 2022 -0400
+
+    Upload default sprite of boat at sea
+
+[33mcommit 8e2508b067750598629c53d127b0a6d860d0f327[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 21:26:14 2022 -0400
+
+    Modify appearance of fishing success frame
+
+[33mcommit bed4477fcf19fed56f53877e342ac2723fb0bdbe[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 19:05:01 2022 -0400
+
+    Upload ocean to be used for pier and fishing scenes
+
+[33mcommit 10cf9e0a461ae68a24d0af82861513c8c055e3c0[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 18:31:06 2022 -0400
+
+    Correct starting balance back to 1000 from 100,000
+
+[33mcommit c0444f2ff8452381e5b2dd3ee633dbc9e3020cb8[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Sat Apr 30 18:07:49 2022 -0400
+
+    Full Store Functionality
+    
+    - Populated items cost for all items in store
+    - Populated Educational Text for all items currently in store
+    - Populated Buy buttons for all items currently in store
+          - Buy buttons now fully functional
+    - Changed Pause/Resume Script so audio no longer plays when the Pause menu is active
+    - Rearranged Shop scene so as to make it Entrance/Exit conform to sprite direction
+
+[33mcommit 22d1c27c2b367f932dcf8acc172226787aefcae6[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 30 18:06:16 2022 -0400
+
+    Update fishing animation
+    
+    Modified appearance of first frame with an extended fishing line, and
+    added two additional frames for idle animation.
+
+[33mcommit 2397f3987a2ad689d5b19ea6fb98cef79303513d[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Sat Apr 30 13:07:47 2022 -0400
+
+    Fixed Persistent Money Issue and Button Function
+    
+    Fixed money issue where money wasn't updating when an item was purchased.
+
+[33mcommit 2dfe9c402d2b399157a19dd97ddee4730512f208[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri Apr 29 18:41:53 2022 -0400
+
+    Delete Library directory
+    
+    Library folder is not necessary to and not recommended to include in version control. Will be deleting it to avoid merge conflicts.
+
+[33mcommit 1134f9197e37252e76e7291235971110e2bf95b1[m
+Merge: d6ddfda8 7c539d83
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri Apr 29 18:38:50 2022 -0400
+
+    Merge branch 'main' of https://github.com/lucylee-412/fish-game
+
+[33mcommit d6ddfda871935fc5767106d1b8e41a87fd9f0e36[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri Apr 29 18:37:51 2022 -0400
+
+    Create gitignore to untrack Unity metadata
+
+[33mcommit 7c539d83e55f9f0a16d3d80a077d0bc71e7684d3[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Thu Apr 14 00:53:12 2022 -0400
+
+    Minor changes to scenes
+
+[33mcommit e3b61f485b6cbc6c6c214df4d683603aaba439c8[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 23:20:32 2022 -0400
+
+    Lots of Good Stuff
+    
+    -Changed Sprites for BaitShop
+    -Fixed Persistent Data
+    -Probably some other small changes
+
+[33mcommit ad59504673b80bb9cd7f2313ab03b5b6931b4b4e[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 23:14:57 2022 -0400
+
+    Add net to store inventory
+
+[33mcommit c334b1e6ced5b1e6a982bfa4b631b250a2c081c1[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 23:14:19 2022 -0400
+
+    Modify appearance of store on land
+
+[33mcommit b7ffce91eb80b9826fcb4ae4e976967e50262017[m
+Merge: 8a0ba77c cfbd063f
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:49:51 2022 -0400
+
+    Merge pull request #20 from lucylee-412/assets
+    
+    Update to store design
+
+[33mcommit cfbd063f30827e3539a6611cd364087798b8821b[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:49:03 2022 -0400
+
+    Add exit inside store
+
+[33mcommit e6196d045d68695314673d943d6b0a034f4a87f1[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:46:04 2022 -0400
+
+    Modify color of wall in store
+
+[33mcommit 8a0ba77c913996d1bafa5f2925394b646c50d3db[m
+Merge: 74bc6a05 5f4fb1c1
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:28:48 2022 -0400
+
+    Merge pull request #19 from lucylee-412/assets
+    
+    Store floor + counter + owner assets added
+
+[33mcommit 5f4fb1c13cd13f08fed1738ea168d14f7bf77717[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:28:18 2022 -0400
+
+    Upload assets for store
+
+[33mcommit 74bc6a05027a2dcd5ccd24cf09aa2cf2d60c8fb7[m
+Merge: 1596548d 54e0d372
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:28:06 2022 -0400
+
+    Merge pull request #18 from lucylee-412/assets
+    
+    Small graphic update to sun
+
+[33mcommit 54e0d3725697fc447a1332c9299ccb88bf7b5bd5[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:23:52 2022 -0400
+
+    Add sunglasses to the sun
+
+[33mcommit 1596548de1fe8720275a46992ce2d2c50b7e7a8b[m
+Merge: c3927006 81a49dea
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:11:33 2022 -0400
+
+    Merge pull request #17 from lucylee-412/assets
+    
+    Add store item + textures to first background
+
+[33mcommit 81a49dea03fe92f6e734feeb300b023032bf1b84[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 22:10:43 2022 -0400
+
+    Upload fishing pole for store
+
+[33mcommit c39270063513ab183d1932ee6bbc61cfee4d37fa[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 21:58:25 2022 -0400
+
+    Update Unity files
+
+[33mcommit aa1724eea427b9ea79f5ab81a86382aa26d21792[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 21:54:07 2022 -0400
+
+    Added New Scene
+    
+    Added Fishing Scene (Temporary)
+    -Added new scripts to change fishing scene back to pier/land
+
+[33mcommit bcc39626974cd084043a87266e3aaf9336a65747[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 20:01:44 2022 -0400
+
+    Changes to Edu&Buy Script
+
+[33mcommit 080b7170724ad222548b2f09f9cf63e51269a750[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 18:53:05 2022 -0400
+
+    Added scripts from local copy
+    
+    -Added Persistent Data Script
+    -Added MoneyKeeper Script
+    -Added Door Script
+
+[33mcommit 1708a29cb4fa742efb44e73daf55e1be4d56dd8b[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 18:35:43 2022 -0400
+
+    Made some editing changes to StartMenu
+    
+    -Added background Music
+    -Fixed some size related issues
+
+[33mcommit 9045054635880814305820d198e882abb4198fd1[m
+Merge: f43d06a4 6d8f1836
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed Apr 13 18:16:06 2022 -0400
+
+    Merge pull request #15 from lucylee-412/UI
+    
+    Start Menu Added
+
+[33mcommit 6d8f183611180ad1d3854398d8cef82b132b5683[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed Apr 13 18:15:30 2022 -0400
+
+    Start Menu Added
+    
+    Created start menu, first scene in the game. The buttons created: play and instructions
+
+[33mcommit a6f9d4aa8a208a14bec8d99d77c73ccabab32f4b[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 18:12:21 2022 -0400
+
+    Add subtle gradient and sun
+
+[33mcommit 81b3455a668e1c12905020c5d6e403235ffdf01e[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 18:09:29 2022 -0400
+
+    Add grass textures
+
+[33mcommit f43d06a4b18353bd01ee9027a066568109f0e5da[m
+Merge: cbe777e8 65fbc2ce
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed Apr 13 17:55:14 2022 -0400
+
+    Merge pull request #14 from lucylee-412/UI
+    
+    Testing changes
+
+[33mcommit 65fbc2cedf6d938e8fc7ef767e618d7562d254f2[m
+Author: DouaTwam <89746876+DouaTwam@users.noreply.github.com>
+Date:   Wed Apr 13 17:44:04 2022 -0400
+
+    Testing changes
+    
+    Added one scene
+
+[33mcommit cbe777e87ff573c2e1d9f4137a3a371be248033e[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 16:31:18 2022 -0400
+
+    Update Unity files with fishing animation assets
+
+[33mcommit f28d97553944074a3a4fbdbd20325fa1f0dff2f1[m
+Merge: 0e3ee3e2 e1122d85
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 16:27:31 2022 -0400
+
+    Merge pull request #13 from lucylee-412/origin/assets
+    
+    Update fishing animation frames #1
+
+[33mcommit e1122d85ad11145f35cf4277778b825dbe526cb9[m[33m ([m[1;31morigin/origin/assets[m[33m)[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 16:26:32 2022 -0400
+
+    Upload reeling animation frames
+
+[33mcommit d6f49569aabc203a5cf5168a4d535d406bd7dc96[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 16:24:22 2022 -0400
+
+    Rename old Reeling.png to Fishing_Success.png
+
+[33mcommit 201ab9501516e2ac04ac09d61740a0667bb5eb62[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Wed Apr 13 16:21:06 2022 -0400
+
+    Rename as Fishing_Success
+    
+    Reeling will now refer to the reeling-in attempt animations, and the
+    original picture for Reeling will be renamed as Fishing_Success with
+    some added "water splash" effects.
+
+[33mcommit 0e3ee3e224a37b1745721d3127b5f447342d2b42[m
+Merge: 93a26464 78fb7ced
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 14:54:40 2022 -0400
+
+    Merge pull request #11 from lucylee-412/ShawnsEditsBranch
+    
+    Shawns edits branch
+
+[33mcommit 93a264643c80ff2cf63e37dffc8008a1650ee3f2[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 14:46:24 2022 -0400
+
+    Minor changes
+
+[33mcommit 655da279d8211e9597db9d3a120d6071ec61dd54[m
+Merge: 2f1ab7f9 201db541
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 14:01:43 2022 -0400
+
+    Merge branch 'main' of https://github.com/lucylee-412/fish-game
+
+[33mcommit 2f1ab7f94fb5d73327816f6b7019d842fe49eadb[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 14:01:22 2022 -0400
+
+    Changes to Play/Pause Script
+    
+    -Added fishing pole description text
+    -Made changes to Play/Pause script to ensure functionality
+    -Added a button to buy fishing pole
+
+[33mcommit 201db5416528150489f82ae06aabc2560fcf5d3a[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 13:57:46 2022 -0400
+
+    Update equipment.txt
+
+[33mcommit 92c76dc40023a476f1888c4ac9357a7ccb596498[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 12:07:55 2022 -0400
+
+    Added Audio
+    
+    -Audio for Store Scene
+    -Audio of Ocean Waves for Land/Pier
+    -Audio of Seagulls for Land/Pier Scene
+
+[33mcommit 8be85dc6d88087d34e3903efab300ff1154ca7ee[m
+Merge: 0120021f b2a146b2
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 10:57:16 2022 -0400
+
+    Merge branch 'main' of https://github.com/lucylee-412/fish-game
+
+[33mcommit 0120021fdd9648d358f802918b19af6bef1d05ce[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 10:54:46 2022 -0400
+
+    Adding changes
+
+[33mcommit 78fb7ced46118cc69f988e296acf97a4874c7eb5[m
+Merge: 5a25d396 b2a146b2
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Wed Apr 13 10:52:05 2022 -0400
+
+    Merge pull request #10 from lucylee-412/main
+    
+    Merge
+
+[33mcommit b2a146b28e852915744b2894c25a1b3cf3f0db37[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 19:02:58 2022 -0400
+
+    Update appearance of ground, added stone
+
+[33mcommit 3edddc2b76920be3705d88b88c0284f05dead84f[m
+Merge: 5f2a1749 7ad7a01f
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:51:04 2022 -0400
+
+    Update Unity files
+
+[33mcommit 7ad7a01ff9d7c3f5f58c597d038aa0af4413968e[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:48:16 2022 -0400
+
+    Delete pier object
+
+[33mcommit e21becd0953db44e1a45c4c8d4000068600da1fa[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:48:06 2022 -0400
+
+    Update appearance of ground
+
+[33mcommit 708b9bfc09224bfa0c92ed0783df6eed858e3b49[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:37:54 2022 -0400
+
+    Update Unity files
+
+[33mcommit 0cf26903686b3d5846c2d93cec631a5c602a0d76[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:37:27 2022 -0400
+
+    Upload png file of sky background
+
+[33mcommit 5a25d3965f7b563f321101faa07e81119cd2de10[m[33m ([m[1;31morigin/ShawnsEditsBranch[m[33m)[m
+Merge: b604beb4 5f2a1749
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon Apr 11 18:23:16 2022 -0400
+
+    Merge pull request #8 from lucylee-412/main
+    
+    Update ShawnsEditsBranch
+
+[33mcommit ab9fc79ff763c8c97a7aa33f16ab31006b67ec7b[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 18:20:09 2022 -0400
+
+    Copy over files from main b
+
+[33mcommit 5f2a1749d094256043d0d559b21548b5dc32fffb[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon Apr 11 18:20:05 2022 -0400
+
+    Updated Scenes/Scripts
+    
+    Updated Pier Scene for new Resolution
+
+[33mcommit 2a31ef99c8dc6baa24a1d828293bb773df03b5b2[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Mon Apr 11 17:54:46 2022 -0400
+
+    Added Assets to Land/Pier Scene
+    
+    -Added Assets to Land/PierScene
+    -Added Pause Button
+    -Reworked PauseScript
+
+[33mcommit 8bd3ca76cdc1363f399f8fda8f5f63998f584206[m[33m ([m[1;31morigin/text[m[33m)[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Mon Apr 11 14:18:14 2022 -0400
+
+    Upload txt file of C# strings to be used for item desc
+
+[33mcommit d07e3e9094fdc822025620580d9e9aa2fda8c46c[m
+Merge: 945d1b14 9ae5d7c8
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 14:11:23 2022 -0400
+
+    Merge pull request #7 from lucylee-412/assets
+    
+    #4
+
+[33mcommit 9ae5d7c8613eb6b75f067487db2190561a755497[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 14:10:22 2022 -0400
+
+    Change width of ground to scale to 480p res
+
+[33mcommit 389a29ceb9030a2bfef3b06e3a591862fe45e196[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 13:43:26 2022 -0400
+
+    Update textures on pier object
+
+[33mcommit 945d1b141d72e6aeab1880d162ca44fd907e2486[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Sat Apr 9 13:42:49 2022 -0400
+
+    Updated Animations
+    
+    Added animation for Idle
+
+[33mcommit bac9a8dfd2521dd2e61ea556c6e981c276d04831[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 13:29:07 2022 -0400
+
+    Upload pier object for land map
+
+[33mcommit 06af3ab90df44fe3ee295508936476e305969ae8[m
+Merge: f288232d f823acab
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 13:10:46 2022 -0400
+
+    Merge pull request #6 from lucylee-412/assets
+    
+    #1
+
+[33mcommit f823acab2d50bbf652c851865d5eb46462e05464[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 13:10:00 2022 -0400
+
+    Update logs
+
+[33mcommit 23aecfcf4afcee58086cee707ac6c720c80f319d[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 9 13:09:34 2022 -0400
+
+    Upload blinking frames for sprite in idle
+
+[33mcommit f288232d8ad2cfd585a97174c1aa590455d4d139[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri Apr 8 21:06:10 2022 -0400
+
+    Update README.md
+    
+    Add link to Google doc[umentation]
+
+[33mcommit eb302cf592b03e62162f3bb92fde4494940cec77[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Thu Apr 7 17:21:43 2022 -0400
+
+    WalkAnimation & Reformatting
+    
+    -Added Walk Animation thru Animator
+    - Renamed Movement script to PlayerMovement script
+    - Reformatted Game Objects to better fit Camera
+    - Added new sprite objects to the BaitShop Scene
+
+[33mcommit ac7ed8dc69c70e1e85ea3a421c16101a74978ce0[m
+Merge: ff50c585 b604beb4
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Sat Apr 2 13:00:15 2022 -0400
+
+    Merge branch 'ShawnsEditsBranch'
+
+[33mcommit b604beb4ea537ad17c5d3bfe07bafd7f89dff9fe[m
+Author: Shawn Philipps <89462917+ThePhreshmaker@users.noreply.github.com>
+Date:   Sat Apr 2 12:28:59 2022 -0400
+
+    Basic Changes
+    
+    Bait/Tackle Shop Scene Created
+    Outside/Pier Scene Create (blank Scene)
+    Basic Movement Script for Player (with Temporary walk animation made only in script. Actual animation will come later)
+    Placeholders for Equipment/Bait in shop created
+
+[33mcommit ff50c585057018173c90d5d70b0a0503d2cb27ce[m
+Merge: 1dd4ffce e6798553
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 11:30:07 2022 -0400
+
+    Merge pull request #5 from lucylee-412/assets
+    
+    #4
+
+[33mcommit e679855375914770536165de24f1652e1f93d6a0[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 11:28:58 2022 -0400
+
+    Upload png files of ground and store on first map
+
+[33mcommit 1dd4ffce4320c32f06f225696ebe63b9d697946b[m
+Merge: 7246cc8d a7bb8ef1
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 11:22:31 2022 -0400
+
+    Merge pull request #3 from lucylee-412/assets
+    
+    #1
+
+[33mcommit a7bb8ef1391b7a234c4e78a7d7fdeadfca604b9b[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 11:21:01 2022 -0400
+
+    Upload png files of sprite fishing animation
+
+[33mcommit 7246cc8d305883bcb1cdff07ebf6825ad24cb897[m
+Merge: 1836ba70 03059f7c
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 01:41:05 2022 -0400
+
+    Merge pull request #2 from lucylee-412/assets
+    
+    #1
+
+[33mcommit 03059f7c86b1aef8f182fd8607728d2a114c2d5c[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Sat Apr 2 01:37:32 2022 -0400
+
+    Add empty Unity project files
+
+[33mcommit 3b67c34f5da5ab1f296a5ddc4a8b5c406f803f56[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Fri Apr 1 18:07:22 2022 -0400
+
+    Upload png files of sprite walking animation
+
+[33mcommit 1836ba7081eb8dff4685fb51830952154e96d4dc[m
+Author: Lucy Lee <leelucy412@gmail.com>
+Date:   Thu Mar 17 13:01:50 2022 -0400
+
+    Initial commit
