@@ -8,11 +8,13 @@ public class PauseResumeMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField] GameObject[] pauseMode;
     [SerializeField] GameObject[] playMode;
+    [SerializeField] GameObject pauseResumeCanvas;
 
     void Awake()
     {
         pauseMode = GameObject.FindGameObjectsWithTag("Pause Mode");
         playMode = GameObject.FindGameObjectsWithTag("Play Mode");
+        pauseResumeCanvas = GameObject.FindGameObjectWithTag("PuaseResumeCanvas");
 
         foreach (GameObject g in playMode)
         {
@@ -51,15 +53,15 @@ public class PauseResumeMenu : MonoBehaviour
 
     public void Resume()
     {
-        // Re-enable play mode
-        foreach (GameObject g in playMode)
-        {
-            g.SetActive(true);
-        }
         // Disable pause mode
         foreach (GameObject g in pauseMode)
         {
             g.SetActive(false);
+        }
+        // Re-enable play mode
+        foreach (GameObject g in playMode)
+        {
+            g.SetActive(true);
         }
 
         Time.timeScale = 1.0f;
@@ -68,15 +70,15 @@ public class PauseResumeMenu : MonoBehaviour
 
     public void Pause()
     {
-        // Re-enable pause mode
-        foreach (GameObject g in pauseMode)
-        {
-            g.SetActive(true);
-        }
         // Disable play mode
         foreach (GameObject g in playMode)
         {
             g.SetActive(false);
+        }
+        // Re-enable pause mode
+        foreach (GameObject g in pauseMode)
+        {
+            g.SetActive(true);
         }
 
         Time.timeScale = 0.0f;

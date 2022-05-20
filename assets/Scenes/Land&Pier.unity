@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMode: []
   playMode: []
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &352908066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,6 +2393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMode: []
   playMode: []
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &1680871485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2827,6 +2829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMode: []
   playMode: []
+  pauseResumeCanvas: {fileID: 0}
 --- !u!114 &1869797173
 MonoBehaviour:
   m_ObjectHideFlags: 0
