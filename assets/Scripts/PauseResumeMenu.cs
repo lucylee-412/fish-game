@@ -6,33 +6,26 @@ using UnityEngine.SceneManagement;
 public class PauseResumeMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    [SerializeField] GameObject[] pauseMode;
-    [SerializeField] GameObject[] playMode;
+    [SerializeField] GameObject pauseMode;
+    [SerializeField] GameObject playMode;
     [SerializeField] GameObject pauseResumeCanvas;
 
     void Awake()
     {
-        pauseMode = GameObject.FindGameObjectsWithTag("Pause Mode");
-        playMode = GameObject.FindGameObjectsWithTag("Play Mode");
+        pauseMode = GameObject.FindGameObjectWithTag("Pause Mode");
+        playMode = GameObject.FindGameObjectWithTag("Play Mode");
         pauseResumeCanvas = GameObject.FindGameObjectWithTag("PuaseResumeCanvas");
 
-        foreach (GameObject g in playMode)
-        {
-            g.SetActive(true);
-        }
-        foreach (GameObject g in pauseMode)
-        {
-            g.SetActive(true);
-        }
+
+        pauseMode.SetActive(true);
+        playMode.SetActive(true);
+
     }
 
     void Start()
     {
-        foreach (GameObject g in pauseMode)
-        {
-            g.SetActive(false); // Pause mode starts off and remains inactive until
-        }                       // player presses pause button
-   }
+        Resume();
+    }
 
     public void PlayGame()
     {
@@ -54,15 +47,9 @@ public class PauseResumeMenu : MonoBehaviour
     public void Resume()
     {
         // Disable pause mode
-        foreach (GameObject g in pauseMode)
-        {
-            g.SetActive(false);
-        }
+        pauseMode.SetActive(false);
         // Re-enable play mode
-        foreach (GameObject g in playMode)
-        {
-            g.SetActive(true);
-        }
+        playMode.SetActive(true);
 
         Time.timeScale = 1.0f;
         GameIsPaused = false;
@@ -71,15 +58,9 @@ public class PauseResumeMenu : MonoBehaviour
     public void Pause()
     {
         // Disable play mode
-        foreach (GameObject g in playMode)
-        {
-            g.SetActive(false);
-        }
+        playMode.SetActive(false);
         // Re-enable pause mode
-        foreach (GameObject g in pauseMode)
-        {
-            g.SetActive(true);
-        }
+        pauseMode.SetActive(true);
 
         Time.timeScale = 0.0f;
         GameIsPaused = true;
