@@ -17,6 +17,7 @@ public class FishKeeper : MonoBehaviour
 
     [SerializeField] GameObject moneyKeeper;
 
+
     const int FISHING_POLE_SCENE = 4;
     const int CAST_NET_SCENE = 5;
     const int BOAT_SCENE = 6;
@@ -39,6 +40,8 @@ public class FishKeeper : MonoBehaviour
         squid = PersistentData.Instance.GetHasSquid();
         mackrel = PersistentData.Instance.GetHasMackrel();
         levelNum = SceneManager.GetActiveScene().buildIndex;
+
+
     }
 
     // Update is called once per frame
@@ -52,7 +55,7 @@ public class FishKeeper : MonoBehaviour
         if(levelNum == FISHING_POLE_SCENE)
         {
             //static values for now, will become RNG at later time
-            smallFishCaught = 100;
+            smallFishCaught = 20;
             mediumFishCaught = 2;
             largeFishAmt = 1;
 

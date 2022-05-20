@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class MoneyKeeper : MonoBehaviour
@@ -13,6 +14,7 @@ public class MoneyKeeper : MonoBehaviour
     [SerializeField] TMP_Text nameTxt;
     [SerializeField] TMP_Text moneyTxt;
     [SerializeField] TMP_Text monthTxt;
+    int levelNum;
 
     //[SerializeField] Text nameTxt;
     // Start is called before the first frame update
@@ -24,11 +26,16 @@ public class MoneyKeeper : MonoBehaviour
         moneyTxt.text = "Money: $" + currentMoney;
         nameTxt.text = "Player: " + currentName;
         monthTxt.text = "Month: " + curMonth;
+        levelNum = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(levelNum == 2 || levelNum == 3)
+        {
+            CheckPlayerMoney();
+        }
         
     }
     public void UpdateMoneyDisplay()
@@ -57,6 +64,14 @@ public class MoneyKeeper : MonoBehaviour
         else
         {
             Debug.Log("Not enough Money!");
+        }
+    }
+
+    void CheckPlayerMoney()
+    {
+        if(currentMoney < 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

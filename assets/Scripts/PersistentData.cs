@@ -21,7 +21,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] int largeFishCaughtLastMonth;
     [SerializeField] int moneyMadeLastMonth;
 
-    const int playerMoneyStart = 100000;
+    const int playerMoneyStart = 1000;
     const int smallFishStart = 250;
     const int mediumFishStart = 150;
     const int largeFishStart = 100;

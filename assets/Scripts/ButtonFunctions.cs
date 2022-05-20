@@ -34,7 +34,6 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] TMP_InputField playerNameInput;
     int levelNum;
     int curMonth;
-    //[SerializeField] InputField playerNameInput;
 
     const int SMALL_BAIT_MOD = 2;
     const int MEDIUM_BAIT_MOD = 2;
