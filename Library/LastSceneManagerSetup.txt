@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Bait&TackleShop.unity
+- path: Assets/Scenes/Fishing Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
