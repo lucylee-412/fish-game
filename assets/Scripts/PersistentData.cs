@@ -12,6 +12,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasNightcrawlers;
     [SerializeField] bool hasSquid;
     [SerializeField] bool hasMackrel;
+    [SerializeField] bool welcomeStoryDisplayed;
     [SerializeField] int smallFish;
     [SerializeField] int mediumFish;
     [SerializeField] int largeFish;
@@ -56,7 +57,8 @@ public class PersistentData : MonoBehaviour
         smallFish = smallFishStart;
         mediumFish = mediumFishStart;
         largeFish = largeFishStart;
-        month = 5;
+        month = 1;
+        welcomeStoryDisplayed = false;
 
         smallFishCaughtLastMonth = 0;
         mediumFishCaughtLastMonth = 0;
@@ -292,7 +294,14 @@ public class PersistentData : MonoBehaviour
     {
         return (smallFish + mediumFish + largeFish) / (smallFishStart + mediumFishStart + largeFishStart);
     }
-    
+    public void SetWelcomeStory(bool val)
+    {
+        welcomeStoryDisplayed = val;
+    }
+    public bool GetWelcomeStory()
+    {
+        return welcomeStoryDisplayed;
+    }
 
 
 }

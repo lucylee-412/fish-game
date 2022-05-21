@@ -43,6 +43,8 @@ TagManager:
   - mediumFish
   - largeFish
   - fishSpawner
+  - WelcomeStory
+  - WelcomeCanvas
   layers:
   - Default
   - TransparentFX
