@@ -13,6 +13,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] bool hasSquid;
     [SerializeField] bool hasMackrel;
     [SerializeField] bool welcomeStoryDisplayed;
+    [SerializeField] bool criminalActivity;
     [SerializeField] int smallFish;
     [SerializeField] int mediumFish;
     [SerializeField] int largeFish;
@@ -59,6 +60,7 @@ public class PersistentData : MonoBehaviour
         largeFish = largeFishStart;
         month = 1;
         welcomeStoryDisplayed = false;
+        criminalActivity = false;
 
         smallFishCaughtLastMonth = 0;
         mediumFishCaughtLastMonth = 0;
@@ -301,6 +303,22 @@ public class PersistentData : MonoBehaviour
     public bool GetWelcomeStory()
     {
         return welcomeStoryDisplayed;
+    }
+
+
+    public void SetCriminalActivity(bool val)
+    {
+        criminalActivity = val;
+    }
+
+    public bool GetCriminalActivity()
+    {
+        return criminalActivity;
+    }
+
+    public void AddProfitTransitonScene(int val)
+    {
+        playerMoney += val;
     }
 
 

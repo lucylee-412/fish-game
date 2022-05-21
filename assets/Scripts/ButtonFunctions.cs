@@ -179,13 +179,15 @@ public class ButtonFunctions : MonoBehaviour
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(2500);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
-            //50% chance of being caught when back to land scene (not programmed) will display on transition scene
+            //50% chance of being caught when back to land scene - Flat 50% chance of being caught on Transition Scene
+            PersistentData.Instance.SetCriminalActivity(true);
         }
         else if (eventNum == 2)
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(5000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
-            //50% chance of being caught when back to land scene (not programmed) will display on transition scene
+            //50% chance of being caught when back to land scene - Flat 50% chance of being caught on Transition Scene
+            PersistentData.Instance.SetCriminalActivity(true);
         }
         else if (eventNum == 3)
         {
@@ -278,19 +280,6 @@ public class ButtonFunctions : MonoBehaviour
         FinalizePlayerMoney();
         SceneManager.LoadScene("MonthTransition");
     }
-    public void AdvanceTime()
-    {
-        if(curMonth < 12)
-        {
-            PersistentData.Instance.SetMonth(curMonth + 1);
-            SceneManager.LoadScene("Land&Pier");
-        }
-        else
-        {
-            SceneManager.LoadScene("HighScores");
-        }
-    }
-
     void SubtractMoney(int cost)
     {
         moneyKeeper.GetComponent<MoneyKeeper>().SubtractMoney(cost);
