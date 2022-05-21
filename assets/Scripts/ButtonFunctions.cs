@@ -152,8 +152,6 @@ public class ButtonFunctions : MonoBehaviour
             SubtractMoney(mackrelCost);
         }
     }
-
-
     public void GoFishingWithPole()
     {
         LandAndPierTrigger.GetComponent<LandAndPierTriggers>().SetAllButtonsFalse();
@@ -181,19 +179,20 @@ public class ButtonFunctions : MonoBehaviour
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(2500);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
-            //50% chance of being caught when back to land scene
+            //50% chance of being caught when back to land scene (not programmed) will display on transition scene
         }
         else if (eventNum == 2)
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(5000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
-            //50% chance of being caught when back to land scene
+            //50% chance of being caught when back to land scene (not programmed) will display on transition scene
         }
         else if (eventNum == 3)
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(10000);
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
             //reduce all fish populations by 50%
+            ReduceFishByPercent(.5f);
         }
         else if (eventNum == 4)
         {
@@ -232,6 +231,8 @@ public class ButtonFunctions : MonoBehaviour
         else if (eventNum == 4)
         {
             eventController.GetComponent<EducationEvents>().ShowEducation(eventNum);
+            //reduce fish by 25%
+            ReduceFishByPercent(.25f);
         }
         else if (eventNum == 5)
         {
@@ -265,9 +266,7 @@ public class ButtonFunctions : MonoBehaviour
             else if(eventNum == 4)
             {
                 FinalizeFishAmounts();
-                PersistentData.Instance.SetSmallFishCaughtLM(0);
-                PersistentData.Instance.SetMediumFishCaughtLM(0);
-                PersistentData.Instance.SetLargeFishCaughtLM(0);
+                ZeroFishThisMonth();
 
             }
             else if(eventNum == 5)

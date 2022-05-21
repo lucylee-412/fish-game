@@ -8,29 +8,25 @@ public class InstructionButtons : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] GameObject[] welcomeStory;
-    [SerializeField] GameObject welcomeCanvas;
+    //[SerializeField] GameObject welcomeCanvas;
     int curMonth;
     bool welcomeDisplayedAlready;
     void Awake()
     {
-        if (welcomeStory == null)
-        {
-            welcomeStory = GameObject.FindGameObjectsWithTag("WelcomeStory");
-        }
-        foreach(GameObject g in welcomeStory)
-        {
-            g.SetActive(true);
-        }
+        welcomeStory = GameObject.FindGameObjectsWithTag("WelcomeStory");
+        DisplayWelcomeStory();
     }
     void Start()
     {
-        welcomeCanvas = GameObject.FindGameObjectWithTag("WelcomeCanvas");
-        welcomeCanvas.SetActive(true);
+        //welcomeStory = GameObject.FindGameObjectsWithTag("WelcomeStory");
+        //DisplayWelcomeStory();
+        // welcomeCanvas = GameObject.FindGameObjectWithTag("WelcomeCanvas");
+        //welcomeCanvas.SetActive(true);
         curMonth = PersistentData.Instance.GetMonth();
         welcomeDisplayedAlready = PersistentData.Instance.GetWelcomeStory();
-        foreach(GameObject g in welcomeStory)
+        if(curMonth > 1 || welcomeDisplayedAlready == true)
         {
-            g.SetActive(false);
+            RemoveWelcomeStory();
         }
         
     }
@@ -38,13 +34,10 @@ public class InstructionButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(curMonth == 1 && welcomeDisplayedAlready == false)
-        {
-            DisplayWelcomeStory();
-        }
+        
     }
 
-    public void DisplayWelcomeStory()
+    void DisplayWelcomeStory()
     {
         foreach(GameObject g in welcomeStory)
         {
@@ -52,9 +45,18 @@ public class InstructionButtons : MonoBehaviour
         }
     }
 
+    void RemoveWelcomeStory()
+    {
+        foreach (GameObject g in welcomeStory)
+        {
+            g.SetActive(false);
+        }
+    }
+
     public void InstructionOkButton()
     {
-        PersistentData.Instance.SetWelcomeStory(true);
-        welcomeCanvas.SetActive(false);
+        welcomeDisplayedAlready = true;
+        PersistentData.Instance.SetWelcomeStory(welcomeDisplayedAlready);
+        RemoveWelcomeStory();
     }
 }
