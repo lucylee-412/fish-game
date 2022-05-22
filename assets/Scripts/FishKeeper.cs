@@ -23,7 +23,7 @@ public class FishKeeper : MonoBehaviour
     const int BOAT_SCENE = 6;
     const int SMALL_BAIT_MOD = 2;
     const int MEDIUM_BAIT_MOD = 2;
-    const int LARGE_BAIT_MOD = 4;
+    const int LARGE_BAIT_MOD = 3;
 
     int levelNum;
     // Start is called before the first frame update
@@ -54,7 +54,7 @@ public class FishKeeper : MonoBehaviour
     {
         if(levelNum == FISHING_POLE_SCENE)
         {
-            //static values for now, will become RNG at later time
+            //RNG values
             smallFishCaught = Random.Range(1,20);
             mediumFishCaught = Random.Range(1,10);
             largeFishAmt = Random.Range(1, 5);
@@ -76,9 +76,9 @@ public class FishKeeper : MonoBehaviour
         }
         if(levelNum == CAST_NET_SCENE)
         {
-            //static values for now, will become RNG at later time
-            smallFishCaught = Random.Range(1, 15);
-            mediumFishCaught = Random.Range(1, 10);
+            //RNG values
+            smallFishCaught = Random.Range(1, 25);
+            mediumFishCaught = Random.Range(1, 15);
             largeFishAmt = Random.Range(1, 2);
             if (nightcrawlers)
             {
@@ -92,10 +92,10 @@ public class FishKeeper : MonoBehaviour
         }
         if(levelNum == BOAT_SCENE)
         {
-            //static values for now, will become RNG at later time
+            //RNG values
             smallFishCaught = Random.Range(1, 10);
-            mediumFishCaught = Random.Range(1, 10);
-            largeFishCaught = Random.Range(1, 10);
+            mediumFishCaught = Random.Range(1, 20);
+            largeFishCaught = Random.Range(5, 15);
 
             if (nightcrawlers)
             {

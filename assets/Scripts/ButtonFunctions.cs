@@ -174,7 +174,6 @@ public class ButtonFunctions : MonoBehaviour
     {
         int eventNum = eventController.GetComponent<EducationEvents>().GetEventNum();
 
-        //below we will need to populate effects to events
         if(eventNum == 1)
         {
             moneyKeeper.GetComponent<MoneyKeeper>().AddMoney(2500);
@@ -310,9 +309,6 @@ public class ButtonFunctions : MonoBehaviour
         largeFishMoney = PersistentData.Instance.GetLargeFishCaughtLM() * LARGE_FISH_SELL_PRICE;
 
         PersistentData.Instance.SetMoneyMadeLastMonth(smallFishMoney + mediumFishMoney + largeFishMoney);
-
-        int curMoney = PersistentData.Instance.GetMoney();
-        PersistentData.Instance.SetMoney(curMoney + (smallFishMoney + mediumFishMoney + largeFishMoney));
     }
 
     public void StartEvents()
