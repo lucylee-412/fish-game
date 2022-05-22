@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\StartMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\FishSpawner.cs" />
+    <Compile Include="Assets\Scripts\ShopkeeperResponse.cs" />
     <Compile Include="Assets\Scripts\MoneyWarning.cs" />
     <Compile Include="Assets\Scripts\HighScores.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
@@ -116,7 +117,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\ButtonFunctions.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\ShopkeeperResponse.cs" />
+    <Compile Include="Assets\Scripts\QuitGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

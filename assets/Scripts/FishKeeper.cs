@@ -78,7 +78,7 @@ public class FishKeeper : MonoBehaviour
         {
             //RNG values
             smallFishCaught = Random.Range(1, 25);
-            mediumFishCaught = Random.Range(1, 15);
+            mediumFishCaught = Random.Range(1, 20);
             largeFishAmt = Random.Range(1, 2);
             if (nightcrawlers)
             {
