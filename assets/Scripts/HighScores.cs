@@ -15,14 +15,22 @@ public class HighScores : MonoBehaviour
     [SerializeField] TMP_Text[] nameTexts;
     [SerializeField] TMP_Text[] scoreTexts;
 
+    bool fromMainMenuOnly;
+
     // Start is called before the first frame update
     void Start()
     {
+        fromMainMenuOnly = PersistentData.Instance.GetFromMainMenuOnly();
         pName = PersistentData.Instance.GetName();
         pScore = PersistentData.Instance.GetMoney();
 
-        RecordPlayerScore();
+        if (!fromMainMenuOnly)
+        {
+            RecordPlayerScore();
+        }
+        //RecordPlayerScore();
         DisplayHighScores();
+        PersistentData.Instance.SetFromMainMenuOnly(false);
     }
 
     // Update is called once per frame

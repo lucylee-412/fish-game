@@ -3,29 +3,11 @@ guid: 98c61addda746e34bb125e283ff64f96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -716801024762281766
-    second: CastnetSpriteSheet_0
+      213: 1737750134759389132
+    second: CastnetSpritesheet_0
   - first:
-      213: -4489486475124759077
-    second: CastnetSpriteSheet_1
-  - first:
-      213: -6059794040819572094
-    second: CastnetSpriteSheet_2
-  - first:
-      213: 2291729172341292363
-    second: CastnetSpriteSheet_3
-  - first:
-      213: 52238530113674141
-    second: CastnetSpriteSheet_4
-  - first:
-      213: -1973359825600486843
-    second: CastnetSpriteSheet_5
-  - first:
-      213: -8654571319377887451
-    second: CastnetSpriteSheet_6
-  - first:
-      213: 3035504169139432747
-    second: CastnetSpriteSheet_7
+      213: 3004734362287231788
+    second: CastnetSpritesheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,95 +109,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CastnetSpriteSheet_0
+      name: CastnetSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 160
-        width: 204
-        height: 205
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad0886804496d06f0800000000000000
-      internalID: -716801024762281766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 334
-        y: 155
-        width: 204
-        height: 210
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd5a44256d322b1c0800000000000000
-      internalID: -4489486475124759077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 338
-        width: 4
-        height: 12
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 282abe01d6947eba0800000000000000
-      internalID: -6059794040819572094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 603
-        y: 155
-        width: 204
-        height: 205
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4d7dc64a8bddcf10800000000000000
-      internalID: 2291729172341292363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 846
-        y: 151
+        x: 0
+        y: 0
         width: 196
         height: 203
       alignment: 4
@@ -225,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b93079aa699b000800000000000000
-      internalID: 52238530113674141
+      spriteID: cc778b26a8abd1810800000000000000
+      internalID: 1737750134759389132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CastnetSpriteSheet_5
+      name: CastnetSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 1161
-        y: 153
-        width: 204
-        height: 205
+        x: 197
+        y: 0
+        width: 203
+        height: 203
       alignment: 4
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,50 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5426e05a1b73d94e0800000000000000
-      internalID: -1973359825600486843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 334
-        y: 315
-        width: 5
-        height: 9
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52f72392d39c4e780800000000000000
-      internalID: -8654571319377887451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CastnetSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 280
-        width: 7
-        height: 7
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2de5c385f6402a20800000000000000
-      internalID: 3035504169139432747
+      spriteID: c235a849bf5f2b920800000000000000
+      internalID: 3004734362287231788
       vertices: []
       indices: 
       edges: []

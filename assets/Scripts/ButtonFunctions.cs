@@ -101,6 +101,10 @@ public class ButtonFunctions : MonoBehaviour
     public void PlayGame()
     {
         string s = playerNameInput.text;
+        if(s == "")
+        {
+            s = "Guest";
+        }
         PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Land&Pier");
 

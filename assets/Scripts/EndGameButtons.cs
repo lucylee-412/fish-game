@@ -9,9 +9,12 @@ public class EndGameButtons : MonoBehaviour
     [SerializeField] TMP_Text playerinfo;
     string playerName;
     int playerMoney;
+
+    int levelNum;
     // Start is called before the first frame update
     void Start()
     {
+        levelNum = SceneManager.GetActiveScene().buildIndex;
         playerName = PersistentData.Instance.GetName();
         playerMoney = PersistentData.Instance.GetMoney();
         DisplayPlayerInfo();
@@ -25,6 +28,10 @@ public class EndGameButtons : MonoBehaviour
 
     public void HighScores()
     {
+        if(levelNum == 0)
+        {
+            PersistentData.Instance.SetFromMainMenuOnly(true);
+        }
         SceneManager.LoadScene("HighScores");
     }
 

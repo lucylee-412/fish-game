@@ -27,6 +27,7 @@ public class PersistentData : MonoBehaviour
     const int smallFishStart = 200;
     const int mediumFishStart = 150;
     const int largeFishStart = 100;
+    bool fromMainMenuOnly;
 
     public static PersistentData Instance;
 
@@ -61,6 +62,7 @@ public class PersistentData : MonoBehaviour
         month = 1;
         welcomeStoryDisplayed = false;
         criminalActivity = false;
+        fromMainMenuOnly = false;
 
         smallFishCaughtLastMonth = 0;
         mediumFishCaughtLastMonth = 0;
@@ -321,5 +323,13 @@ public class PersistentData : MonoBehaviour
         playerMoney += val;
     }
 
+    public void SetFromMainMenuOnly( bool val)
+    {
+        fromMainMenuOnly = val;
+    }
+    public bool GetFromMainMenuOnly()
+    {
+        return fromMainMenuOnly;
+    }
 
 }
