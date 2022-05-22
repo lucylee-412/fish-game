@@ -32,6 +32,9 @@ public class ButtonFunctions : MonoBehaviour
     [SerializeField] GameObject LandAndPierTrigger;
     [SerializeField] GameObject[] fishingButtons;
     [SerializeField] TMP_InputField playerNameInput;
+
+    [SerializeField] GameObject shopkeeper;
+
     int levelNum;
     int curMonth;
 
@@ -70,6 +73,13 @@ public class ButtonFunctions : MonoBehaviour
         {
             g.SetActive(true);
         }
+
+        if(levelNum == 2)
+        {
+            shopkeeper = GameObject.FindGameObjectWithTag("SpeechController");
+            
+        }
+
         curMonth = PersistentData.Instance.GetMonth();
 
         smallFishMoney = 0;
@@ -108,7 +118,12 @@ public class ButtonFunctions : MonoBehaviour
             PersistentData.Instance.SetHasFishingPole(true);
             SubtractMoney(fishingpoleCost);
         }
-        
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
+            Debug.Log("It's working Bub");
+        }
+
     }
     public void BuyCastNetButton()
     {
@@ -116,6 +131,10 @@ public class ButtonFunctions : MonoBehaviour
         {
             PersistentData.Instance.SetHasCastNet(true);
             SubtractMoney(castNetCost);
+        }
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
         }
 
     }
@@ -126,6 +145,10 @@ public class ButtonFunctions : MonoBehaviour
             PersistentData.Instance.SetHasFishingBoat(true);
             SubtractMoney(fishingBoatCost);
         }
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
+        }
     }
     public void BuyNightcrawlersButton()
     {
@@ -133,6 +156,10 @@ public class ButtonFunctions : MonoBehaviour
         {
             PersistentData.Instance.SetHasNightcrawlers(true);
             SubtractMoney(nightcrawlerCost);
+        }
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
         }
     }
 
@@ -143,6 +170,10 @@ public class ButtonFunctions : MonoBehaviour
             PersistentData.Instance.SetHasSquid(true);
             SubtractMoney(squidCost);
         }
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
+        }
     }
     public void BuyMackrelButton()
     {
@@ -150,6 +181,10 @@ public class ButtonFunctions : MonoBehaviour
         {
             PersistentData.Instance.SetHasMackrel(true);
             SubtractMoney(mackrelCost);
+        }
+        else
+        {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
         }
     }
     public void GoFishingWithPole()

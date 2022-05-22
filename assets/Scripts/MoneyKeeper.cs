@@ -7,8 +7,8 @@ using TMPro;
 
 public class MoneyKeeper : MonoBehaviour
 {
+    [SerializeField] GameObject shopkeeper;
     [SerializeField] int currentMoney;
-    //[SerializeField] Text moneyTxt;
     [SerializeField] string currentName;
     [SerializeField] int curMonth;
     [SerializeField] TMP_Text nameTxt;
@@ -16,7 +16,6 @@ public class MoneyKeeper : MonoBehaviour
     [SerializeField] TMP_Text monthTxt;
     int levelNum;
 
-    //[SerializeField] Text nameTxt;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +26,11 @@ public class MoneyKeeper : MonoBehaviour
         nameTxt.text = "Player: " + currentName;
         monthTxt.text = "Month: " + curMonth;
         levelNum = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(levelNum);
+        if(levelNum == 2)
+        {
+            shopkeeper = GameObject.FindGameObjectWithTag("SpeechController");
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +67,7 @@ public class MoneyKeeper : MonoBehaviour
         }
         else
         {
+            shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
             Debug.Log("Not enough Money!");
         }
     }

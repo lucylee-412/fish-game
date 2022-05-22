@@ -8,7 +8,6 @@ public class InstructionButtons : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] GameObject[] welcomeStory;
-    //[SerializeField] GameObject welcomeCanvas;
     int curMonth;
     bool welcomeDisplayedAlready;
     void Awake()
@@ -18,10 +17,6 @@ public class InstructionButtons : MonoBehaviour
     }
     void Start()
     {
-        //welcomeStory = GameObject.FindGameObjectsWithTag("WelcomeStory");
-        //DisplayWelcomeStory();
-        // welcomeCanvas = GameObject.FindGameObjectWithTag("WelcomeCanvas");
-        //welcomeCanvas.SetActive(true);
         curMonth = PersistentData.Instance.GetMonth();
         welcomeDisplayedAlready = PersistentData.Instance.GetWelcomeStory();
         if(curMonth > 1 || welcomeDisplayedAlready == true)

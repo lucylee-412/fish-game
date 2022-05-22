@@ -49,6 +49,8 @@ TagManager:
   - HelpPanel
   - MoneyWarningCanvas
   - MoneyWarning
+  - SpeechBubble
+  - SpeechController
   layers:
   - Default
   - TransparentFX
