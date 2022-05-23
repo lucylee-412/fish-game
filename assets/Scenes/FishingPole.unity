@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Need Help?
+  m_text: Level Hints
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -371,6 +371,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!114 &143185795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +978,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!1 &354117873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4134,6 +4136,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!114 &1368072900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4787,6 +4790,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!114 &1535464125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5406,6 +5410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e6993509c160445bd74a725a56cc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopkeeper: {fileID: 0}
   currentMoney: 0
   currentName: 
   curMonth: 0
@@ -5444,6 +5449,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!1 &1726034939
 GameObject:
   m_ObjectHideFlags: 0
@@ -6183,6 +6189,7 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}
 --- !u!114 &1872906154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7020,3 +7027,4 @@ MonoBehaviour:
   LandAndPierTrigger: {fileID: 1984134244}
   fishingButtons: []
   playerNameInput: {fileID: 1454172682}
+  shopkeeper: {fileID: 0}

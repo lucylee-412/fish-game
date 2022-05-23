@@ -202,7 +202,7 @@ public class EducationEvents : MonoBehaviour
     public void StartEvents()
     {
         //changed for testing
-        eventTypeSelector = Random.Range(1 , 5 );
+        eventTypeSelector = Random.Range(1 , 4 );
 
         if (eventTypeSelector == 1)
         {

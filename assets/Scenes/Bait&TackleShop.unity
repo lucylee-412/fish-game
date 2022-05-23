@@ -1423,6 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingPole: {fileID: 1018212345}
   castNet: {fileID: 788878095}
+  fishingBoat: {fileID: 0}
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
@@ -2468,6 +2469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingPole: {fileID: 0}
   castNet: {fileID: 0}
+  fishingBoat: {fileID: 0}
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}
@@ -3040,6 +3042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingPole: {fileID: 1018212345}
   castNet: {fileID: 788878095}
+  fishingBoat: {fileID: 0}
   nightcrawlerBait: {fileID: 289509593}
   squidBait: {fileID: 542620377}
   mackrelBait: {fileID: 1935456990}
@@ -4265,6 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingPole: {fileID: 1018212345}
   castNet: {fileID: 788878095}
+  fishingBoat: {fileID: 0}
   nightcrawlerBait: {fileID: 289509593}
   squidBait: {fileID: 542620377}
   mackrelBait: {fileID: 1935456990}
@@ -6682,7 +6686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Need Help?
+  m_text: Level Hints
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -7283,6 +7287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishingPole: {fileID: 0}
   castNet: {fileID: 0}
+  fishingBoat: {fileID: 0}
   nightcrawlerBait: {fileID: 0}
   squidBait: {fileID: 0}
   mackrelBait: {fileID: 0}

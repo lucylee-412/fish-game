@@ -91,9 +91,11 @@ public class TransitionScript : MonoBehaviour
     }
     int GetFineAmount()
     {
-        if(PersistentData.Instance.GetCriminalActivity() == true)
+        int fineChance = Random.Random.Range(1, 3);
+
+        if (PersistentData.Instance.GetCriminalActivity() == true)
         {
-            if(Random.Range(1,3) == 1)
+            if(fineChance == 1)
             {
                 fineAmt = FINE_AMOUNT;
             }

@@ -19,6 +19,7 @@ public class GameOverButtons : MonoBehaviour
 
     public void MainMenu()
     {
+        PersistentData.Instance.EndGameInstance();
         SceneManager.LoadScene("StartMenu");
     }
 }
