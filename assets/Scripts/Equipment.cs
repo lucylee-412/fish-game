@@ -7,12 +7,14 @@ public class Equipment : MonoBehaviour
 {
     [SerializeField] GameObject fishingPole;
     [SerializeField] GameObject castNet;
+    [SerializeField] GameObject fishingBoat;
     [SerializeField] GameObject nightcrawlerBait;
     [SerializeField] GameObject squidBait;
     [SerializeField] GameObject mackrelBait;
 
     const int fishPoleCost = 500;
     const int castNetCost = 1000;
+    const int fishingBoatCost = 10000;
     const int nightcrawlerCost = 250;
     const int squidCost = 1000;
     const int mackrelCost = 2500;
@@ -31,6 +33,10 @@ public class Equipment : MonoBehaviour
             squidBait = GameObject.FindGameObjectWithTag("Squid");
         if (mackrelBait == null)
             mackrelBait = GameObject.FindGameObjectWithTag("Mackrel");
+        if(fishingBoat == null)
+        {
+            fishingBoat = GameObject.FindGameObjectWithTag("Boat");
+        }
 
     }
 
@@ -47,6 +53,10 @@ public class Equipment : MonoBehaviour
     {
         return castNetCost;
     }
+    public int GetFishingBoat()
+    {
+        return fishingBoatCost;
+    }
     public int GetNightcrawlerCost()
     {
         return nightcrawlerCost;
@@ -59,66 +69,5 @@ public class Equipment : MonoBehaviour
     {
         return mackrelCost;
     }
-
-    /* private void OnTriggerEnter2D(Collider2D collider)
-     {
-         if(this.gameObject.tag == "Fishing Pole")
-         {
-             Debug.Log("This is the fishing pole!");
-             foreach (GameObject g in fishPoleButton)
-             {
-                 g.SetActive(true);
-             }
-             foreach (GameObject g in fishPoleText)
-             {
-                 g.SetActive(true);
-             }
-         }
-         else if (this.gameObject.tag == "Cast Net")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Nightcrawler")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Squid")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Mackrel")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-     }
-     private void OnTriggerExit2D(Collider2D collider)
-     {
-         if (this.gameObject.tag == "Fishing Pole")
-         {
-             foreach (GameObject g in fishPoleButton)
-             {
-                 g.SetActive(false);
-             }
-             foreach (GameObject g in fishPoleText)
-             {
-                 g.SetActive(false);
-             }
-         }
-         else if (this.gameObject.tag == "Cast Net")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Nightcrawler")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Squid")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-         else if (this.gameObject.tag == "Mackrel")
-         {
-             Debug.Log("You got the right one bub!");
-         }
-     }*/
+    
 }
