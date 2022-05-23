@@ -112,7 +112,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("StartMenu");
     }
 
     public void BuyFishingPoleButton()
