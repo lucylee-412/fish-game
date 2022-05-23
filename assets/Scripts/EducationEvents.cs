@@ -229,7 +229,7 @@ public class EducationEvents : MonoBehaviour
             {
                 do
                 {
-                    eventNum = Random.Range(2, 6);
+                    eventNum = Random.Range(1, 6);
                 } while (eventNum == 3);
                 nonEduCanvas.SetActive(true);
                 currentNonEduName.text = nonEduEventNames[eventNum];
