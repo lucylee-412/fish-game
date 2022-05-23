@@ -6225,7 +6225,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "A fisherman is not a fish and therefore must go to land from time to time
     to see important people like the shopkeeper in the store.\n\nOnce you are stocked
-    up for the month with fishing equipement and supplies, move your character to
+    up for the month with fishing equipment and supplies, move your character to
     the end of the pier to choose between the fishing spots that are available to
     your fisherman. Location availability is based on your equipment.\n\nTo enter
     the store, move the fisherman to the door.\t"
