@@ -1172,8 +1172,8 @@ MonoBehaviour:
     with Enviornmental COnservation goals.
 
 
-    Use the arrow keys to control your
-    character and interact with buttons using the mouse.'
+    Use the WASD or arrow keys to control
+    your character and interact with buttons using the mouse.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
