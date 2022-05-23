@@ -114,7 +114,7 @@ public class PersistentData : MonoBehaviour
     {
         return hasCastNet;
     }
-
+    
     public void SetHasNightcrawlers(bool value)
     {
         hasNightcrawlers = value;
@@ -330,6 +330,10 @@ public class PersistentData : MonoBehaviour
     public bool GetFromMainMenuOnly()
     {
         return fromMainMenuOnly;
+    }
+    public void EndGameInstance()
+    {
+        Destroy(this);
     }
 
 }

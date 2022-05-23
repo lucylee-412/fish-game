@@ -23,7 +23,6 @@ public class InstructionButtons : MonoBehaviour
         {
             RemoveWelcomeStory();
         }
-        
     }
 
     // Update is called once per frame

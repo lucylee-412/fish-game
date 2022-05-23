@@ -37,6 +37,7 @@ public class EndGameButtons : MonoBehaviour
 
     public void MainMenu()
     {
+        PersistentData.Instance.EndGameInstance();
         SceneManager.LoadScene("StartMenu");
     }
 

@@ -130,7 +130,7 @@ public class EducationEvents : MonoBehaviour
 			" and the fish are just begging to be cause. Do you stay and keep fishing? (+ $5000)";
         event3 = "One of your friends has a surplus of dynamite and attempts to convince you of the benefits of fishing with explosives. After hearing them out, you can clearly see that the method is effective" +
 			"and you can turn a quick profit of $10,000 in one month. Do you want to fish with explosives?";
-        event4 = "An oil tanker owned by 'TotallyNotTheBadGuys Petroleum' has hit a reef and caused a devastating oil spill. The local authorities are calling all able boats to help in the cleanup effort" +
+        event4 = "An oil tanker owned by 'TotallyNotTheBadGuys Petroleum' has hit a reef and caused a devastating oil spill. The local authorities are calling all able boats to help in the cleanup effort." +
             " Will you answer the call (lose out on catching any fish this month)?";
         event5 = "A local business man that claims he is 'totally on the up and up' offers you $10,000 dollars to head out to the deep ocean and drop 'a totally harmless' package deep out at sea." +
             "The money is far more than you can make fishing in one month and the oceans a big place, right? What do you do?";
@@ -141,13 +141,13 @@ public class EducationEvents : MonoBehaviour
 			"unscrupulous fisherman, as US Fish & Wildlife is empowered to search any catch to ensure limits are respected. Failure to do so can lead to fines and jail time.";
         eventEducation3 = "It should come as no surprise that fishing with explosives is highly destructive to a marine ecosystem. This method of fishing is more commonly seen in developing countries" +
             "and the damage caused to reefs, which are vital for a robust marine ecosystem in many parts of the world, is immense.";
-        eventEducation4 = "Oil in marine ecosystems that stem from human activity can have severe consequences for a marine ecosystem in the short term. Mammals and sealife that breach the surface" +
+        eventEducation4 = "Oil in marine ecosystems that stem from human activity can have severe consequences for a marine ecosystem in the short term. Mammals and sealife that breach the surface " +
 			"are at greatest risk of harm as the oil floats to the surface. Quick action to contain and clean man made oil spills is crucial to protecting the marine ecosystem.";
         eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, as the ocean was viewed as a place of near unlimited capacity to disperse " +
 			"waste. Subsequent research would prove this assumption false and while many places have enacted measures to prevent/limit ocean dumping, international waters and underdeveloped countries " +
 			"remain largely unregulated";
         didYouKnow = "Did you know?";
-
+       
         nonEduEventName1 = "Broken Fishing Pole"; 
         nonEduEventName2 = "Bait Stolen";
         nonEduEventName3 = "Broken Cast Net"; 
