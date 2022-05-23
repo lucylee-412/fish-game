@@ -27,6 +27,7 @@ public class MoneyKeeper : MonoBehaviour
         nameTxt.text = "Player: " + currentName;
         monthTxt.text = "Month: " + curMonth;
         levelNum = SceneManager.GetActiveScene().buildIndex;
+        AudioListener.volume = PersistentData.Instance.GetVolume();
     }
 
     // Update is called once per frame

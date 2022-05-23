@@ -20,7 +20,7 @@ public class PersistentData : MonoBehaviour
     [SerializeField] int mediumFishCaughtLastMonth;
     [SerializeField] int largeFishCaughtLastMonth;
     [SerializeField] int moneyMadeLastMonth;
-
+    [SerializeField] float sliderVolume;
     const int playerMoneyStart = 1000;
     const int smallFishStart = 200;
     const int mediumFishStart = 150;
@@ -62,6 +62,7 @@ public class PersistentData : MonoBehaviour
         mediumFishCaughtLastMonth = 0;
         largeFishCaughtLastMonth = 0;
         moneyMadeLastMonth = 0;
+        sliderVolume = 0.0f;
     }
 
     // Update is called once per frame
@@ -292,7 +293,16 @@ public class PersistentData : MonoBehaviour
     {
         return (smallFish + mediumFish + largeFish) / (smallFishStart + mediumFishStart + largeFishStart);
     }
-    
+
+    public void SetVolume(float v)
+    {
+        sliderVolume = v;
+    }
+
+    public float GetVolume()
+    {
+        return sliderVolume;
+    }
 
 
 }

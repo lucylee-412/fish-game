@@ -1,23 +1,32 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class SoundManeger : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    [SerializeField] float startVolume;
+    const string key = "musicVolume";
+    const float startVol = 1.0f; 
     // Start is called before the first frame update
     void Start()
     {
-        if(!PlayerPrefs.HasKey("musicVolume"))
+        if(PlayerPrefs.HasKey(key))
         {
-            PlayerPrefs.SetFloat("musicVolume", 1);
-            Load();
+            startVolume = PlayerPrefs.GetFloat(key);
+            AudioListener.volume = startVolume;
+            volumeSlider.value = startVolume;
+            PersistentData.Instance.SetVolume(volumeSlider.value);
         }
 
         else
         {
-            Load();
+            PlayerPrefs.SetFloat(key, startVol);
         }
+    }
+    void update()
+    {
+        ChangeVolume();
     }
 
     public void ChangeVolume()
@@ -26,14 +35,9 @@ public class SoundManeger : MonoBehaviour
         Save();
     } 
 
-    public void Load()
-    {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-    }
-
     public void Save()
     {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        PlayerPrefs.SetFloat(key, volumeSlider.value);
     }
           
 }
