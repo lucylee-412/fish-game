@@ -119,13 +119,19 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasFishingPole())
         {
-            PersistentData.Instance.SetHasFishingPole(true);
-            SubtractMoney(fishingpoleCost);
+            if (moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(fishingpoleCost) == true)
+            {
+                PersistentData.Instance.SetHasFishingPole(true);
+                SubtractMoney(fishingpoleCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {
             shopkeeper.GetComponent<ShopkeeperResponse>().setHasItem(true);
-            Debug.Log("It's working Bub");
         }
 
     }
@@ -133,8 +139,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasCastNet())
         {
-            PersistentData.Instance.SetHasCastNet(true);
-            SubtractMoney(castNetCost);
+            if(moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(castNetCost) == true)
+            {
+                PersistentData.Instance.SetHasCastNet(true);
+                SubtractMoney(castNetCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {
@@ -146,8 +159,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasFishingBoat())
         {
-            PersistentData.Instance.SetHasFishingBoat(true);
-            SubtractMoney(fishingBoatCost);
+            if (moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(fishingBoatCost) == true)
+            {
+                PersistentData.Instance.SetHasFishingBoat(true);
+                SubtractMoney(fishingBoatCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {
@@ -158,8 +178,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasNightcrawlers())
         {
-            PersistentData.Instance.SetHasNightcrawlers(true);
-            SubtractMoney(nightcrawlerCost);
+            if (moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(nightcrawlerCost) == true)
+            {
+                PersistentData.Instance.SetHasNightcrawlers(true);
+                SubtractMoney(nightcrawlerCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {
@@ -171,8 +198,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasSquid())
         {
-            PersistentData.Instance.SetHasSquid(true);
-            SubtractMoney(squidCost);
+            if (moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(squidCost) == true)
+            {
+                PersistentData.Instance.SetHasSquid(true);
+                SubtractMoney(squidCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {
@@ -183,8 +217,15 @@ public class ButtonFunctions : MonoBehaviour
     {
         if (!PersistentData.Instance.GetHasMackrel())
         {
-            PersistentData.Instance.SetHasMackrel(true);
-            SubtractMoney(mackrelCost);
+            if (moneyKeeper.GetComponent<MoneyKeeper>().checkIfPlayerHasEnoughMoney(mackrelCost) == true)
+            {
+                PersistentData.Instance.SetHasMackrel(true);
+                SubtractMoney(mackrelCost);
+            }
+            else
+            {
+                shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
+            }
         }
         else
         {

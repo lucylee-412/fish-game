@@ -65,10 +65,18 @@ public class MoneyKeeper : MonoBehaviour
             PersistentData.Instance.SetMoney(currentMoney);
             UpdateMoneyDisplay();
         }
+    }
+
+    public bool checkIfPlayerHasEnoughMoney(int val)
+    {
+        int enoughMoney = currentMoney - val;
+        if(enoughMoney > 0)
+        {
+            return true;
+        }
         else
         {
-            shopkeeper.GetComponent<ShopkeeperResponse>().setNotEnoughMoney(true);
-            Debug.Log("Not enough Money!");
+            return false;
         }
     }
 
