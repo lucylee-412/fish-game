@@ -241,7 +241,14 @@ public class PersistentData : MonoBehaviour
     }
     public void AddToSmallFish(int amt)
     {
-        smallFish += amt;
+        if (smallFish + amt < smallFishStart)
+        {
+            smallFish += amt;
+        }
+        else
+        {
+            smallFish = smallFishStart;
+        }
     }
 
     public void SubtractFromMedFish(int amt)
@@ -257,7 +264,14 @@ public class PersistentData : MonoBehaviour
     }
     public void AddToMedFish(int amt)
     {
-        mediumFish += amt;
+        if (mediumFish + amt < mediumFishStart)
+        {
+            mediumFish += amt;
+        }
+        else
+        {
+            mediumFish = mediumFishStart;
+        }
     }
     public void SubtractFromLargeFish(int amt)
     {
@@ -272,7 +286,14 @@ public class PersistentData : MonoBehaviour
     }
     public void AddToLargeFish(int amt)
     {
-        largeFish += amt;
+        if(largeFish + amt < largeFishStart)
+        {
+            largeFish += amt;
+        }
+        else
+        {
+            largeFish = largeFishStart;
+        }
     }
 
     public void ZeroFishCaughtLM()
@@ -284,19 +305,19 @@ public class PersistentData : MonoBehaviour
 
     public float GetCurrentSmallFishPercentage()
     {
-        return smallFish / smallFishStart;
+        return ((float)smallFish / (float)smallFishStart);
     }
     public float GetCurrentMedFishPercentage()
     {
-        return mediumFish / mediumFishStart;
+        return ((float)mediumFish / (float)mediumFishStart);
     }
     public float GetCurrentLargeFishPercentage()
     {
-        return largeFish / largeFishStart;
+        return ((float)largeFish / (float)largeFishStart);
     }
     public float GetCurrentTotalFishPercentage()
     {
-        return (smallFish + mediumFish + largeFish) / (smallFishStart + mediumFishStart + largeFishStart);
+        return ((float)smallFish + (float)mediumFish + (float)largeFish) / ((float)smallFishStart + (float)mediumFishStart + (float)largeFishStart);
     }
     public void SetWelcomeStory(bool val)
     {

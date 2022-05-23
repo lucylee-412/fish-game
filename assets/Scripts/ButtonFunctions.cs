@@ -22,9 +22,9 @@ public class ButtonFunctions : MonoBehaviour
     const int squidCost = 2500;
     const int mackrelCost = 5000;
 
-    const int SMALL_FISH_SELL_PRICE = 50;
-    const int MEDIUM_FISH_SELL_PRICE = 100;
-    const int LARGE_FISH_SELL_PRICE = 150;
+    const int SMALL_FISH_SELL_PRICE = 25;
+    const int MEDIUM_FISH_SELL_PRICE = 50;
+    const int LARGE_FISH_SELL_PRICE = 125;
 
     [SerializeField] GameObject fishKeeper;
     [SerializeField] GameObject moneyKeeper;

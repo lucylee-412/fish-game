@@ -141,8 +141,8 @@ public class EducationEvents : MonoBehaviour
 			"unscrupulous fisherman, as US Fish & Wildlife is empowered to search any catch to ensure limits are respected. Failure to do so can lead to fines and jail time.";
         eventEducation3 = "It should come as no surprise that fishing with explosives is highly destructive to a marine ecosystem. This method of fishing is more commonly seen in developing countries" +
             "and the damage caused to reefs, which are vital for a robust marine ecosystem in many parts of the world, is immense.";
-        eventEducation4 = "Oil in marine ecosystems that stem from human activity can have severe consequences for a marine ecosystem in the short term. Mammals and sealife that breach the surface " +
-			"are at greatest risk of harm as the oil floats to the surface. Quick action to contain and clean man made oil spills is crucial to protecting the marine ecosystem.";
+        eventEducation4 = "Oil in marine ecosystems that stems from human activity can have severe consequences for a marine ecosystem in the short term. However, fish populations are at less risk than mammals, birds, and marine life that need to breach the surface. " +
+            "This is because oil float on the surface of water, and most fish life live well below the surface. Quick action to contain and clean oil spills is crucial to protecting a marine ecosystem.";
         eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, as the ocean was viewed as a place of near unlimited capacity to disperse " +
 			"waste. Subsequent research would prove this assumption false and while many places have enacted measures to prevent/limit ocean dumping, international waters and underdeveloped countries " +
 			"remain largely unregulated";
