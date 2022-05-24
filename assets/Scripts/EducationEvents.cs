@@ -161,7 +161,7 @@ public class EducationEvents : MonoBehaviour
         "What do you do? (Chance of being caught and fined)";
 
         eventEducation5 = "Prior to the 1970s, ocean dumping was commonplace in many parts of the world, " +
-        "as the ocean was seen as a trash receptable of near unlimited capacity. " +
+        "as the ocean was seen as a trash receptacle of near unlimited capacity. " +
         "Subsequent research would prove this assumption false, and while many places have since enacted measures to prevent or limit ocean dumping, " +
         "international waters and under-developed countries remain largely void of meaningful regulation.";
 
