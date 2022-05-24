@@ -798,7 +798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your total money is under $1500 and you are at risk of bankruptcy.
+  m_text: 'Your total money has fallen below $1500, and you are at risk of bankruptcy.
 
 
     According
@@ -806,7 +806,7 @@ MonoBehaviour:
     first year.
 
 
-    Don''t become another statistic: Monitor your spending and
+    Don''t become another statistic: Monitor your spending, and
     prepare for unexpected business expenses.
 
 
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Land & Pier Help
+  m_text: What should I do?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OK
+  m_text: GOT IT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -3744,7 +3744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OK
+  m_text: RIGHT ON!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4495,17 +4495,20 @@ MonoBehaviour:
   m_text: 'After years of toil and sweat in the corporate business world, you have
     decided to shed your old life and strike out in the world of fishing. With only
     $1000 to your name, you embark on a new business venture as a full time angler.
-    Your mission is to turn the highest profit over the next 12 months to see if
-    this is indeed the career path for you! However, you will need to balance your
-    business goals with the health of the marine ecosystem.
 
 
-    Read all descriptions
-    carefully, as many will have important information to maximize your earnings!
+    Your
+    mission is to turn the highest profit over the next 12 months to see if this
+    is indeed the career path for you! However, you will need to balance your business
+    goals with the health of the marine ecosystem. After all, no fish means no money.
 
 
-    Now
-    Lets get fishing!'
+    Read
+    all descriptions carefully, as many will contain important information needed
+    to maximize your earnings!
+
+
+    Now Lets get fishing!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4787,8 +4790,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Uh Oh, Bub! It looks like you don't have any fishing equipment. Fishing
-    with your hands isn't recommended. Go buy some equipment in the store!
+  m_text: 'Uh Oh, Bub! It looks like you don''t have any fishing equipment. Fishing
+    with your hands isn''t recommended.
+
+
+    Go buy some equipment in the store!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -6200,8 +6206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.7776, y: -0}
-  m_SizeDelta: {x: 576.7739, y: 190.3355}
+  m_AnchoredPosition: {x: 0, y: -0}
+  m_SizeDelta: {x: 650, y: 190.3355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008682757
 MonoBehaviour:
@@ -6223,15 +6229,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A fisherman is not a fish and therefore must go to land from time to time
-    to see important people like the shopkeeper in the store.\n\nOnce you are stocked
-    up for the month with fishing equipment and supplies, move your character to
-    the end of the pier to choose between the fishing spots that are available to
-    your fisherman. Location availability is based on your equipment.\n\nTo enter
-    the store, move the fisherman to the door.\t"
+  m_text: 'A fisherman is not a fish, and therefore must go onto land from time to
+    time to see VERY important people, like the shopkeeper.
+
+
+    To enter the store,
+    move the fisherman to the door.
+
+
+    Once you are stocked up for the month with
+    fishing equipment and supplies, move your character to the end of the pier on
+    the right side: Choose between the fishing spots that are available to your fisherman.
+    Location availability is based on your equipment on hand.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4e51e6a3d0218b24184f8489c8076a9a, type: 2}
+  m_sharedMaterial: {fileID: 889401835758421832, guid: 4e51e6a3d0218b24184f8489c8076a9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6255,8 +6267,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
