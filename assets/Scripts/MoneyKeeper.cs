@@ -33,10 +33,10 @@ public class MoneyKeeper : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Check done when player loads into land or shop* scenes (precaution)
     void Update()
     {
-        if(levelNum == 2 || levelNum == 3)
+        if(levelNum == 2 || levelNum == 3) 
         {
             CheckPlayerMoney();
         }
@@ -51,15 +51,17 @@ public class MoneyKeeper : MonoBehaviour
     {
         nameTxt.text = "Player: " + PersistentData.Instance.GetName();
     }
+
     public void AddMoney(int m)
     {
         currentMoney += m;
         PersistentData.Instance.SetMoney(currentMoney);
         UpdateMoneyDisplay();
     }
+    // If this transaction won't break the bank, allow player to buy item
     public void SubtractMoney(int m)
     {
-        if (currentMoney - m >= 0)
+        if (currentMoney - m >= 0) 
         {
             currentMoney -= m;
             PersistentData.Instance.SetMoney(currentMoney);
@@ -70,7 +72,7 @@ public class MoneyKeeper : MonoBehaviour
     public bool checkIfPlayerHasEnoughMoney(int val)
     {
         int enoughMoney = currentMoney - val;
-        if(enoughMoney > 0)
+        if(enoughMoney >= 0)
         {
             return true;
         }
@@ -80,6 +82,7 @@ public class MoneyKeeper : MonoBehaviour
         }
     }
 
+    // Check done at start of new level
     void CheckPlayerMoney()
     {
         if(currentMoney < 0)
